@@ -1,0 +1,221 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+fail() {
+  printf 'error: %s\n' "$*" >&2
+  exit 1
+}
+
+info() {
+  printf 'info: %s\n' "$*" >&2
+}
+
+APT_PACKAGES=(
+  "libatk-bridge2.0-0"
+  "libatk1.0-0"
+  "libasound2"
+  "libcairo2"
+  "libcups2"
+  "libdbus-1-3"
+  "libdrm2"
+  "libexpat1"
+  "libfontconfig1"
+  "libfreetype6"
+  "libgbm1"
+  "libglib2.0-0"
+  "libgtk-3-0"
+  "libnspr4"
+  "libnss3"
+  "libpci3"
+  "libpangocairo-1.0-0"
+  "libpango-1.0-0"
+  "libwayland-client0"
+  "libwayland-server0"
+  "libx11-xcb1"
+  "libx11-6"
+  "libxcomposite1"
+  "libxcursor1"
+  "libxdamage1"
+  "libxext6"
+  "libxfixes3"
+  "libxi6"
+  "libxinerama1"
+  "libxkbcommon0"
+  "libxkbcommon-x11-0"
+  "libxrandr2"
+  "libxrender1"
+  "libxshmfence1"
+  "libxslt1.1"
+  "libxss1"
+  "libxtst6"
+  "libxcb1"
+  "libxcb-dri2-0"
+  "libxcb-dri3-0"
+  "libxcb-render-util0"
+)
+
+DNF_PACKAGES=(
+  "alsa-lib"
+  "atk"
+  "atk-bridge"
+  "at-spi2-atk"
+  "at-spi2-core"
+  "cairo"
+  "cups-libs"
+  "dbus-glib"
+  "dconf"
+  "expat"
+  "fontconfig"
+  "freetype"
+  "gdk-pixbuf2"
+  "glib2"
+  "glibc"
+  "gtk3"
+  "libX11"
+  "libX11-xcb"
+  "libXcomposite"
+  "libXcursor"
+  "libXdamage"
+  "libXext"
+  "libXfixes"
+  "libXi"
+  "libXinerama"
+  "libxkbcommon"
+  "libxkbcommon-x11"
+  "libXrandr"
+  "libXScrnSaver"
+  "libXrender"
+  "libXss"
+  "libXtst"
+  "libgbm"
+  "libdrm"
+  "libwayland-client"
+  "libwayland-egl"
+  "libwayland-server"
+  "nss"
+  "nspr"
+  "pango"
+  "pulseaudio-libs"
+)
+
+YUM_PACKAGES=(
+  "alsa-lib"
+  "atk"
+  "atk-bridge"
+  "at-spi2-atk"
+  "at-spi2-core"
+  "cairo"
+  "cups-libs"
+  "dbus-glib"
+  "dconf"
+  "expat"
+  "fontconfig"
+  "freetype"
+  "gdk-pixbuf2"
+  "glib2"
+  "glibc"
+  "gtk3"
+  "libX11"
+  "libX11-xcb"
+  "libXcomposite"
+  "libXcursor"
+  "libXdamage"
+  "libXext"
+  "libXfixes"
+  "libXi"
+  "libXinerama"
+  "libxkbcommon"
+  "libxkbcommon-x11"
+  "libXrandr"
+  "libXScrnSaver"
+  "libXrender"
+  "libXss"
+  "libXtst"
+  "libgbm"
+  "libdrm"
+  "libwayland-client"
+  "libwayland-egl"
+  "libwayland-server"
+  "nss"
+  "nspr"
+  "pango"
+  "pulseaudio-libs"
+)
+
+PACMAN_PACKAGES=(
+  "alsa-lib"
+  "atk"
+  "atkmm"
+  "at-spi2-atk"
+  "at-spi2-core"
+  "cairo"
+  "cups"
+  "dbus-glib"
+  "dconf"
+  "fontconfig"
+  "gdk-pixbuf2"
+  "glib2"
+  "gtk3"
+  "libx11"
+  "libxcomposite"
+  "libxcursor"
+  "libxdamage"
+  "libxext"
+  "libxfixes"
+  "libxi"
+  "libxinerama"
+  "libxkbcommon"
+  "libxkbcommon-x11"
+  "libxrandr"
+  "libxrender"
+  "libxshmfence"
+  "libxss"
+  "libxtst"
+  "libwayland"
+  "libwayland-egl"
+  "libdrm"
+  "libgbm"
+  "libnss"
+  "libpulse"
+  "libwayland-client"
+  "libwayland-server"
+  "libXScrnSaver"
+  "nss"
+  "nspr"
+  "pango"
+  "pipewire"
+)
+
+info "installing Playwright / Chromium dependencies"
+
+if command -v apt-get >/dev/null 2>&1; then
+  info "using apt-get"
+  sudo apt-get update
+  sudo apt-get install -y "${APT_PACKAGES[@]}"
+  info "apt packages installed"
+  exit 0
+fi
+
+if command -v dnf >/dev/null 2>&1; then
+  info "using dnf"
+  sudo dnf install -y "${DNF_PACKAGES[@]}"
+  info "dnf packages installed"
+  exit 0
+fi
+
+if command -v yum >/dev/null 2>&1; then
+  info "using yum"
+  sudo yum install -y "${YUM_PACKAGES[@]}"
+  info "yum packages installed"
+  exit 0
+fi
+
+if command -v pacman >/dev/null 2>&1; then
+  info "using pacman"
+  sudo pacman -Sy --noconfirm
+  sudo pacman -S --needed --noconfirm "${PACMAN_PACKAGES[@]}"
+  info "pacman packages installed"
+  exit 0
+fi
+
+fail "no supported package manager found (apt-get, dnf, yum, or pacman)"

@@ -1,0 +1,8 @@
+{"hook_name": "tldr-context-inject", "invocations": 2, "successes": 2, "failures": 0, "metrics": {"context_injected": 2, "layers_used": 2}, "timestamp": "2026-01-23T16:28:38.514592+00:00"}
+{"hook_name": "arch-context-inject", "invocations": 1, "successes": 1, "failures": 0, "metrics": {"tasks_processed": 1, "arch_injected": 1}, "timestamp": "2026-01-23T16:28:38.514592+00:00"}
+{"hook_name": "smart-search-router", "invocations": 1, "successes": 1, "failures": 0, "metrics": {"queries_routed": 1, "literal_queries": 1}, "timestamp": "2026-01-23T16:28:38.514592+00:00"}
+{"hook_name": "tldr-context-inject", "invocations": 5, "successes": 5, "failures": 0, "metrics": {"context_injected": 5, "layers_used": 7}, "timestamp": "2026-01-23T18:20:49.746870+00:00"}
+{"hook_name": "tldr-context-inject", "invocations": 2, "successes": 2, "failures": 0, "metrics": {"context_injected": 2, "layers_used": 2}, "timestamp": "2026-01-23T19:04:34.657494+00:00"}
+{"hook_name": "smart-search-router", "invocations": 1, "successes": 1, "failures": 0, "metrics": {"queries_routed": 1, "literal_queries": 0, "semantic_queries": 1}, "timestamp": "2026-01-23T19:04:34.657494+00:00"}
+{"hook_name": "smart-search-router", "invocations": 1, "successes": 1, "failures": 0, "metrics": {"queries_routed": 1, "literal_queries": 1, "semantic_queries": 0}, "timestamp": "2026-01-23T19:24:53.761775+00:00"}
+{"hook_name": "post-edit-notify", "invocations": 4, "successes": 4, "failures": 0, "metrics": {"edits_notified": 4, "reindexes_triggered": 0}, "timestamp": "2026-01-23T19:24:53.761775+00:00"}
