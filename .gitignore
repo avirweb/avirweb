@@ -53,3 +53,7 @@ compare-*.js
 Thumbs.db
 .Spotlight-V100
 .Trashes
+
+# AI assistant cache
+.claude/
+.claude/cache/
