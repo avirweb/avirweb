@@ -64,7 +64,7 @@ function truncateText(text, maxLength) {
 }
 
 /**
- * Extract title from HTML content
+ * Extract title from HTML content (original, unsuffixed)
  */
 function extractTitle(html, filePath) {
   const fileName = path.basename(filePath);
@@ -88,6 +88,17 @@ function extractTitle(html, filePath) {
   }
   
   return 'AVIR';
+}
+
+/**
+ * Generate document title with AVIR suffix (for <title> tag)
+ */
+function generateDocumentTitle(title) {
+  // Only add suffix if not already present
+  if (title.includes('AVIR')) {
+    return title;
+  }
+  return `${title} | AVIR`;
 }
 
 /**
@@ -160,13 +171,17 @@ function hasExistingSeo(html) {
 
 /**
  * Generate SEO meta tags
+ * @param {string} contentTitle - Original title for OG/Twitter tags
+ * @param {string} description - Meta description
+ * @param {string} ogImage - OG image URL
+ * @param {string} canonicalUrl - Canonical URL
  */
-function generateSeoTags(title, description, ogImage, canonicalUrl) {
+function generateSeoTags(contentTitle, description, ogImage, canonicalUrl) {
   return `<meta content="${description}" name="description"/>
-<meta content="${title}" property="og:title"/>
+<meta content="${contentTitle}" property="og:title"/>
 <meta content="${description}" property="og:description"/>
 <meta content="${ogImage}" property="og:image"/>
-<meta content="${title}" property="twitter:title"/>
+<meta content="${contentTitle}" property="twitter:title"/>
 <meta content="${description}" property="twitter:description"/>
 <meta content="${ogImage}" property="twitter:image"/>
 <meta property="og:type" content="website"/>
@@ -177,10 +192,12 @@ function generateSeoTags(title, description, ogImage, canonicalUrl) {
 
 /**
  * Inject SEO tags into HTML
+ * @param {string} html - HTML content
+ * @param {string} seoTags - SEO meta tags to inject
+ * @param {string} documentTitle - Title for <title> tag (may include AVIR suffix)
  */
-function injectSeoTags(html, seoTags, title) {
-  // Replace existing <title> tag
-  const titleTag = `<title>${title}</title>`;
+function injectSeoTags(html, seoTags, documentTitle) {
+  const titleTag = `<title>${documentTitle}</title>`;
   html = html.replace(/<title>.*?<\/title>/i, titleTag);
   
   // Find insertion point (before viewport meta tag)
@@ -215,17 +232,21 @@ function processFile(filePath, dryRun = false) {
   
   // Extract metadata
   const title = extractTitle(html, filePath);
+  const documentTitle = generateDocumentTitle(title);
   const description = extractDescription(html, filePath);
   const ogImage = extractImage(html);
   const canonicalUrl = generateCanonicalUrl(filePath);
   
   // Log extracted data
-  console.log(`  📝 Title: ${title}`);
+  console.log(`  📝 Content Title: ${title}`);
+  if (title !== documentTitle) {
+    console.log(`  📝 Document Title: ${documentTitle}`);
+  }
   console.log(`  📄 Description: ${description}`);
   console.log(`  🖼️  OG Image: ${ogImage}`);
   console.log(`  🔗 Canonical: ${canonicalUrl}`);
   
-  // Generate SEO tags
+  // Generate SEO tags (using original title for OG/Twitter)
   const seoTags = generateSeoTags(title, description, ogImage, canonicalUrl);
   
   if (dryRun) {
@@ -235,11 +256,12 @@ function processFile(filePath, dryRun = false) {
         console.log(`    ${line}`);
       }
     });
+    console.log(`\n  <title> tag would be: <title>${documentTitle}</title>`);
     return { processed: true, dryRun: true };
   }
   
-  // Inject SEO tags
-  const updatedHtml = injectSeoTags(html, seoTags, title);
+  // Inject SEO tags (using documentTitle for <title> tag)
+  const updatedHtml = injectSeoTags(html, seoTags, documentTitle);
   
   // Write back to file
   fs.writeFileSync(filePath, updatedHtml, 'utf8');
