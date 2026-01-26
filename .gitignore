@@ -1,21 +1,55 @@
-# OS / editor
-.DS_Store
-Thumbs.db
-.idea/
+# Development and testing
+archive/
+node_modules/
+.sisyphus/
+*.log
+
+# Build artifacts
+dist/
+build/
+*.min.js
+*.min.css
+
+# Environment and secrets
+.env
+.env.local
+.env.*
+*.key
+*.pem
+credentials.json
+secrets.json
+config.local.*
+
+# Editor and IDE
 .vscode/
+.idea/
 *.swp
 *.swo
+*~
+.DS_Store
 
-# Logs / temp
-*.log
-*.tmp
-*.bak
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Temporary files
 tmp/
 temp/
+*.tmp
+.cache/
 
-# Wget HSTS
-.wget-hsts
+# Screenshots and evidence
+screenshots/
+evidence/
+baseline/
+after/
 
-# NOTE: site/ is tracked by default.
-# If you choose not to commit mirrored output, uncomment:
-# site/
+# Scripts (development only)
+capture-*.js
+compare-*.js
+
+# OS files
+Thumbs.db
+.Spotlight-V100
+.Trashes
