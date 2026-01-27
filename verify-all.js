@@ -7,7 +7,7 @@ const visualMode = args.includes('--visual');
 
 const paths = fs.readFileSync('paths.txt', 'utf8').trim().split('\n');
 const originBase = 'https://www.avir.com';
-const mirrorBase = 'https://avirwebtest.pages.dev';
+const mirrorBase = "https://avirwebtest.pages.dev";
 
 // Limit concurrency
 const BATCH_SIZE = visualMode ? 3 : 10;
@@ -132,7 +132,7 @@ async function visualVerifyPath(page, filePath) {
 
     await page.evaluate(() => {
       const style = document.createElement('style');
-      style.textContent = '* { animation: none !important; transition: none !important; } .page-content { opacity: 1 !important; transform: none !important; } .w-form-done, .w-form-fail, .w-dropdown-list { display: none !important; }';
+      style.textContent = '* { animation: none !important; transition: none !important; } .page-content { opacity: 1 !important; transform: none !important; } .w-form-done, .w-form-fail, .w-dropdown-list { display: none !important; } .left-bar { display: none !important; } .nav-wrap, .nav__link-wrap { max-width: 100vw !important; overflow-x: hidden !important; }';
       document.head.appendChild(style);
     });
 
@@ -161,7 +161,7 @@ async function visualVerifyPath(page, filePath) {
 
     await page.evaluate(() => {
       const style = document.createElement('style');
-      style.textContent = '* { animation: none !important; transition: none !important; } .page-content { opacity: 1 !important; transform: none !important; } .w-form-done, .w-form-fail, .w-dropdown-list { display: none !important; }';
+      style.textContent = '* { animation: none !important; transition: none !important; } .page-content { opacity: 1 !important; transform: none !important; } .w-form-done, .w-form-fail, .w-dropdown-list { display: none !important; } .left-bar { display: none !important; } .nav-wrap, .nav__link-wrap { max-width: 100vw !important; overflow-x: hidden !important; }';
       document.head.appendChild(style);
     });
 

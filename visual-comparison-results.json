@@ -1,14 +1,56 @@
 [
   {
     "path": "/careers/assistant-technician.html",
-    "status": "FAIL",
-    "diffPercent": "44.5737",
-    "details": "Visual difference: 44.5737% (threshold: 1%) [Dimensions: 1920x2494 vs 1920x11641, compared 1920x2494]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/careers/integration-technician.html",
+    "status": "PASS",
+    "diffPercent": "0.0000"
+  },
+  {
+    "path": "/processes.html",
+    "status": "PASS",
+    "diffPercent": "0.0024"
+  },
+  {
+    "path": "/exciting-new-products.html",
+    "status": "PASS",
+    "diffPercent": "0.2465"
+  },
+  {
+    "path": "/blog.html",
+    "status": "PASS",
+    "diffPercent": "0.7170"
+  },
+  {
+    "path": "/residential-form.html",
     "status": "FAIL",
-    "diffPercent": "44.5714",
-    "details": "Visual difference: 44.5714% (threshold: 1%) [Dimensions: 1920x2494 vs 1920x11641, compared 1920x2494]"
+    "diffPercent": "4.2532",
+    "details": "Visual difference: 4.2532% (threshold: 1%) [Dimensions: 1920x2989 vs 1920x2951, compared 1920x2951]"
+  },
+  {
+    "path": "/commercial-form.html",
+    "status": "FAIL",
+    "diffPercent": "4.5659",
+    "details": "Visual difference: 4.5659% (threshold: 1%) [Dimensions: 1920x2801 vs 1920x2762, compared 1920x2762]"
+  },
+  {
+    "path": "/galleries/home-cinema.html",
+    "status": "FAIL",
+    "diffPercent": "26.7081",
+    "details": "Visual difference: 26.7081% (threshold: 1%) [Dimensions: 1920x9297 vs 1920x9429, compared 1920x9297]"
+  },
+  {
+    "path": "/galleries/lifestyle.html",
+    "status": "FAIL",
+    "diffPercent": "5.0286",
+    "details": "Visual difference: 5.0286% (threshold: 1%) [Dimensions: 1920x21634 vs 1920x22096, compared 1920x21634]"
+  },
+  {
+    "path": "/galleries/commercial.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://www.avir.com/galleries/commercial\", waiting until \"networkidle\"\u001b[22m\n"
   }
 ]
