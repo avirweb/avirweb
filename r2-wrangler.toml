@@ -1,0 +1,7 @@
+name = "avir-r2"
+main = "r2-worker.js"
+compatibility_date = "2026-01-27"
+
+[[r2_buckets]]
+bucket_name = "avir-videos"
+binding = "AVIR_VIDEOS"

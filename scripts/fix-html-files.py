@@ -22,11 +22,13 @@ GOOGLE_FONTS_LINK = '''<link href="https://fonts.googleapis.com" rel="preconnect
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous"/>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
-    .tk-termina, [class*="termina"] { font-family: 'Outfit', sans-serif !important; }
+    .tk-termina, [class*="termina"], .nav-link { font-family: 'Manrope', sans-serif !important; }
     .page-content { opacity: 1 !important; transform: translate(0px) !important; pointer-events: auto !important; }
     .dept__item, .dept__heading, .dept__para, .dept__line { opacity: 1 !important; transform: none !important; }
     .hero-anim-wrap { display: none !important; }
     .left-bar { display: block !important; }
+    .nav__site-logo-inner { height: 40px !important; width: auto !important; }
+    .brands__product-image { display: block !important; }
   </style>'''
 
 def fix_title(title):
@@ -107,10 +109,10 @@ def fix_html_file(filepath):
         content
     )
     
-    # 5. Add Google Fonts if not already present
+    old_google_fonts = r'<link href="https://fonts\.googleapis\.com"[^>]*>\s*<link href="https://fonts\.gstatic\.com"[^>]*>\s*<link href="https://fonts\.googleapis\.com/css2[^>]*>\s*<style>\s*\.tk-termina[^<]*</style>'
+    content = re.sub(old_google_fonts, GOOGLE_FONTS_LINK, content, flags=re.DOTALL)
+    
     if 'fonts.googleapis.com/css2' not in content:
-        # Find the </head> or first <script> after meta tags and insert fonts
-        # Look for right after the viewport meta tag
         viewport_pattern = r'(<meta content="width=device-width, initial-scale=1" name="viewport"/>)'
         if re.search(viewport_pattern, content):
             content = re.sub(
@@ -231,6 +233,10 @@ def fix_html_file(filepath):
         content,
         flags=re.DOTALL
     )
+    
+    content = re.sub(r'href="index\.html"', 'href="/"', content)
+    content = re.sub(r'href="([^"]+)\.html"', r'href="/\1"', content)
+    content = re.sub(r'href="//', 'href="/', content)
     
     if content != original_content:
         with open(filepath, 'w', encoding='utf-8') as f:
