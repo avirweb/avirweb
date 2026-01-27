@@ -125,7 +125,7 @@ async function visualVerifyPath(page, filePath) {
   try {
     const { chromium } = require('playwright');
     const PNG = require('pngjs').PNG;
-    const pixelmatch = require('pixelmatch');
+    const pixelmatch = require('pixelmatch').default || require('pixelmatch');
 
     await page.goto(originUrl, { waitUntil: 'networkidle', timeout: 30000 });
     await page.waitForTimeout(2000);
