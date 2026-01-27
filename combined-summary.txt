@@ -1,0 +1,39 @@
+=== COMBINED VISUAL COMPARISON RESULTS ===
+All 144 pages tested across two runs
+
+RUN 1 (51 pages - non-error pages):
+  PASS: 35
+  FAIL: 16
+  ERROR: 0
+
+RUN 2 (93 pages - retry of error pages):
+  PASS: 3
+  FAIL: 88
+  ERROR: 2
+
+COMBINED TOTALS (144 pages):
+  PASS: 38 (26.4%)
+  FAIL: 104 (72.2%)
+  ERROR: 2 (1.4%)
+
+BREAKDOWN:
+- City pages (27): All PASS with 0.0000% diff
+- Core pages (8): 7 PASS, 1 FAIL (commercial-form)
+- Gallery pages (3): 3 FAIL (dimension mismatches)
+- Blog posts (102): 2 PASS, 98 FAIL, 2 ERROR
+- Other pages (4): 1 PASS, 2 FAIL
+
+KEY FINDINGS:
+1. Static pages (cities, about, brands, etc.) render perfectly
+2. Blog posts show significant visual differences (likely layout/content issues)
+3. Only 2 pages still have browser errors (down from 93)
+4. Forms show 4-7% differences (dimension mismatches)
+
+PASS pages (38 total):
+- All 27 city pages
+- Core: about-avir, blog, brands, careers (both), contact, portfolio, old-home, exciting-new-products
+- Blog: new--ketra-d2-and-rania-d2-architectural-downlights
+- Other: processes, services
+
+ERROR pages (2 remaining):
+- Need investigation for browser compatibility issues
