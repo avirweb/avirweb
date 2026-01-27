@@ -1,0 +1,6 @@
+# Clean URLs - redirect .html to non-.html
+/index.html  /  301
+/*.html      /:splat  301
+
+# Handle form submissions
+/api/*  /api/:splat  200

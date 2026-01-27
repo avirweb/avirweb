@@ -1,0 +1,5 @@
+# Exclude large files that exceed Cloudflare Pages limits
+videos/
+*.mp4
+*.mov
+*.avi

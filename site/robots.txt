@@ -1,1 +1,4 @@
-Sitemap: https://www.avir.com/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://avirwebtest.pages.dev/sitemap.xml
