@@ -33,8 +33,17 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
-# AI assistant
+# AI assistant / Agent planning
 .claude/
+.sisyphus/
+
+# Generated scripts (not needed in repo)
+scripts/
+visual_test_report.md
+
+# Generated Functions (keep api/submit-form.ts for mail)
+functions/
+!functions/api/submit-form.ts
 
 # Temporary files
 tmp/

@@ -1,0 +1,25 @@
+# Cloudflare Pages CDN Headers
+
+# Images - aggressive caching (1 year, immutable since filenames contain hashes)
+/images/*
+  Cache-Control: public, max-age=31536000, immutable
+  
+# JS files - aggressive caching (contain hashes in filenames)
+/js/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# CSS files - aggressive caching
+/css/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML pages - short cache, revalidate
+/*.html
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Homepage
+/
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# API routes - no cache
+/api/*
+  Cache-Control: no-store
