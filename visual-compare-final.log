@@ -1,0 +1,46 @@
+Visual verification mode: 21 pages...
+[FAIL] /post/screen-innovations-upgrades-kaos-outdoor-shades-with-features-from-its-zen-line.html (diff: 4.1463%)
+  Visual difference: 4.1463% (threshold: 1%)
+[PASS] /post/the-arena-collection-by-sonus-faber.html (diff: 0.0000%)
+[PASS] /post/the-m6800d-from-audiocontrol.html (diff: 0.0000%)
+Batch 1: 2/3 passed
+
+[PASS] /post/the-worlds-first-single-apparent-source-loudspeaker.html (diff: 0.0000%)
+[PASS] /post/transform-any-room-with-a-view.html (diff: 0.0000%)
+[PASS] /post/trinnov-unveils-altitudeci.html (diff: 0.0000%)
+Batch 2: 3/3 passed
+
+[PASS] /post/turning-homes-into-self-sustaining-power-grids-the-savant-revolution.html (diff: 0.0000%)
+[PASS] /post/unlock-the-full-potential-of-your-sonos-ace-wireless-headphones.html (diff: 0.0000%)
+[PASS] /post/unpacking-the-sony-xr90-series.html (diff: 0.0000%)
+Batch 3: 3/3 passed
+
+[PASS] /post/unveiling-hyphn-the-pinnacle-of-sound-sculpting-by-monitor-audio.html (diff: 0.0000%)
+[PASS] /post/upgrade-your-home-audio-with-the-james-loudspeaker-on-wall-qt-series.html (diff: 0.0000%)
+[PASS] /post/urc-furrion-announce-expanded-partnership.html (diff: 0.0000%)
+Batch 4: 3/3 passed
+
+[FAIL] /post/urcs-tdc-8300-and-trc-1120-for-smart-home-control.html (diff: 3.4003%)
+  Visual difference: 3.4003% (threshold: 1%)
+[PASS] /post/vinyl-royalty-pro-ject-unveils-the-classic-reference-turntable-with-elevated-elegance-and-precision.html (diff: 0.0000%)
+[PASS] /post/void-acoustics-unveils-three-new-products.html (diff: 0.0000%)
+Batch 5: 2/3 passed
+
+[PASS] /post/wisdom-audio-s57i-a-subwoofer-that-fits-anywhere-and-sounds-amazing.html (diff: 0.0000%)
+[PASS] /post/zeppelin-pro-a-fresh-take-on-a-classic-wireless-speaker.html (diff: 0.0000%)
+[PASS] /processes.html (diff: 0.0000%)
+Batch 6: 3/3 passed
+
+[PASS] /residential-form.html (diff: 0.0000%)
+[PASS] /service-request.html (diff: 0.0000%)
+[PASS] /services.html (diff: 0.0000%)
+Batch 7: 3/3 passed
+
+
+--- VISUAL COMPARISON SUMMARY ---
+Total: 21
+PASS: 19
+FAIL: 2
+ERROR: 0
+
+Results saved to visual-comparison-results.json

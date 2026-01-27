@@ -1,551 +1,105 @@
 [
   {
-    "path": "/post/celebrating-sound-the-klipsch-jubilee-75th-anniversary-edition.html",
-    "status": "FAIL",
-    "diffPercent": "1.8114",
-    "details": "Visual difference: 1.8114% (threshold: 1%)"
-  },
-  {
-    "path": "/post/coastal-source-opens-showroom-at-pacific-design-center.html",
-    "status": "FAIL",
-    "diffPercent": "52.9136",
-    "details": "Visual difference: 52.9136% (threshold: 1%) [Dimensions: 1920x4470 vs 1920x1912, compared 1920x1912]"
-  },
-  {
-    "path": "/post/collaboration-between-screen-innovations-and-carbonblack-technology.html",
-    "status": "FAIL",
-    "diffPercent": "24.8088",
-    "details": "Visual difference: 24.8088% (threshold: 1%) [Dimensions: 1920x4986 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/c-seed-n1-165-137-tv.html",
-    "status": "FAIL",
-    "diffPercent": "44.8399",
-    "details": "Visual difference: 44.8399% (threshold: 1%) [Dimensions: 1920x7531 vs 1920x2530, compared 1920x2530]"
-  },
-  {
-    "path": "/post/doorbird-smart-door-controller-d410-lte-4g.html",
-    "status": "FAIL",
-    "diffPercent": "48.8117",
-    "details": "Visual difference: 48.8117% (threshold: 1%) [Dimensions: 1920x7682 vs 1920x2483, compared 1920x2483]"
-  },
-  {
-    "path": "/post/dynaudio-unveils-new-sound-at-high-end-munich-2024.html",
-    "status": "FAIL",
-    "diffPercent": "54.2710",
-    "details": "Visual difference: 54.2710% (threshold: 1%) [Dimensions: 1920x6498 vs 1920x2245, compared 1920x2245]"
-  },
-  {
-    "path": "/post/dynaudio-unveils-updated-symphony-opus-one-immersive-soundbar-at-ces-2025.html",
-    "status": "FAIL",
-    "diffPercent": "48.7725",
-    "details": "Visual difference: 48.7725% (threshold: 1%) [Dimensions: 1920x8273 vs 1920x2530, compared 1920x2530]"
-  },
-  {
-    "path": "/post/enhanced-control4-smart-home.html",
-    "status": "FAIL",
-    "diffPercent": "1.1755",
-    "details": "Visual difference: 1.1755% (threshold: 1%)"
-  },
-  {
-    "path": "/post/epson-qb1000-4k-hdr-laser-projector.html",
-    "status": "FAIL",
-    "diffPercent": "41.4737",
-    "details": "Visual difference: 41.4737% (threshold: 1%) [Dimensions: 1920x8982 vs 1920x3101, compared 1920x3101]"
-  },
-  {
-    "path": "/post/epson-unveils-the-q-series-at-cedia-2024.html",
-    "status": "FAIL",
-    "diffPercent": "46.3815",
-    "details": "Visual difference: 46.3815% (threshold: 1%) [Dimensions: 1920x8679 vs 1920x2340, compared 1920x2340]"
-  },
-  {
-    "path": "/post/experience-cutting-edge-luxury-home-cinema-with-barco-residential.html",
-    "status": "FAIL",
-    "diffPercent": "21.0815",
-    "details": "Visual difference: 21.0815% (threshold: 1%) [Dimensions: 1920x5842 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/expert-tips-for-designing-your-perfect-home-theater.html",
-    "status": "FAIL",
-    "diffPercent": "25.9634",
-    "details": "Visual difference: 25.9634% (threshold: 1%) [Dimensions: 1920x6309 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/focal-diva-mezza-utopia.html",
-    "status": "FAIL",
-    "diffPercent": "37.0132",
-    "details": "Visual difference: 37.0132% (threshold: 1%) [Dimensions: 1920x8586 vs 1920x3482, compared 1920x3482]"
-  },
-  {
-    "path": "/post/focal-diva-utopia-high-end-performance-in-a-wireless-system.html",
-    "status": "FAIL",
-    "diffPercent": "45.3736",
-    "details": "Visual difference: 45.3736% (threshold: 1%) [Dimensions: 1920x10333 vs 1920x2697, compared 1920x2697]"
-  },
-  {
-    "path": "/post/focal-introduces-the-utopia-cinema-range-2.html",
-    "status": "FAIL",
-    "diffPercent": "33.2254",
-    "details": "Visual difference: 33.2254% (threshold: 1%) [Dimensions: 1920x5539 vs 1920x3815, compared 1920x3815]"
-  },
-  {
-    "path": "/post/focal-introduces-the-utopia-cinema-range.html",
-    "status": "FAIL",
-    "diffPercent": "36.4723",
-    "details": "Visual difference: 36.4723% (threshold: 1%) [Dimensions: 1920x5806 vs 1920x3863, compared 1920x3863]"
-  },
-  {
-    "path": "/post/grimani-systems-launches-the-reflectance-tm-system.html",
-    "status": "FAIL",
-    "diffPercent": "36.2157",
-    "details": "Visual difference: 36.2157% (threshold: 1%) [Dimensions: 1920x7377 vs 1920x3744, compared 1920x3744]"
-  },
-  {
-    "path": "/post/grimani-systems-mp-84-seamless-design.html",
-    "status": "FAIL",
-    "diffPercent": "54.0929",
-    "details": "Visual difference: 54.0929% (threshold: 1%) [Dimensions: 1920x7245 vs 1920x2221, compared 1920x2221]"
-  },
-  {
-    "path": "/post/how-the-crestron-and-luhkee-partnership-transforms-smart-homes-in-palm-desert.html",
-    "status": "FAIL",
-    "diffPercent": "47.0879",
-    "details": "Visual difference: 47.0879% (threshold: 1%) [Dimensions: 1920x6518 vs 1920x2435, compared 1920x2435]"
-  },
-  {
-    "path": "/post/how-to-keep-your-home-theater-safe.html",
-    "status": "FAIL",
-    "diffPercent": "37.5236",
-    "details": "Visual difference: 37.5236% (threshold: 1%) [Dimensions: 1920x5610 vs 1920x3125, compared 1920x3125]"
-  },
-  {
-    "path": "/post/introducing-the-mark-levinson-600-series.html",
-    "status": "FAIL",
-    "diffPercent": "48.2651",
-    "details": "Visual difference: 48.2651% (threshold: 1%) [Dimensions: 1920x8141 vs 1920x2435, compared 1920x2435]"
-  },
-  {
-    "path": "/post/james-loudspeaker-outdoor-tower-series.html",
-    "status": "FAIL",
-    "diffPercent": "33.7036",
-    "details": "Visual difference: 33.7036% (threshold: 1%) [Dimensions: 1920x9905 vs 1920x3577, compared 1920x3577]"
-  },
-  {
-    "path": "/post/jbl-summit-series-expands.html",
-    "status": "FAIL",
-    "diffPercent": "3.3267",
-    "details": "Visual difference: 3.3267% (threshold: 1%)"
-  },
-  {
-    "path": "/post/jbl-synthesis-sdr-38-review-high-end-sound-for-the-discerning-listener.html",
-    "status": "FAIL",
-    "diffPercent": "59.1716",
-    "details": "Visual difference: 59.1716% (threshold: 1%) [Dimensions: 1920x5378 vs 1920x2031, compared 1920x2031]"
-  },
-  {
-    "path": "/post/jbl-synthesis-sma-series-amplifiers-2024.html",
-    "status": "FAIL",
-    "diffPercent": "17.5033",
-    "details": "Visual difference: 17.5033% (threshold: 1%) [Dimensions: 1920x8196 vs 1920x6333, compared 1920x6333]"
-  },
-  {
-    "path": "/post/jl-audio-gotham-tm-v2-powered-subwoofers.html",
-    "status": "FAIL",
-    "diffPercent": "47.1966",
-    "details": "Visual difference: 47.1966% (threshold: 1%) [Dimensions: 1920x9242 vs 1920x2364, compared 1920x2364]"
-  },
-  {
-    "path": "/post/jvc-partners-up-with-control4.html",
-    "status": "FAIL",
-    "diffPercent": "56.7180",
-    "details": "Visual difference: 56.7180% (threshold: 1%) [Dimensions: 1920x4738 vs 1920x2126, compared 1920x2126]"
-  },
-  {
-    "path": "/post/kaleidescapes-strato-v-movie-player.html",
-    "status": "FAIL",
-    "diffPercent": "47.8156",
-    "details": "Visual difference: 47.8156% (threshold: 1%) [Dimensions: 1920x7994 vs 1920x2506, compared 1920x2506]"
-  },
-  {
-    "path": "/post/kaleidescape-strato-v.html",
-    "status": "FAIL",
-    "diffPercent": "57.4953",
-    "details": "Visual difference: 57.4953% (threshold: 1%) [Dimensions: 1920x9399 vs 1920x2340, compared 1920x2340]"
-  },
-  {
-    "path": "/post/kef-introduces-two-new-thx-certified-architectural-speakers.html",
-    "status": "FAIL",
-    "diffPercent": "48.2241",
-    "details": "Visual difference: 48.2241% (threshold: 1%) [Dimensions: 1920x6346 vs 1920x2625, compared 1920x2625]"
-  },
-  {
-    "path": "/post/kef-reference-5-meta.html",
-    "status": "FAIL",
-    "diffPercent": "2.0723",
-    "details": "Visual difference: 2.0723% (threshold: 1%)"
-  },
-  {
-    "path": "/post/klipschs-latest-for-2024.html",
-    "status": "FAIL",
-    "diffPercent": "56.5564",
-    "details": "Visual difference: 56.5564% (threshold: 1%) [Dimensions: 1920x7920 vs 1920x2506, compared 1920x2506]"
-  },
-  {
-    "path": "/post/leon-announces-the-new-sole-tv-frame-for-sonys-bravia-7.html",
-    "status": "FAIL",
-    "diffPercent": "53.6058",
-    "details": "Visual difference: 53.6058% (threshold: 1%) [Dimensions: 1920x6126 vs 1920x2292, compared 1920x2292]"
-  },
-  {
-    "path": "/post/lg-introduces-the-wallpaper-tv-thin-wireless-oled-tv.html",
-    "status": "FAIL",
-    "diffPercent": "34.3562",
-    "details": "Visual difference: 34.3562% (threshold: 1%) [Dimensions: 1920x8336 vs 1920x6908, compared 1920x6908]"
-  },
-  {
-    "path": "/post/lgs-transparent-oled-tv-brings-sci-fi-concepts-into-everyday-life.html",
-    "status": "FAIL",
-    "diffPercent": "57.3458",
-    "details": "Visual difference: 57.3458% (threshold: 1%) [Dimensions: 1920x5976 vs 1920x2102, compared 1920x2102]"
-  },
-  {
-    "path": "/post/lg-unveils-136-inch-magnit-active-micro-led-display.html",
-    "status": "FAIL",
-    "diffPercent": "46.9985",
-    "details": "Visual difference: 46.9985% (threshold: 1%) [Dimensions: 1920x6166 vs 1920x2721, compared 1920x2721]"
-  },
-  {
-    "path": "/post/lutron-introduces-new-rania-and-lumaris-form-factors.html",
-    "status": "FAIL",
-    "diffPercent": "35.9561",
-    "details": "Visual difference: 35.9561% (threshold: 1%) [Dimensions: 1920x6854 vs 1920x4886, compared 1920x4886]"
-  },
-  {
-    "path": "/post/lutrons-latest-innovations-at-cedia-expo-2024.html",
-    "status": "FAIL",
-    "diffPercent": "45.2775",
-    "details": "Visual difference: 45.2775% (threshold: 1%) [Dimensions: 1920x7622 vs 1920x2316, compared 1920x2316]"
-  },
-  {
-    "path": "/post/marantz-expands-its-premium-hifi-separates-offerings-with-three-new-releases.html",
-    "status": "ERROR",
-    "details": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:8791/post/marantz-expands-its-premium-hifi-separates-offerings-with-three-new-releases\", waiting until \"networkidle\"\u001b[22m\n"
-  },
-  {
-    "path": "/post/marantz-introduces-av-30-and-amp-30-home-theater-components.html",
-    "status": "FAIL",
-    "diffPercent": "53.7894",
-    "details": "Visual difference: 53.7894% (threshold: 1%) [Dimensions: 1920x7245 vs 1920x2537, compared 1920x2537]"
-  },
-  {
-    "path": "/post/marantz-link-10n.html",
-    "status": "FAIL",
-    "diffPercent": "23.5108",
-    "details": "Visual difference: 23.5108% (threshold: 1%) [Dimensions: 1920x6419 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/mark-levinson-600-series.html",
-    "status": "FAIL",
-    "diffPercent": "62.2381",
-    "details": "Visual difference: 62.2381% (threshold: 1%) [Dimensions: 1920x5859 vs 1920x1950, compared 1920x1950]"
-  },
-  {
-    "path": "/post/mcintosh-and-sonus-faber-partner-with-jeep-and-lamborghini.html",
-    "status": "FAIL",
-    "diffPercent": "58.8037",
-    "details": "Visual difference: 58.8037% (threshold: 1%) [Dimensions: 1920x7305 vs 1920x2387, compared 1920x2387]"
-  },
-  {
-    "path": "/post/mcintosh-mx200-a-v-processor.html",
-    "status": "FAIL",
-    "diffPercent": "41.0552",
-    "details": "Visual difference: 41.0552% (threshold: 1%) [Dimensions: 1920x8390 vs 1920x3149, compared 1920x3149]"
-  },
-  {
-    "path": "/post/mera-sound-sconce-a-new-approach-to-light-and-sound.html",
-    "status": "FAIL",
-    "diffPercent": "57.0757",
-    "details": "Visual difference: 57.0757% (threshold: 1%) [Dimensions: 1920x8729 vs 1920x2173, compared 1920x2173]"
-  },
-  {
-    "path": "/post/meridian-audio-and-leon-collaborate-on-new-edge-media-frame.html",
-    "status": "FAIL",
-    "diffPercent": "66.8922",
-    "details": "Visual difference: 66.8922% (threshold: 1%) [Dimensions: 1920x3813 vs 1920x1717, compared 1920x1717]"
-  },
-  {
-    "path": "/post/meridian-ellipse-streaming-audio-at-its-finest.html",
-    "status": "FAIL",
-    "diffPercent": "56.1515",
-    "details": "Visual difference: 56.1515% (threshold: 1%) [Dimensions: 1920x10622 vs 1920x2221, compared 1920x2221]"
-  },
-  {
-    "path": "/post/mirror-mirror-on-the-wall--is-that-a-tv-after-all.html",
-    "status": "FAIL",
-    "diffPercent": "49.0262",
-    "details": "Visual difference: 49.0262% (threshold: 1%) [Dimensions: 1920x8922 vs 1920x2530, compared 1920x2530]"
-  },
-  {
-    "path": "/post/monitor-audio-release-new-vestra-series-subwoofers.html",
-    "status": "FAIL",
-    "diffPercent": "52.1546",
-    "details": "Visual difference: 52.1546% (threshold: 1%) [Dimensions: 1920x9103 vs 1920x2364, compared 1920x2364]"
-  },
-  {
-    "path": "/post/monumental-style-minimal-distractions.html",
-    "status": "FAIL",
-    "diffPercent": "62.8616",
-    "details": "Visual difference: 62.8616% (threshold: 1%) [Dimensions: 1920x13207 vs 1920x1950, compared 1920x1950]"
-  },
-  {
-    "path": "/post/mti100-integrated-turntable-sun-records-limited-edition.html",
-    "status": "FAIL",
-    "diffPercent": "49.9585",
-    "details": "Visual difference: 49.9585% (threshold: 1%) [Dimensions: 1920x13699 vs 1920x2744, compared 1920x2744]"
-  },
-  {
-    "path": "/post/new--ketra-d2-and-rania-d2-architectural-downlights.html",
-    "status": "PASS",
-    "diffPercent": "0.7131"
-  },
-  {
-    "path": "/post/outdoor-entertainment-comparisons-and-considerations.html",
-    "status": "FAIL",
-    "diffPercent": "42.2714",
-    "details": "Visual difference: 42.2714% (threshold: 1%) [Dimensions: 1920x6074 vs 1920x3030, compared 1920x3030]"
-  },
-  {
-    "path": "/post/planar-expands-award-winning-planar-carbonlight-led-display-family.html",
-    "status": "FAIL",
-    "diffPercent": "11.7966",
-    "details": "Visual difference: 11.7966% (threshold: 1%) [Dimensions: 1920x6052 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/planar-komodo-series.html",
-    "status": "FAIL",
-    "diffPercent": "16.6027",
-    "details": "Visual difference: 16.6027% (threshold: 1%) [Dimensions: 1920x6930 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/polina-brings-beauty-and-stellar-performance-to-open-spaces.html",
-    "status": "FAIL",
-    "diffPercent": "61.9595",
-    "details": "Visual difference: 61.9595% (threshold: 1%) [Dimensions: 1920x7910 vs 1920x1950, compared 1920x1950]"
-  },
-  {
-    "path": "/post/pristine-audio-connectivity-avpro-edges-new-dante-enabled-products.html",
-    "status": "FAIL",
-    "diffPercent": "42.3841",
-    "details": "Visual difference: 42.3841% (threshold: 1%) [Dimensions: 1920x4286 vs 1920x2697, compared 1920x2697]"
-  },
-  {
-    "path": "/post/pro-ject-t1-evo-the-perfect-entry-point-to-hi-fi-vinyl-or-a-great-addition-to-a-collection.html",
-    "status": "FAIL",
-    "diffPercent": "43.6444",
-    "details": "Visual difference: 43.6444% (threshold: 1%) [Dimensions: 1920x9253 vs 1920x2602, compared 1920x2602]"
-  },
-  {
-    "path": "/post/rania-and-lumaris.html",
-    "status": "FAIL",
-    "diffPercent": "36.4863",
-    "details": "Visual difference: 36.4863% (threshold: 1%) [Dimensions: 1920x6563 vs 1920x4815, compared 1920x4815]"
-  },
-  {
-    "path": "/post/sage-series-l150m.html",
-    "status": "FAIL",
-    "diffPercent": "4.1287",
-    "details": "Visual difference: 4.1287% (threshold: 1%) [Dimensions: 1920x5241 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/samsung-smart-laser-projector-integrated-cabinets.html",
-    "status": "FAIL",
-    "diffPercent": "1.5794",
-    "details": "Visual difference: 1.5794% (threshold: 1%)"
-  },
-  {
-    "path": "/post/samsung-unveils-worlds-first-samsung-r95h.html",
-    "status": "FAIL",
-    "diffPercent": "40.2593",
-    "details": "Visual difference: 40.2593% (threshold: 1%) [Dimensions: 1920x7316 vs 1920x2697, compared 1920x2697]"
-  },
-  {
-    "path": "/post/savant-reveals-new-premium-proseo-ge-smart-lighting-and-shading-solutions.html",
-    "status": "FAIL",
-    "diffPercent": "45.9291",
-    "details": "Visual difference: 45.9291% (threshold: 1%) [Dimensions: 1920x6890 vs 1920x2863, compared 1920x2863]"
-  },
-  {
     "path": "/post/screen-innovations-upgrades-kaos-outdoor-shades-with-features-from-its-zen-line.html",
     "status": "FAIL",
-    "diffPercent": "53.4966",
-    "details": "Visual difference: 53.4966% (threshold: 1%) [Dimensions: 1920x5935 vs 1920x2537, compared 1920x2537]"
-  },
-  {
-    "path": "/post/small-but-mighty-the-best-selling-sonus-faber-concertino-g4.html",
-    "status": "FAIL",
-    "diffPercent": "55.6775",
-    "details": "Visual difference: 55.6775% (threshold: 1%) [Dimensions: 1920x8709 vs 1920x2435, compared 1920x2435]"
-  },
-  {
-    "path": "/post/smart-home-technology-wed-like-to-see-in-2025-a-vision-for-high-end-integration.html",
-    "status": "FAIL",
-    "diffPercent": "47.4474",
-    "details": "Visual difference: 47.4474% (threshold: 1%) [Dimensions: 1920x7260 vs 1920x3220, compared 1920x3220]"
-  },
-  {
-    "path": "/post/sonances-elegant-innovations-unveiled-at-cedia-expo-2024.html",
-    "status": "FAIL",
-    "diffPercent": "48.3506",
-    "details": "Visual difference: 48.3506% (threshold: 1%) [Dimensions: 1920x6527 vs 1920x2816, compared 1920x2816]"
-  },
-  {
-    "path": "/post/sonus-faber-and-automobili-lamborghini.html",
-    "status": "FAIL",
-    "diffPercent": "51.2119",
-    "details": "Visual difference: 51.2119% (threshold: 1%) [Dimensions: 1920x8782 vs 1920x2411, compared 1920x2411]"
-  },
-  {
-    "path": "/post/sony-develops-next-generation-display-system.html",
-    "status": "FAIL",
-    "diffPercent": "25.6167",
-    "details": "Visual difference: 25.6167% (threshold: 1%) [Dimensions: 1920x6643 vs 1920x5814, compared 1920x5814]"
-  },
-  {
-    "path": "/post/sonys-2025-bravia-lineup.html",
-    "status": "FAIL",
-    "diffPercent": "2.6766",
-    "details": "Visual difference: 2.6766% (threshold: 1%)"
-  },
-  {
-    "path": "/post/sony-vpl-xw7000es-elevating-home-cinema-in-2024.html",
-    "status": "FAIL",
-    "diffPercent": "23.9947",
-    "details": "Visual difference: 23.9947% (threshold: 1%) [Dimensions: 1920x3395 vs 1920x1080, compared 1920x1080]"
-  },
-  {
-    "path": "/post/soundscapes-redefined.html",
-    "status": "FAIL",
-    "diffPercent": "72.9346",
-    "details": "Visual difference: 72.9346% (threshold: 1%) [Dimensions: 1920x9905 vs 1920x1717, compared 1920x1717]"
-  },
-  {
-    "path": "/post/stormaudio-isr-fusion-20-named-stereonet-product-of-the-year-2025.html",
-    "status": "FAIL",
-    "diffPercent": "47.7592",
-    "details": "Visual difference: 47.7592% (threshold: 1%) [Dimensions: 1920x13458 vs 1920x3125, compared 1920x3125]"
+    "diffPercent": "4.1463",
+    "details": "Visual difference: 4.1463% (threshold: 1%)"
   },
   {
     "path": "/post/the-arena-collection-by-sonus-faber.html",
-    "status": "FAIL",
-    "diffPercent": "62.1586",
-    "details": "Visual difference: 62.1586% (threshold: 1%) [Dimensions: 1920x8211 vs 1920x1950, compared 1920x1950]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/the-m6800d-from-audiocontrol.html",
-    "status": "FAIL",
-    "diffPercent": "51.6248",
-    "details": "Visual difference: 51.6248% (threshold: 1%) [Dimensions: 1920x8355 vs 1920x2364, compared 1920x2364]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/the-worlds-first-single-apparent-source-loudspeaker.html",
-    "status": "FAIL",
-    "diffPercent": "47.4962",
-    "details": "Visual difference: 47.4962% (threshold: 1%) [Dimensions: 1920x13230 vs 1920x2537, compared 1920x2537]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/transform-any-room-with-a-view.html",
-    "status": "FAIL",
-    "diffPercent": "46.8913",
-    "details": "Visual difference: 46.8913% (threshold: 1%) [Dimensions: 1920x7872 vs 1920x2554, compared 1920x2554]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/trinnov-unveils-altitudeci.html",
-    "status": "FAIL",
-    "diffPercent": "54.9716",
-    "details": "Visual difference: 54.9716% (threshold: 1%) [Dimensions: 1920x7822 vs 1920x2506, compared 1920x2506]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/turning-homes-into-self-sustaining-power-grids-the-savant-revolution.html",
-    "status": "FAIL",
-    "diffPercent": "2.6439",
-    "details": "Visual difference: 2.6439% (threshold: 1%)"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/unlock-the-full-potential-of-your-sonos-ace-wireless-headphones.html",
-    "status": "FAIL",
-    "diffPercent": "51.3403",
-    "details": "Visual difference: 51.3403% (threshold: 1%) [Dimensions: 1920x10020 vs 1920x2221, compared 1920x2221]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/unpacking-the-sony-xr90-series.html",
-    "status": "FAIL",
-    "diffPercent": "43.8872",
-    "details": "Visual difference: 43.8872% (threshold: 1%) [Dimensions: 1920x10545 vs 1920x2459, compared 1920x2459]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/unveiling-hyphn-the-pinnacle-of-sound-sculpting-by-monitor-audio.html",
-    "status": "FAIL",
-    "diffPercent": "75.5986",
-    "details": "Visual difference: 75.5986% (threshold: 1%) [Dimensions: 1920x8617 vs 1920x1717, compared 1920x1717]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/upgrade-your-home-audio-with-the-james-loudspeaker-on-wall-qt-series.html",
-    "status": "FAIL",
-    "diffPercent": "1.7703",
-    "details": "Visual difference: 1.7703% (threshold: 1%)"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/urc-furrion-announce-expanded-partnership.html",
-    "status": "FAIL",
-    "diffPercent": "30.8630",
-    "details": "Visual difference: 30.8630% (threshold: 1%) [Dimensions: 1920x6499 vs 1920x5148, compared 1920x5148]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/urcs-tdc-8300-and-trc-1120-for-smart-home-control.html",
     "status": "FAIL",
-    "diffPercent": "23.3954",
-    "details": "Visual difference: 23.3954% (threshold: 1%) [Dimensions: 1920x6724 vs 1920x1080, compared 1920x1080]"
+    "diffPercent": "3.4003",
+    "details": "Visual difference: 3.4003% (threshold: 1%)"
   },
   {
     "path": "/post/vinyl-royalty-pro-ject-unveils-the-classic-reference-turntable-with-elevated-elegance-and-precision.html",
-    "status": "FAIL",
-    "diffPercent": "42.9613",
-    "details": "Visual difference: 42.9613% (threshold: 1%) [Dimensions: 1920x12564 vs 1920x2649, compared 1920x2649]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/void-acoustics-unveils-three-new-products.html",
-    "status": "ERROR",
-    "details": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.avir.com/post/void-acoustics-unveils-three-new-products\", waiting until \"networkidle\"\u001b[22m\n"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/wisdom-audio-s57i-a-subwoofer-that-fits-anywhere-and-sounds-amazing.html",
-    "status": "FAIL",
-    "diffPercent": "46.9217",
-    "details": "Visual difference: 46.9217% (threshold: 1%) [Dimensions: 1920x6827 vs 1920x2245, compared 1920x2245]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/post/zeppelin-pro-a-fresh-take-on-a-classic-wireless-speaker.html",
-    "status": "FAIL",
-    "diffPercent": "52.7883",
-    "details": "Visual difference: 52.7883% (threshold: 1%) [Dimensions: 1920x9999 vs 1920x2459, compared 1920x2459]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/processes.html",
     "status": "PASS",
-    "diffPercent": "0.0024"
+    "diffPercent": "0.0000"
   },
   {
     "path": "/residential-form.html",
-    "status": "FAIL",
-    "diffPercent": "4.2532",
-    "details": "Visual difference: 4.2532% (threshold: 1%) [Dimensions: 1920x2989 vs 1920x2951, compared 1920x2951]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/service-request.html",
-    "status": "FAIL",
-    "diffPercent": "7.5326",
-    "details": "Visual difference: 7.5326% (threshold: 1%) [Dimensions: 1920x2567 vs 1920x2481, compared 1920x2481]"
+    "status": "PASS",
+    "diffPercent": "0.0000"
   },
   {
     "path": "/services.html",
