@@ -1,14 +1,15 @@
-# Development and testing
-archive/
+# Dependencies
 node_modules/
-.sisyphus/
-*.log
 
-# Build artifacts
+# Cloudflare Wrangler
+.wrangler/
+wrangler.toml
+wrangler-pages.toml
+_worker.ts
+
+# Build output
 dist/
 build/
-*.min.js
-*.min.css
 
 # Environment and secrets
 .env
@@ -18,9 +19,8 @@ build/
 *.pem
 credentials.json
 secrets.json
-config.local.*
 
-# Editor and IDE
+# IDE
 .vscode/
 .idea/
 *.swp
@@ -28,32 +28,16 @@ config.local.*
 *~
 .DS_Store
 
-# Package managers
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# OS files
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# AI assistant
+.claude/
 
 # Temporary files
 tmp/
 temp/
 *.tmp
 .cache/
-
-# Screenshots and evidence
-screenshots/
-evidence/
-baseline/
-after/
-
-# Scripts (development only)
-capture-*.js
-compare-*.js
-
-# OS files
-Thumbs.db
-.Spotlight-V100
-.Trashes
-
-# AI assistant cache
-.claude/
-.claude/cache/
