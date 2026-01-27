@@ -7,7 +7,7 @@ const visualMode = args.includes('--visual');
 
 const paths = fs.readFileSync('paths.txt', 'utf8').trim().split('\n');
 const originBase = 'https://www.avir.com';
-const mirrorBase = "https://avirwebtest.pages.dev";
+const mirrorBase = 'http://localhost:8791';
 
 // Limit concurrency
 const BATCH_SIZE = visualMode ? 3 : 10;

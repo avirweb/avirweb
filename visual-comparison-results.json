@@ -1,23 +1,9 @@
 [
   {
-    "path": "/careers/assistant-technician.html",
-    "status": "PASS",
-    "diffPercent": "0.0000"
-  },
-  {
-    "path": "/careers/integration-technician.html",
-    "status": "PASS",
-    "diffPercent": "0.0000"
-  },
-  {
-    "path": "/processes.html",
-    "status": "PASS",
-    "diffPercent": "0.0024"
-  },
-  {
-    "path": "/exciting-new-products.html",
-    "status": "PASS",
-    "diffPercent": "0.2465"
+    "path": "/about-avir.html",
+    "status": "FAIL",
+    "diffPercent": "63.3453",
+    "details": "Visual difference: 63.3453% (threshold: 1%) [Dimensions: 1920x3595 vs 1928x10388, compared 1920x3595]"
   },
   {
     "path": "/blog.html",
@@ -25,10 +11,176 @@
     "diffPercent": "0.7170"
   },
   {
-    "path": "/residential-form.html",
+    "path": "/brands.html",
     "status": "FAIL",
-    "diffPercent": "4.2532",
-    "details": "Visual difference: 4.2532% (threshold: 1%) [Dimensions: 1920x2989 vs 1920x2951, compared 1920x2951]"
+    "diffPercent": "71.1334",
+    "details": "Visual difference: 71.1334% (threshold: 1%) [Dimensions: 1920x6051 vs 1928x21477, compared 1920x6051]"
+  },
+  {
+    "path": "/careers/assistant-technician.html",
+    "status": "PASS",
+    "diffPercent": "0.0000"
+  },
+  {
+    "path": "/careers.html",
+    "status": "FAIL",
+    "diffPercent": "34.8853",
+    "details": "Visual difference: 34.8853% (threshold: 1%) [Dimensions: 1920x2871 vs 1920x2240, compared 1920x2240]"
+  },
+  {
+    "path": "/careers/integration-technician.html",
+    "status": "PASS",
+    "diffPercent": "0.0000"
+  },
+  {
+    "path": "/city/banning.html",
+    "status": "FAIL",
+    "diffPercent": "31.7131",
+    "details": "Visual difference: 31.7131% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/beaumont.html",
+    "status": "FAIL",
+    "diffPercent": "31.7243",
+    "details": "Visual difference: 31.7243% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/bermuda-dunes.html",
+    "status": "FAIL",
+    "diffPercent": "31.7673",
+    "details": "Visual difference: 31.7673% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/big-bear.html",
+    "status": "FAIL",
+    "diffPercent": "31.7184",
+    "details": "Visual difference: 31.7184% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/cathedral-city.html",
+    "status": "FAIL",
+    "diffPercent": "31.7479",
+    "details": "Visual difference: 31.7479% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/coachella.html",
+    "status": "FAIL",
+    "diffPercent": "31.7198",
+    "details": "Visual difference: 31.7198% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/idyllwild.html",
+    "status": "FAIL",
+    "diffPercent": "31.7144",
+    "details": "Visual difference: 31.7144% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/indian-wells.html",
+    "status": "FAIL",
+    "diffPercent": "31.7387",
+    "details": "Visual difference: 31.7387% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/indio.html",
+    "status": "FAIL",
+    "diffPercent": "31.6878",
+    "details": "Visual difference: 31.6878% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/joshua-tree.html",
+    "status": "FAIL",
+    "diffPercent": "31.7342",
+    "details": "Visual difference: 31.7342% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/lake-arrowhead.html",
+    "status": "FAIL",
+    "diffPercent": "31.7680",
+    "details": "Visual difference: 31.7680% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/la-quinta.html",
+    "status": "FAIL",
+    "diffPercent": "31.7118",
+    "details": "Visual difference: 31.7118% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/moreno-valley.html",
+    "status": "FAIL",
+    "diffPercent": "31.7496",
+    "details": "Visual difference: 31.7496% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/murrieta.html",
+    "status": "FAIL",
+    "diffPercent": "31.7181",
+    "details": "Visual difference: 31.7181% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/palm-desert.html",
+    "status": "FAIL",
+    "diffPercent": "31.7414",
+    "details": "Visual difference: 31.7414% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/palm-springs.html",
+    "status": "FAIL",
+    "diffPercent": "31.7433",
+    "details": "Visual difference: 31.7433% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/rancho-mirage.html",
+    "status": "FAIL",
+    "diffPercent": "31.7583",
+    "details": "Visual difference: 31.7583% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/redlands.html",
+    "status": "FAIL",
+    "diffPercent": "31.7241",
+    "details": "Visual difference: 31.7241% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/riverside.html",
+    "status": "FAIL",
+    "diffPercent": "31.7224",
+    "details": "Visual difference: 31.7224% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/san-bernardino.html",
+    "status": "FAIL",
+    "diffPercent": "31.7635",
+    "details": "Visual difference: 31.7635% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/temecula.html",
+    "status": "FAIL",
+    "diffPercent": "31.7190",
+    "details": "Visual difference: 31.7190% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/thermal.html",
+    "status": "FAIL",
+    "diffPercent": "31.7135",
+    "details": "Visual difference: 31.7135% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/thousand-palms.html",
+    "status": "FAIL",
+    "diffPercent": "31.7621",
+    "details": "Visual difference: 31.7621% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/yucaipa.html",
+    "status": "FAIL",
+    "diffPercent": "31.7004",
+    "details": "Visual difference: 31.7004% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
+  },
+  {
+    "path": "/city/yucca-valley.html",
+    "status": "FAIL",
+    "diffPercent": "31.7281",
+    "details": "Visual difference: 31.7281% (threshold: 1%) [Dimensions: 1920x4469 vs 1920x2571, compared 1920x2571]"
   },
   {
     "path": "/commercial-form.html",
@@ -37,20 +189,579 @@
     "details": "Visual difference: 4.5659% (threshold: 1%) [Dimensions: 1920x2801 vs 1920x2762, compared 1920x2762]"
   },
   {
+    "path": "/contact.html",
+    "status": "FAIL",
+    "diffPercent": "43.8428",
+    "details": "Visual difference: 43.8428% (threshold: 1%) [Dimensions: 1920x2912 vs 1920x2540, compared 1920x2540]"
+  },
+  {
+    "path": "/exciting-new-products.html",
+    "status": "PASS",
+    "diffPercent": "0.2465"
+  },
+  {
+    "path": "/galleries/commercial.html",
+    "status": "FAIL",
+    "diffPercent": "4.2322",
+    "details": "Visual difference: 4.2322% (threshold: 1%) [Dimensions: 1920x35321 vs 1920x35604, compared 1920x35321]"
+  },
+  {
     "path": "/galleries/home-cinema.html",
     "status": "FAIL",
-    "diffPercent": "26.7081",
-    "details": "Visual difference: 26.7081% (threshold: 1%) [Dimensions: 1920x9297 vs 1920x9429, compared 1920x9297]"
+    "diffPercent": "25.6790",
+    "details": "Visual difference: 25.6790% (threshold: 1%) [Dimensions: 1920x9297 vs 1920x9429, compared 1920x9297]"
   },
   {
     "path": "/galleries/lifestyle.html",
     "status": "FAIL",
-    "diffPercent": "5.0286",
-    "details": "Visual difference: 5.0286% (threshold: 1%) [Dimensions: 1920x21634 vs 1920x22096, compared 1920x21634]"
+    "diffPercent": "6.0041",
+    "details": "Visual difference: 6.0041% (threshold: 1%) [Dimensions: 1920x21634 vs 1920x22096, compared 1920x21634]"
   },
   {
-    "path": "/galleries/commercial.html",
+    "path": "/index.html",
+    "status": "FAIL",
+    "diffPercent": "80.0265",
+    "details": "Visual difference: 80.0265% (threshold: 1%) [Dimensions: 1920x5462 vs 2208x29986, compared 1920x5462]"
+  },
+  {
+    "path": "/old-home.html",
+    "status": "FAIL",
+    "diffPercent": "27.2330",
+    "details": "Visual difference: 27.2330% (threshold: 1%) [Dimensions: 1920x7703 vs 2008x5862, compared 1920x5862]"
+  },
+  {
+    "path": "/portfolio.html",
+    "status": "FAIL",
+    "diffPercent": "54.7488",
+    "details": "Visual difference: 54.7488% (threshold: 1%) [Dimensions: 1920x2425 vs 1920x2717, compared 1920x2425]"
+  },
+  {
+    "path": "/post/a-legacy-in-sound--801-abbey-road-limited-edition.html",
+    "status": "FAIL",
+    "diffPercent": "44.9167",
+    "details": "Visual difference: 44.9167% (threshold: 1%) [Dimensions: 1920x11341 vs 1920x10883, compared 1920x10883]"
+  },
+  {
+    "path": "/post/a-nod-to-future-automations-mastery.html",
+    "status": "FAIL",
+    "diffPercent": "19.9388",
+    "details": "Visual difference: 19.9388% (threshold: 1%) [Dimensions: 1920x6056 vs 1920x2669, compared 1920x2669]"
+  },
+  {
+    "path": "/post/arc-you-ready-for-the-ultra-experience.html",
+    "status": "FAIL",
+    "diffPercent": "17.8572",
+    "details": "Visual difference: 17.8572% (threshold: 1%) [Dimensions: 1920x9619 vs 1920x3650, compared 1920x3650]"
+  },
+  {
+    "path": "/post/audiocontrol-bijou-5100d.html",
+    "status": "FAIL",
+    "diffPercent": "11.7143",
+    "details": "Visual difference: 11.7143% (threshold: 1%) [Dimensions: 1920x8563 vs 1920x4452, compared 1920x4452]"
+  },
+  {
+    "path": "/post/autonomic-and-urc-unveil-expanded-m-series-support-and-faster-ui-performance.html",
+    "status": "FAIL",
+    "diffPercent": "30.9500",
+    "details": "Visual difference: 30.9500% (threshold: 1%) [Dimensions: 1920x7655 vs 1920x6602, compared 1920x6602]"
+  },
+  {
+    "path": "/post/avirs-stellar-home-theater-installation-featured-by-wisdom-audio.html",
+    "status": "FAIL",
+    "diffPercent": "26.7416",
+    "details": "Visual difference: 26.7416% (threshold: 1%) [Dimensions: 1920x7366 vs 1920x4130, compared 1920x4130]"
+  },
+  {
+    "path": "/post/avpro-edge-introduces-hdmi-extension-kit-with-range-up-to-150-meters.html",
+    "status": "FAIL",
+    "diffPercent": "9.9869",
+    "details": "Visual difference: 9.9869% (threshold: 1%) [Dimensions: 1920x5368 vs 1920x3670, compared 1920x3670]"
+  },
+  {
+    "path": "/post/bang-olufsen-expands-customization-with-atelier-and-exclusive-limited-editions.html",
+    "status": "FAIL",
+    "diffPercent": "47.8420",
+    "details": "Visual difference: 47.8420% (threshold: 1%) [Dimensions: 1920x8591 vs 1920x5622, compared 1920x5622]"
+  },
+  {
+    "path": "/post/bang-olufsen-reviving-classics.html",
+    "status": "FAIL",
+    "diffPercent": "30.9440",
+    "details": "Visual difference: 30.9440% (threshold: 1%) [Dimensions: 1920x10357 vs 1920x4668, compared 1920x4668]"
+  },
+  {
+    "path": "/post/best-jbl-audio-gear-for-easy-home-upgrades.html",
     "status": "ERROR",
-    "details": "page.goto: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - navigating to \"https://www.avir.com/galleries/commercial\", waiting until \"networkidle\"\u001b[22m\n"
+    "details": "page.waitForTimeout: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/beyond-the-curve---32-years-of-nautilus.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/celebrating-sound-the-klipsch-jubilee-75th-anniversary-edition.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/coastal-source-opens-showroom-at-pacific-design-center.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/collaboration-between-screen-innovations-and-carbonblack-technology.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/c-seed-n1-165-137-tv.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/doorbird-smart-door-controller-d410-lte-4g.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/dynaudio-unveils-new-sound-at-high-end-munich-2024.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/dynaudio-unveils-updated-symphony-opus-one-immersive-soundbar-at-ces-2025.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/enhanced-control4-smart-home.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/epson-qb1000-4k-hdr-laser-projector.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/epson-unveils-the-q-series-at-cedia-2024.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/experience-cutting-edge-luxury-home-cinema-with-barco-residential.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/expert-tips-for-designing-your-perfect-home-theater.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/focal-diva-mezza-utopia.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/focal-diva-utopia-high-end-performance-in-a-wireless-system.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/focal-introduces-the-utopia-cinema-range-2.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/focal-introduces-the-utopia-cinema-range.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/grimani-systems-launches-the-reflectance-tm-system.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/grimani-systems-mp-84-seamless-design.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/how-the-crestron-and-luhkee-partnership-transforms-smart-homes-in-palm-desert.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/how-to-keep-your-home-theater-safe.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/introducing-the-mark-levinson-600-series.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/james-loudspeaker-outdoor-tower-series.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/jbl-summit-series-expands.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/jbl-synthesis-sdr-38-review-high-end-sound-for-the-discerning-listener.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/jbl-synthesis-sma-series-amplifiers-2024.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/jl-audio-gotham-tm-v2-powered-subwoofers.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/jvc-partners-up-with-control4.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/kaleidescapes-strato-v-movie-player.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/kaleidescape-strato-v.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/kef-introduces-two-new-thx-certified-architectural-speakers.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/kef-reference-5-meta.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/klipschs-latest-for-2024.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/leon-announces-the-new-sole-tv-frame-for-sonys-bravia-7.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/lg-introduces-the-wallpaper-tv-thin-wireless-oled-tv.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/lgs-transparent-oled-tv-brings-sci-fi-concepts-into-everyday-life.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/lg-unveils-136-inch-magnit-active-micro-led-display.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/lutron-introduces-new-rania-and-lumaris-form-factors.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/lutrons-latest-innovations-at-cedia-expo-2024.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/marantz-expands-its-premium-hifi-separates-offerings-with-three-new-releases.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/marantz-introduces-av-30-and-amp-30-home-theater-components.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/marantz-link-10n.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/mark-levinson-600-series.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/mcintosh-and-sonus-faber-partner-with-jeep-and-lamborghini.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/mcintosh-mx200-a-v-processor.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/mera-sound-sconce-a-new-approach-to-light-and-sound.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/meridian-audio-and-leon-collaborate-on-new-edge-media-frame.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/meridian-ellipse-streaming-audio-at-its-finest.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/mirror-mirror-on-the-wall--is-that-a-tv-after-all.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/monitor-audio-release-new-vestra-series-subwoofers.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/monumental-style-minimal-distractions.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/mti100-integrated-turntable-sun-records-limited-edition.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/new--ketra-d2-and-rania-d2-architectural-downlights.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/outdoor-entertainment-comparisons-and-considerations.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/planar-expands-award-winning-planar-carbonlight-led-display-family.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/planar-komodo-series.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/polina-brings-beauty-and-stellar-performance-to-open-spaces.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/pristine-audio-connectivity-avpro-edges-new-dante-enabled-products.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/pro-ject-t1-evo-the-perfect-entry-point-to-hi-fi-vinyl-or-a-great-addition-to-a-collection.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/rania-and-lumaris.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/sage-series-l150m.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/samsung-smart-laser-projector-integrated-cabinets.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/samsung-unveils-worlds-first-samsung-r95h.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/savant-reveals-new-premium-proseo-ge-smart-lighting-and-shading-solutions.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/screen-innovations-upgrades-kaos-outdoor-shades-with-features-from-its-zen-line.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/small-but-mighty-the-best-selling-sonus-faber-concertino-g4.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/smart-home-technology-wed-like-to-see-in-2025-a-vision-for-high-end-integration.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/sonances-elegant-innovations-unveiled-at-cedia-expo-2024.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/sonus-faber-and-automobili-lamborghini.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/sony-develops-next-generation-display-system.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/sonys-2025-bravia-lineup.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/sony-vpl-xw7000es-elevating-home-cinema-in-2024.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/soundscapes-redefined.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/stormaudio-isr-fusion-20-named-stereonet-product-of-the-year-2025.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/the-arena-collection-by-sonus-faber.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/the-m6800d-from-audiocontrol.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/the-worlds-first-single-apparent-source-loudspeaker.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/transform-any-room-with-a-view.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/trinnov-unveils-altitudeci.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/turning-homes-into-self-sustaining-power-grids-the-savant-revolution.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/unlock-the-full-potential-of-your-sonos-ace-wireless-headphones.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/unpacking-the-sony-xr90-series.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/unveiling-hyphn-the-pinnacle-of-sound-sculpting-by-monitor-audio.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/upgrade-your-home-audio-with-the-james-loudspeaker-on-wall-qt-series.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/urc-furrion-announce-expanded-partnership.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/urcs-tdc-8300-and-trc-1120-for-smart-home-control.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/vinyl-royalty-pro-ject-unveils-the-classic-reference-turntable-with-elevated-elegance-and-precision.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/void-acoustics-unveils-three-new-products.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/wisdom-audio-s57i-a-subwoofer-that-fits-anywhere-and-sounds-amazing.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/post/zeppelin-pro-a-fresh-take-on-a-classic-wireless-speaker.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/processes.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/residential-form.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/service-request.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
+  },
+  {
+    "path": "/services.html",
+    "status": "ERROR",
+    "details": "page.goto: Target page, context or browser has been closed"
   }
 ]

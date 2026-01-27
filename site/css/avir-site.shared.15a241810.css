@@ -3695,17 +3695,17 @@ a {
 }
 
 .slide {
-  background-image: url("/images/61aeaa63fc373a25c198ab33_620a7e3d087c6d6cbe7038ed_BH28 Hero.jpg");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/620a7e3d087c6d6cbe7038ed_BH28%20Hero.jpg");
   background-position: 50%;
   background-size: cover;
 }
 
 .slide.two {
-  background-image: url("/images/61aeaa63fc373a25c198ab33_620a7e3ca4704bb8133f16c4_HC1 Hero.jpg");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/620a7e3ca4704bb8133f16c4_HC1%20Hero.jpg");
 }
 
 .slide.three {
-  background-image: url("/images/61aeaa63fc373a25c198ab33_620a7e3d4015cb31aedf0e06_BH Hero.jpg");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/620a7e3d4015cb31aedf0e06_BH%20Hero.jpg");
 }
 
 .hero-wrap {
@@ -3881,7 +3881,7 @@ a {
 }
 
 .title__bg.with-image {
-  background-image: url("/images/61aeaa63fc373a25c198ab33_654bf13f04a1d01e7ee5507d_Screenshot 2023-11-08 at 12.28.28 PM.png");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/654bf13f04a1d01e7ee5507d_Screenshot%202023-11-08%20at%2012.28.28%20PM.png");
   background-position: 50%;
   background-size: cover;
 }
@@ -4392,7 +4392,7 @@ a {
   border: 1px solid var(--joshua-rocks);
   background-color: var(--white-sand);
   cursor: pointer;
-  background-image: url("/images/61aeaa63fc373a25c198ab33_6238d7acbb05182778fc1d18_closeJR.svg");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/6238d7acbb05182778fc1d18_closeJR.svg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 15px 15px;
@@ -4510,7 +4510,7 @@ a {
   z-index: 30;
   opacity: 1;
   mix-blend-mode: screen;
-  background-image: url("/images/61aeaa63fc373a25c198ab33_630e4cb96406d5b1a6a2e877_Grey-Grain.gif");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/630e4cb96406d5b1a6a2e877_Grey-Grain.gif");
   background-position: 50%;
   background-repeat: repeat;
   background-size: 200px 200px;
@@ -4638,7 +4638,7 @@ a {
   filter: brightness(200%) sepia(62%);
   mix-blend-mode: screen;
   background-color: #000;
-  background-image: url("/images/61aeaa63fc373a25c198ab33_630e4cb96406d5b1a6a2e877_Grey-Grain.gif");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/630e4cb96406d5b1a6a2e877_Grey-Grain.gif");
   background-repeat: repeat;
   background-size: 200px;
   display: none;
@@ -4651,7 +4651,7 @@ a {
   filter: brightness(200%) sepia(62%);
   mix-blend-mode: screen;
   background-color: #000;
-  background-image: url("/images/61aeaa63fc373a25c198ab33_630e4cb96406d5b1a6a2e877_Grey-Grain.gif");
+  background-image: url("https://cdn.prod.website-files.com/61aeaa63fc373a25c198ab33/630e4cb96406d5b1a6a2e877_Grey-Grain.gif");
   background-repeat: repeat;
   background-size: 200px;
   display: block;
