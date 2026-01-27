@@ -132,7 +132,7 @@ async function visualVerifyPath(page, filePath) {
 
     await page.evaluate(() => {
       const style = document.createElement('style');
-      style.textContent = '* { animation: none !important; transition: none !important; }';
+      style.textContent = '* { animation: none !important; transition: none !important; } .page-content { opacity: 1 !important; transform: none !important; } .w-form-done, .w-form-fail, .w-dropdown-list { display: none !important; }';
       document.head.appendChild(style);
     });
 
@@ -161,7 +161,7 @@ async function visualVerifyPath(page, filePath) {
 
     await page.evaluate(() => {
       const style = document.createElement('style');
-      style.textContent = '* { animation: none !important; transition: none !important; }';
+      style.textContent = '* { animation: none !important; transition: none !important; } .page-content { opacity: 1 !important; transform: none !important; } .w-form-done, .w-form-fail, .w-dropdown-list { display: none !important; }';
       document.head.appendChild(style);
     });
 

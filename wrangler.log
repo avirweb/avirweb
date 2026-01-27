@@ -1,0 +1,9 @@
+
+ ⛅️ wrangler 4.60.0
+───────────────────
+✨ Compiled Worker successfully
+✨ Parsed 6 valid header rules.
+⎔ Starting local server...
+[wrangler:info] Ready on http://localhost:8788
+[wrangler:info] HEAD /images/61aeaa63fc373a25c198ab33_6239b8884b436d481028701f_subrite-logo.png 200 OK (12ms)
+[wrangler:info] GET /images/61aeaa63fc373a25c198ab33_6239b8884b436d481028701f_subrite-logo.png 200 OK (8ms)
