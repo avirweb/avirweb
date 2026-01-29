@@ -1,0 +1,41 @@
+{
+  "timestamp": "2026-01-29T18:26:54.807Z",
+  "results": [
+    {
+      "page": "Homepage",
+      "path": "/",
+      "status": "error",
+      "error": "pixelmatch is not a function"
+    },
+    {
+      "page": "Services page",
+      "path": "/services",
+      "status": "error",
+      "error": "pixelmatch is not a function"
+    },
+    {
+      "page": "Contact page",
+      "path": "/contact",
+      "status": "error",
+      "error": "pixelmatch is not a function"
+    },
+    {
+      "page": "About page",
+      "path": "/about",
+      "status": "error",
+      "error": "pixelmatch is not a function"
+    },
+    {
+      "page": "Team page",
+      "path": "/team",
+      "status": "error",
+      "error": "pixelmatch is not a function"
+    }
+  ],
+  "summary": {
+    "totalPages": 5,
+    "passed": 0,
+    "failed": 5,
+    "averageDifference": 0
+  }
+}

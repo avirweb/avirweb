@@ -1,0 +1,147 @@
+{
+  "timestamp": "2026-01-29T18:32:34.753Z",
+  "site": "https://avirwebtest.pages.dev",
+  "pageResults": [
+    {
+      "page": "Homepage",
+      "path": "/",
+      "pageLoad": {
+        "status": "passed",
+        "loadTime": 623,
+        "error": null
+      },
+      "responsiveness": {
+        "status": "passed",
+        "mobile": true,
+        "tablet": true,
+        "desktop": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "page": "Services page",
+      "path": "/services",
+      "pageLoad": {
+        "status": "passed",
+        "loadTime": 573,
+        "error": null
+      },
+      "responsiveness": {
+        "status": "passed",
+        "mobile": true,
+        "tablet": true,
+        "desktop": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "page": "Contact page",
+      "path": "/contact",
+      "pageLoad": {
+        "status": "passed",
+        "loadTime": 572,
+        "error": null
+      },
+      "responsiveness": {
+        "status": "passed",
+        "mobile": true,
+        "tablet": true,
+        "desktop": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "page": "About page",
+      "path": "/about",
+      "pageLoad": {
+        "status": "passed",
+        "loadTime": 571,
+        "error": null
+      },
+      "responsiveness": {
+        "status": "passed",
+        "mobile": true,
+        "tablet": true,
+        "desktop": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "page": "Team page",
+      "path": "/team",
+      "pageLoad": {
+        "status": "passed",
+        "loadTime": 588,
+        "error": null
+      },
+      "responsiveness": {
+        "status": "passed",
+        "mobile": true,
+        "tablet": true,
+        "desktop": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "page": "Portfolio page",
+      "path": "/portfolio",
+      "pageLoad": {
+        "status": "passed",
+        "loadTime": 576,
+        "error": null
+      },
+      "responsiveness": {
+        "status": "passed",
+        "mobile": true,
+        "tablet": true,
+        "desktop": true
+      },
+      "errors": [],
+      "warnings": []
+    },
+    {
+      "page": "Blog page",
+      "path": "/blog",
+      "pageLoad": {
+        "status": "passed",
+        "loadTime": 566,
+        "error": null
+      },
+      "responsiveness": {
+        "status": "passed",
+        "mobile": true,
+        "tablet": true,
+        "desktop": true
+      },
+      "errors": [],
+      "warnings": []
+    }
+  ],
+  "formResults": {
+    "formTests": {
+      "status": "no_forms_found",
+      "results": []
+    },
+    "errors": []
+  },
+  "linkResults": {
+    "linkTests": {
+      "status": "passed",
+      "totalLinks": 5,
+      "brokenLinks": [],
+      "workingLinks": []
+    },
+    "errors": []
+  },
+  "summary": {
+    "totalTests": 9,
+    "passed": 8,
+    "failed": 0,
+    "warnings": 0
+  }
+}
