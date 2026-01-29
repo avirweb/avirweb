@@ -3,7 +3,7 @@
 # Images - aggressive caching (1 year, immutable since filenames contain hashes)
 /images/*
   Cache-Control: public, max-age=31536000, immutable
-  
+
 # JS files - aggressive caching (contain hashes in filenames)
 /images/js/*
   Cache-Control: public, max-age=31536000, immutable
@@ -23,5 +23,3 @@
 # API routes - no cache
 /api/*
   Cache-Control: no-store
-/* Force full re-upload */
-# Force cache invalidation: 1769700055
