@@ -1,0 +1,9 @@
+{
+	"id": "ODCokYORU77LR8R",
+	"json": "{\"id\":\"ODCokYORU77LR8R\",\"url\":\"https://www.avir.com/city/thermal\",\"loadedUrl\":\"https://www.avir.com/city/thermal\",\"uniqueKey\":\"https://www.avir.com/city/thermal\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:56.949Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/city/thermal",
+	"url": "https://www.avir.com/city/thermal"
+}

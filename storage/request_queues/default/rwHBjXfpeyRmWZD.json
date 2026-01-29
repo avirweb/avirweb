@@ -1,0 +1,9 @@
+{
+	"id": "rwHBjXfpeyRmWZD",
+	"json": "{\"id\":\"rwHBjXfpeyRmWZD\",\"url\":\"https://www.avir.com/old-home\",\"loadedUrl\":\"https://www.avir.com/old-home\",\"uniqueKey\":\"https://www.avir.com/old-home\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":3,\"state\":4}},\"handledAt\":\"2026-01-29T18:16:00.248Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/old-home",
+	"url": "https://www.avir.com/old-home"
+}

@@ -1,0 +1,9 @@
+{
+	"id": "OZ4Ylh2DNgietsb",
+	"json": "{\"id\":\"OZ4Ylh2DNgietsb\",\"url\":\"https://www.avir.com/city/yucaipa\",\"loadedUrl\":\"https://www.avir.com/city/yucaipa\",\"uniqueKey\":\"https://www.avir.com/city/yucaipa\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:59.044Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/city/yucaipa",
+	"url": "https://www.avir.com/city/yucaipa"
+}

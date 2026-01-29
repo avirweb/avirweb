@@ -1,0 +1,9 @@
+{
+	"id": "Oihs7jWv0Me82Rh",
+	"json": "{\"id\":\"Oihs7jWv0Me82Rh\",\"url\":\"https://www.avir.com/exciting-new-products\",\"loadedUrl\":\"https://www.avir.com/exciting-new-products\",\"uniqueKey\":\"https://www.avir.com/exciting-new-products\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:32.323Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/exciting-new-products",
+	"url": "https://www.avir.com/exciting-new-products"
+}

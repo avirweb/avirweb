@@ -5,11 +5,11 @@
   Cache-Control: public, max-age=31536000, immutable
   
 # JS files - aggressive caching (contain hashes in filenames)
-/js/*
+/images/js/*
   Cache-Control: public, max-age=31536000, immutable
 
 # CSS files - aggressive caching
-/css/*
+/images/css/*
   Cache-Control: public, max-age=31536000, immutable
 
 # HTML pages - short cache, revalidate

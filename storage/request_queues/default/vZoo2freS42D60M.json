@@ -1,0 +1,9 @@
+{
+	"id": "vZoo2freS42D60M",
+	"json": "{\"id\":\"vZoo2freS42D60M\",\"url\":\"https://www.avir.com/about-avir\",\"loadedUrl\":\"https://www.avir.com/about-avir\",\"uniqueKey\":\"https://www.avir.com/about-avir\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:31.739Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/about-avir",
+	"url": "https://www.avir.com/about-avir"
+}

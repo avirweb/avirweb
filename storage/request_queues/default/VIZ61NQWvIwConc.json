@@ -1,0 +1,9 @@
+{
+	"id": "VIZ61NQWvIwConc",
+	"json": "{\"id\":\"VIZ61NQWvIwConc\",\"url\":\"https://www.avir.com/brands\",\"loadedUrl\":\"https://www.avir.com/brands\",\"uniqueKey\":\"https://www.avir.com/brands\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:28.849Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/brands",
+	"url": "https://www.avir.com/brands"
+}

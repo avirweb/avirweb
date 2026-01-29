@@ -1,0 +1,9 @@
+{
+	"id": "7lnoBOPWjVhplxW",
+	"json": "{\"id\":\"7lnoBOPWjVhplxW\",\"url\":\"https://www.avir.com/city/cathedral-city\",\"loadedUrl\":\"https://www.avir.com/city/cathedral-city\",\"uniqueKey\":\"https://www.avir.com/city/cathedral-city\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:43.009Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/city/cathedral-city",
+	"url": "https://www.avir.com/city/cathedral-city"
+}

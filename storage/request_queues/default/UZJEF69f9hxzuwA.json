@@ -1,0 +1,9 @@
+{
+	"id": "UZJEF69f9hxzuwA",
+	"json": "{\"id\":\"UZJEF69f9hxzuwA\",\"url\":\"https://www.avir.com/commercial-form\",\"loadedUrl\":\"https://www.avir.com/commercial-form\",\"uniqueKey\":\"https://www.avir.com/commercial-form\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":2,\"state\":4}},\"handledAt\":\"2026-01-29T18:15:05.237Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/commercial-form",
+	"url": "https://www.avir.com/commercial-form"
+}

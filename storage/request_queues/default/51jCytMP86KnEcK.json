@@ -1,0 +1,9 @@
+{
+	"id": "51jCytMP86KnEcK",
+	"json": "{\"id\":\"51jCytMP86KnEcK\",\"url\":\"https://www.avir.com/city/bermuda-dunes\",\"loadedUrl\":\"https://www.avir.com/city/bermuda-dunes\",\"uniqueKey\":\"https://www.avir.com/city/bermuda-dunes\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:41.883Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/city/bermuda-dunes",
+	"url": "https://www.avir.com/city/bermuda-dunes"
+}

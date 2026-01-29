@@ -1,0 +1,9 @@
+{
+	"id": "UlTFjqj9Tnlf0Qa",
+	"json": "{\"id\":\"UlTFjqj9Tnlf0Qa\",\"url\":\"https://www.avir.com/city/banning\",\"loadedUrl\":\"https://www.avir.com/city/banning\",\"uniqueKey\":\"https://www.avir.com/city/banning\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:39.465Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/city/banning",
+	"url": "https://www.avir.com/city/banning"
+}

@@ -41,9 +41,9 @@ Thumbs.db
 scripts/
 visual_test_report.md
 
-# Generated Functions (keep api/submit-form.ts for mail)
+# Functions - keep submit-form.js
 functions/
-!functions/api/submit-form.ts
+!functions/api/submit-form.js
 
 # Temporary files
 tmp/

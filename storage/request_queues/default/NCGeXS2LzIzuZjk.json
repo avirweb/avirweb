@@ -1,0 +1,9 @@
+{
+	"id": "NCGeXS2LzIzuZjk",
+	"json": "{\"id\":\"NCGeXS2LzIzuZjk\",\"url\":\"https://www.avir.com/galleries/commercial\",\"loadedUrl\":\"https://www.avir.com/galleries/commercial\",\"uniqueKey\":\"https://www.avir.com/galleries/commercial\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":2,\"state\":4}},\"handledAt\":\"2026-01-29T18:15:06.493Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.avir.com/galleries/commercial",
+	"url": "https://www.avir.com/galleries/commercial"
+}
