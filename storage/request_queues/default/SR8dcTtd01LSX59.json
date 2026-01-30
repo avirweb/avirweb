@@ -1,0 +1,9 @@
+{
+	"id": "SR8dcTtd01LSX59",
+	"json": "{\"id\":\"SR8dcTtd01LSX59\",\"url\":\"https://www.avir.com/city/palm-springs/\",\"loadedUrl\":\"https://www.avir.com/city/palm-springs\",\"uniqueKey\":\"live-/city/palm-springs/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:10.958Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/city/palm-springs/",
+	"url": "https://www.avir.com/city/palm-springs/"
+}

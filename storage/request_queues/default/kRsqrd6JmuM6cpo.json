@@ -1,0 +1,9 @@
+{
+	"id": "kRsqrd6JmuM6cpo",
+	"json": "{\"id\":\"kRsqrd6JmuM6cpo\",\"url\":\"https://www.avir.com/city/idyllwild/\",\"loadedUrl\":\"https://www.avir.com/city/idyllwild\",\"uniqueKey\":\"live-/city/idyllwild/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:30.880Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/city/idyllwild/",
+	"url": "https://www.avir.com/city/idyllwild/"
+}

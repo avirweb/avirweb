@@ -1,0 +1,9 @@
+{
+	"id": "aZPTNBE0GWmU9UE",
+	"json": "{\"id\":\"aZPTNBE0GWmU9UE\",\"url\":\"https://avirwebtest.pages.dev/city/temecula/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/temecula/\",\"uniqueKey\":\"deployed-/city/temecula/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:33.616Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/temecula/",
+	"url": "https://avirwebtest.pages.dev/city/temecula/"
+}

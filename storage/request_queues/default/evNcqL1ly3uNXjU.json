@@ -1,0 +1,9 @@
+{
+	"id": "evNcqL1ly3uNXjU",
+	"json": "{\"id\":\"evNcqL1ly3uNXjU\",\"url\":\"https://avirwebtest.pages.dev/city/banning/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/banning/\",\"uniqueKey\":\"deployed-/city/banning/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:03.481Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/banning/",
+	"url": "https://avirwebtest.pages.dev/city/banning/"
+}

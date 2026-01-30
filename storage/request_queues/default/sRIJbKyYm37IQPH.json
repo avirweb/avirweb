@@ -1,0 +1,9 @@
+{
+	"id": "sRIJbKyYm37IQPH",
+	"json": "{\"id\":\"sRIJbKyYm37IQPH\",\"url\":\"https://avirwebtest.pages.dev/city/beaumont/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/beaumont/\",\"uniqueKey\":\"deployed-/city/beaumont/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:10.179Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/beaumont/",
+	"url": "https://avirwebtest.pages.dev/city/beaumont/"
+}

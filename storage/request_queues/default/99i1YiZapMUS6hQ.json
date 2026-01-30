@@ -1,0 +1,9 @@
+{
+	"id": "99i1YiZapMUS6hQ",
+	"json": "{\"id\":\"99i1YiZapMUS6hQ\",\"url\":\"https://www.avir.com/contact/\",\"loadedUrl\":\"https://www.avir.com/contact\",\"uniqueKey\":\"live-/contact/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:23:03.282Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/contact/",
+	"url": "https://www.avir.com/contact/"
+}

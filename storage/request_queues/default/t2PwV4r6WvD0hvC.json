@@ -1,0 +1,9 @@
+{
+	"id": "t2PwV4r6WvD0hvC",
+	"json": "{\"id\":\"t2PwV4r6WvD0hvC\",\"url\":\"https://avirwebtest.pages.dev/city/yucaipa/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/yucaipa/\",\"uniqueKey\":\"deployed-/city/yucaipa/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:50.044Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/yucaipa/",
+	"url": "https://avirwebtest.pages.dev/city/yucaipa/"
+}

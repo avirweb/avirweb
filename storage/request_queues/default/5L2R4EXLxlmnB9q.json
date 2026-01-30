@@ -1,0 +1,9 @@
+{
+	"id": "5L2R4EXLxlmnB9q",
+	"json": "{\"id\":\"5L2R4EXLxlmnB9q\",\"url\":\"https://www.avir.com/city/indio/\",\"loadedUrl\":\"https://www.avir.com/city/indio\",\"uniqueKey\":\"live-/city/indio/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:37.692Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/city/indio/",
+	"url": "https://www.avir.com/city/indio/"
+}

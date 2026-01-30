@@ -1,0 +1,9 @@
+{
+	"id": "ap4aHiZSR2PJsqy",
+	"json": "{\"id\":\"ap4aHiZSR2PJsqy\",\"url\":\"https://avirwebtest.pages.dev/city/la-quinta/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/la-quinta/\",\"uniqueKey\":\"deployed-/city/la-quinta/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:52.679Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/la-quinta/",
+	"url": "https://avirwebtest.pages.dev/city/la-quinta/"
+}
