@@ -1,0 +1,9 @@
+{
+	"id": "pomJ8rukFIlLAsF",
+	"json": "{\"id\":\"pomJ8rukFIlLAsF\",\"url\":\"https://avirwebtest.pages.dev/city/thousand-palms/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/thousand-palms/\",\"uniqueKey\":\"deployed-/city/thousand-palms/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:46.080Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/thousand-palms/",
+	"url": "https://avirwebtest.pages.dev/city/thousand-palms/"
+}

@@ -1,0 +1,8 @@
+{
+	"pagePath": "/post/the-worlds-first-single-apparent-source-loudspeaker/",
+	"url": "https://www.avir.com/post/the-worlds-first-single-apparent-source-loudspeaker/",
+	"isLive": true,
+	"error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://www.avir.com/post/the-worlds-first-single-apparent-source-loudspeaker/\", waiting until \"networkidle\"\u001b[22m\n",
+	"timestamp": "2026-01-30T21:34:23.192Z",
+	"passed": false
+}

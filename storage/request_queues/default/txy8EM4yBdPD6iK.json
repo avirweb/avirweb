@@ -1,0 +1,9 @@
+{
+	"id": "txy8EM4yBdPD6iK",
+	"json": "{\"id\":\"txy8EM4yBdPD6iK\",\"url\":\"https://www.avir.com/city/lake-arrowhead/\",\"loadedUrl\":\"https://www.avir.com/city/lake-arrowhead\",\"uniqueKey\":\"live-/city/lake-arrowhead/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:46.083Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/city/lake-arrowhead/",
+	"url": "https://www.avir.com/city/lake-arrowhead/"
+}

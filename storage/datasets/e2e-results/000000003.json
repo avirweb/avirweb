@@ -1,0 +1,8 @@
+{
+	"pagePath": "/about-avir/",
+	"url": "https://www.avir.com/about-avir/",
+	"isLive": true,
+	"error": "Cannot read properties of undefined (reading 'push')",
+	"timestamp": "2026-01-30T20:50:12.405Z",
+	"passed": false
+}

@@ -1,0 +1,9 @@
+{
+	"id": "eFLoJs31WKYImyp",
+	"json": "{\"id\":\"eFLoJs31WKYImyp\",\"url\":\"https://avirwebtest.pages.dev/test.html/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/test.html/\",\"uniqueKey\":\"deployed-/test.html/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:36:34.294Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/test.html/",
+	"url": "https://avirwebtest.pages.dev/test.html/"
+}

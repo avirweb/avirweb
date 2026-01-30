@@ -1,0 +1,9 @@
+{
+	"id": "KJv1u1Pf06kdOYL",
+	"json": "{\"id\":\"KJv1u1Pf06kdOYL\",\"url\":\"https://avirwebtest.pages.dev/city/san-bernardino/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/san-bernardino/\",\"uniqueKey\":\"deployed-/city/san-bernardino/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:31.022Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/san-bernardino/",
+	"url": "https://avirwebtest.pages.dev/city/san-bernardino/"
+}

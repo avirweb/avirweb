@@ -1,0 +1,9 @@
+{
+	"id": "WioMQ0gpU7RnbCv",
+	"json": "{\"id\":\"WioMQ0gpU7RnbCv\",\"url\":\"https://www.avir.com/galleries/home-cinema/\",\"loadedUrl\":\"https://www.avir.com/galleries/home-cinema\",\"uniqueKey\":\"live-/galleries/home-cinema/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:23:28.152Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/galleries/home-cinema/",
+	"url": "https://www.avir.com/galleries/home-cinema/"
+}

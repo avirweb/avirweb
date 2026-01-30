@@ -1,0 +1,9 @@
+{
+	"id": "jpfTbbjkWTSnLBG",
+	"json": "{\"id\":\"jpfTbbjkWTSnLBG\",\"url\":\"https://www.avir.com/city/thousand-palms/\",\"loadedUrl\":\"https://www.avir.com/city/thousand-palms\",\"uniqueKey\":\"live-/city/thousand-palms/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:42.212Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/city/thousand-palms/",
+	"url": "https://www.avir.com/city/thousand-palms/"
+}

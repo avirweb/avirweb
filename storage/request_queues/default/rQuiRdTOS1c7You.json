@@ -1,0 +1,9 @@
+{
+	"id": "rQuiRdTOS1c7You",
+	"json": "{\"id\":\"rQuiRdTOS1c7You\",\"url\":\"https://avirwebtest.pages.dev/city/murrieta/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/murrieta/\",\"uniqueKey\":\"deployed-/city/murrieta/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:04.058Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/murrieta/",
+	"url": "https://avirwebtest.pages.dev/city/murrieta/"
+}

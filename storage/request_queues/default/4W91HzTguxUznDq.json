@@ -1,0 +1,9 @@
+{
+	"id": "4W91HzTguxUznDq",
+	"json": "{\"id\":\"4W91HzTguxUznDq\",\"url\":\"https://avirwebtest.pages.dev/city/moreno-valley/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/moreno-valley/\",\"uniqueKey\":\"deployed-/city/moreno-valley/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:58.016Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/moreno-valley/",
+	"url": "https://avirwebtest.pages.dev/city/moreno-valley/"
+}

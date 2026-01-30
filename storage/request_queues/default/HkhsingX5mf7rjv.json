@@ -1,0 +1,9 @@
+{
+	"id": "HkhsingX5mf7rjv",
+	"json": "{\"id\":\"HkhsingX5mf7rjv\",\"url\":\"https://avirwebtest.pages.dev/residential-form/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/residential-form/\",\"uniqueKey\":\"deployed-/residential-form/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:35:59.864Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/residential-form/",
+	"url": "https://avirwebtest.pages.dev/residential-form/"
+}

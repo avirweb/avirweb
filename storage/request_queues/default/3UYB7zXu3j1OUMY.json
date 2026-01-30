@@ -1,0 +1,9 @@
+{
+	"id": "3UYB7zXu3j1OUMY",
+	"json": "{\"id\":\"3UYB7zXu3j1OUMY\",\"url\":\"https://avirwebtest.pages.dev/city/palm-springs/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/palm-springs/\",\"uniqueKey\":\"deployed-/city/palm-springs/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:11.326Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "deployed-/city/palm-springs/",
+	"url": "https://avirwebtest.pages.dev/city/palm-springs/"
+}

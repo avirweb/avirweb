@@ -1,0 +1,9 @@
+{
+	"id": "oCh5BJquCgrmZOK",
+	"json": "{\"id\":\"oCh5BJquCgrmZOK\",\"url\":\"https://www.avir.com/processes/\",\"loadedUrl\":\"https://www.avir.com/processes\",\"uniqueKey\":\"live-/processes/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:35:53.328Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "live-/processes/",
+	"url": "https://www.avir.com/processes/"
+}
