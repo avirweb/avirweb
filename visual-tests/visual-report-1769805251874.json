@@ -1,0 +1,71 @@
+{
+  "timestamp": "2026-01-30T20:32:13.679Z",
+  "results": [
+    {
+      "page": "Homepage",
+      "path": "/",
+      "status": "passed",
+      "differencePercentage": 0,
+      "diffPixels": 0,
+      "screenshots": {
+        "live": "/home/agent/avir/visual-tests/screenshots/homepage-live.png",
+        "deployed": "/home/agent/avir/visual-tests/screenshots/homepage-deployed.png",
+        "diff": "/home/agent/avir/visual-tests/diffs/homepage-diff.png"
+      }
+    },
+    {
+      "page": "Services page",
+      "path": "/services",
+      "status": "passed",
+      "differencePercentage": 0,
+      "diffPixels": 0,
+      "screenshots": {
+        "live": "/home/agent/avir/visual-tests/screenshots/services-live.png",
+        "deployed": "/home/agent/avir/visual-tests/screenshots/services-deployed.png",
+        "diff": "/home/agent/avir/visual-tests/diffs/services-diff.png"
+      }
+    },
+    {
+      "page": "Contact page",
+      "path": "/contact",
+      "status": "passed",
+      "differencePercentage": 0,
+      "diffPixels": 0,
+      "screenshots": {
+        "live": "/home/agent/avir/visual-tests/screenshots/contact-live.png",
+        "deployed": "/home/agent/avir/visual-tests/screenshots/contact-deployed.png",
+        "diff": "/home/agent/avir/visual-tests/diffs/contact-diff.png"
+      }
+    },
+    {
+      "page": "About page",
+      "path": "/about",
+      "status": "passed",
+      "differencePercentage": 0,
+      "diffPixels": 0,
+      "screenshots": {
+        "live": "/home/agent/avir/visual-tests/screenshots/about-live.png",
+        "deployed": "/home/agent/avir/visual-tests/screenshots/about-deployed.png",
+        "diff": "/home/agent/avir/visual-tests/diffs/about-diff.png"
+      }
+    },
+    {
+      "page": "Team page",
+      "path": "/team",
+      "status": "passed",
+      "differencePercentage": 0,
+      "diffPixels": 0,
+      "screenshots": {
+        "live": "/home/agent/avir/visual-tests/screenshots/team-live.png",
+        "deployed": "/home/agent/avir/visual-tests/screenshots/team-deployed.png",
+        "diff": "/home/agent/avir/visual-tests/diffs/team-diff.png"
+      }
+    }
+  ],
+  "summary": {
+    "totalPages": 5,
+    "passed": 5,
+    "failed": 0,
+    "averageDifference": 0
+  }
+}
