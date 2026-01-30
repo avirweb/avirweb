@@ -1,0 +1,866 @@
+[
+  {
+    "path": "/about-avir/",
+    "name": "about-avir",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/blog/",
+    "name": "blog",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/brands/",
+    "name": "brands",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/careers/",
+    "name": "careers",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/careers/assistant-technician/",
+    "name": "careers/assistant-technician",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/careers/integration-technician/",
+    "name": "careers/integration-technician",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/banning/",
+    "name": "city/banning",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/beaumont/",
+    "name": "city/beaumont",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/bermuda-dunes/",
+    "name": "city/bermuda-dunes",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/big-bear/",
+    "name": "city/big-bear",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/cathedral-city/",
+    "name": "city/cathedral-city",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/coachella/",
+    "name": "city/coachella",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/idyllwild/",
+    "name": "city/idyllwild",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/indian-wells/",
+    "name": "city/indian-wells",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/indio/",
+    "name": "city/indio",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/joshua-tree/",
+    "name": "city/joshua-tree",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/lake-arrowhead/",
+    "name": "city/lake-arrowhead",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/la-quinta/",
+    "name": "city/la-quinta",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/moreno-valley/",
+    "name": "city/moreno-valley",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/murrieta/",
+    "name": "city/murrieta",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/palm-desert/",
+    "name": "city/palm-desert",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/palm-springs/",
+    "name": "city/palm-springs",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/rancho-mirage/",
+    "name": "city/rancho-mirage",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/redlands/",
+    "name": "city/redlands",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/riverside/",
+    "name": "city/riverside",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/san-bernardino/",
+    "name": "city/san-bernardino",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/temecula/",
+    "name": "city/temecula",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/thermal/",
+    "name": "city/thermal",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/thousand-palms/",
+    "name": "city/thousand-palms",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/yucaipa/",
+    "name": "city/yucaipa",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/city/yucca-valley/",
+    "name": "city/yucca-valley",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/commercial-form/",
+    "name": "commercial-form",
+    "type": "page",
+    "hasForm": true
+  },
+  {
+    "path": "/contact/",
+    "name": "contact",
+    "type": "page",
+    "hasForm": true
+  },
+  {
+    "path": "/exciting-new-products/",
+    "name": "exciting-new-products",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/galleries/commercial/",
+    "name": "galleries/commercial",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/galleries/home-cinema/",
+    "name": "galleries/home-cinema",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/galleries/lifestyle/",
+    "name": "galleries/lifestyle",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/old-home/",
+    "name": "old-home",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/portfolio/",
+    "name": "portfolio",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/a-legacy-in-sound--801-abbey-road-limited-edition/",
+    "name": "post/a-legacy-in-sound--801-abbey-road-limited-edition",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/a-nod-to-future-automations-mastery/",
+    "name": "post/a-nod-to-future-automations-mastery",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/arc-you-ready-for-the-ultra-experience/",
+    "name": "post/arc-you-ready-for-the-ultra-experience",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/audiocontrol-bijou-5100d/",
+    "name": "post/audiocontrol-bijou-5100d",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/autonomic-and-urc-unveil-expanded-m-series-support-and-faster-ui-performance/",
+    "name": "post/autonomic-and-urc-unveil-expanded-m-series-support-and-faster-ui-performance",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/avirs-stellar-home-theater-installation-featured-by-wisdom-audio/",
+    "name": "post/avirs-stellar-home-theater-installation-featured-by-wisdom-audio",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/avpro-edge-introduces-hdmi-extension-kit-with-range-up-to-150-meters/",
+    "name": "post/avpro-edge-introduces-hdmi-extension-kit-with-range-up-to-150-meters",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/bang-olufsen-expands-customization-with-atelier-and-exclusive-limited-editions/",
+    "name": "post/bang-olufsen-expands-customization-with-atelier-and-exclusive-limited-editions",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/bang-olufsen-reviving-classics/",
+    "name": "post/bang-olufsen-reviving-classics",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/best-jbl-audio-gear-for-easy-home-upgrades/",
+    "name": "post/best-jbl-audio-gear-for-easy-home-upgrades",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/beyond-the-curve---32-years-of-nautilus/",
+    "name": "post/beyond-the-curve---32-years-of-nautilus",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/celebrating-sound-the-klipsch-jubilee-75th-anniversary-edition/",
+    "name": "post/celebrating-sound-the-klipsch-jubilee-75th-anniversary-edition",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/coastal-source-opens-showroom-at-pacific-design-center/",
+    "name": "post/coastal-source-opens-showroom-at-pacific-design-center",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/collaboration-between-screen-innovations-and-carbonblack-technology/",
+    "name": "post/collaboration-between-screen-innovations-and-carbonblack-technology",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/c-seed-n1-165-137-tv/",
+    "name": "post/c-seed-n1-165-137-tv",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/doorbird-smart-door-controller-d410-lte-4g/",
+    "name": "post/doorbird-smart-door-controller-d410-lte-4g",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/dynaudio-unveils-new-sound-at-high-end-munich-2024/",
+    "name": "post/dynaudio-unveils-new-sound-at-high-end-munich-2024",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/dynaudio-unveils-updated-symphony-opus-one-immersive-soundbar-at-ces-2025/",
+    "name": "post/dynaudio-unveils-updated-symphony-opus-one-immersive-soundbar-at-ces-2025",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/enhanced-control4-smart-home/",
+    "name": "post/enhanced-control4-smart-home",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/epson-qb1000-4k-hdr-laser-projector/",
+    "name": "post/epson-qb1000-4k-hdr-laser-projector",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/epson-unveils-the-q-series-at-cedia-2024/",
+    "name": "post/epson-unveils-the-q-series-at-cedia-2024",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/experience-cutting-edge-luxury-home-cinema-with-barco-residential/",
+    "name": "post/experience-cutting-edge-luxury-home-cinema-with-barco-residential",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/expert-tips-for-designing-your-perfect-home-theater/",
+    "name": "post/expert-tips-for-designing-your-perfect-home-theater",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/focal-diva-mezza-utopia/",
+    "name": "post/focal-diva-mezza-utopia",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/focal-diva-utopia-high-end-performance-in-a-wireless-system/",
+    "name": "post/focal-diva-utopia-high-end-performance-in-a-wireless-system",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/focal-introduces-the-utopia-cinema-range/",
+    "name": "post/focal-introduces-the-utopia-cinema-range",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/focal-introduces-the-utopia-cinema-range-2/",
+    "name": "post/focal-introduces-the-utopia-cinema-range-2",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/grimani-systems-launches-the-reflectance-tm-system/",
+    "name": "post/grimani-systems-launches-the-reflectance-tm-system",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/grimani-systems-mp-84-seamless-design/",
+    "name": "post/grimani-systems-mp-84-seamless-design",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/how-the-crestron-and-luhkee-partnership-transforms-smart-homes-in-palm-desert/",
+    "name": "post/how-the-crestron-and-luhkee-partnership-transforms-smart-homes-in-palm-desert",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/how-to-keep-your-home-theater-safe/",
+    "name": "post/how-to-keep-your-home-theater-safe",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/introducing-the-mark-levinson-600-series/",
+    "name": "post/introducing-the-mark-levinson-600-series",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/james-loudspeaker-outdoor-tower-series/",
+    "name": "post/james-loudspeaker-outdoor-tower-series",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/jbl-summit-series-expands/",
+    "name": "post/jbl-summit-series-expands",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/jbl-synthesis-sdr-38-review-high-end-sound-for-the-discerning-listener/",
+    "name": "post/jbl-synthesis-sdr-38-review-high-end-sound-for-the-discerning-listener",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/jbl-synthesis-sma-series-amplifiers-2024/",
+    "name": "post/jbl-synthesis-sma-series-amplifiers-2024",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/jl-audio-gotham-tm-v2-powered-subwoofers/",
+    "name": "post/jl-audio-gotham-tm-v2-powered-subwoofers",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/jvc-partners-up-with-control4/",
+    "name": "post/jvc-partners-up-with-control4",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/kaleidescapes-strato-v-movie-player/",
+    "name": "post/kaleidescapes-strato-v-movie-player",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/kaleidescape-strato-v/",
+    "name": "post/kaleidescape-strato-v",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/kef-introduces-two-new-thx-certified-architectural-speakers/",
+    "name": "post/kef-introduces-two-new-thx-certified-architectural-speakers",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/kef-reference-5-meta/",
+    "name": "post/kef-reference-5-meta",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/klipschs-latest-for-2024/",
+    "name": "post/klipschs-latest-for-2024",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/leon-announces-the-new-sole-tv-frame-for-sonys-bravia-7/",
+    "name": "post/leon-announces-the-new-sole-tv-frame-for-sonys-bravia-7",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/lg-introduces-the-wallpaper-tv-thin-wireless-oled-tv/",
+    "name": "post/lg-introduces-the-wallpaper-tv-thin-wireless-oled-tv",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/lgs-transparent-oled-tv-brings-sci-fi-concepts-into-everyday-life/",
+    "name": "post/lgs-transparent-oled-tv-brings-sci-fi-concepts-into-everyday-life",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/lg-unveils-136-inch-magnit-active-micro-led-display/",
+    "name": "post/lg-unveils-136-inch-magnit-active-micro-led-display",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/lutron-introduces-new-rania-and-lumaris-form-factors/",
+    "name": "post/lutron-introduces-new-rania-and-lumaris-form-factors",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/lutrons-latest-innovations-at-cedia-expo-2024/",
+    "name": "post/lutrons-latest-innovations-at-cedia-expo-2024",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/marantz-expands-its-premium-hifi-separates-offerings-with-three-new-releases/",
+    "name": "post/marantz-expands-its-premium-hifi-separates-offerings-with-three-new-releases",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/marantz-introduces-av-30-and-amp-30-home-theater-components/",
+    "name": "post/marantz-introduces-av-30-and-amp-30-home-theater-components",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/marantz-link-10n/",
+    "name": "post/marantz-link-10n",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/mark-levinson-600-series/",
+    "name": "post/mark-levinson-600-series",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/mcintosh-and-sonus-faber-partner-with-jeep-and-lamborghini/",
+    "name": "post/mcintosh-and-sonus-faber-partner-with-jeep-and-lamborghini",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/mcintosh-mx200-a-v-processor/",
+    "name": "post/mcintosh-mx200-a-v-processor",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/mera-sound-sconce-a-new-approach-to-light-and-sound/",
+    "name": "post/mera-sound-sconce-a-new-approach-to-light-and-sound",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/meridian-audio-and-leon-collaborate-on-new-edge-media-frame/",
+    "name": "post/meridian-audio-and-leon-collaborate-on-new-edge-media-frame",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/meridian-ellipse-streaming-audio-at-its-finest/",
+    "name": "post/meridian-ellipse-streaming-audio-at-its-finest",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/mirror-mirror-on-the-wall--is-that-a-tv-after-all/",
+    "name": "post/mirror-mirror-on-the-wall--is-that-a-tv-after-all",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/monitor-audio-release-new-vestra-series-subwoofers/",
+    "name": "post/monitor-audio-release-new-vestra-series-subwoofers",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/monumental-style-minimal-distractions/",
+    "name": "post/monumental-style-minimal-distractions",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/mti100-integrated-turntable-sun-records-limited-edition/",
+    "name": "post/mti100-integrated-turntable-sun-records-limited-edition",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/new--ketra-d2-and-rania-d2-architectural-downlights/",
+    "name": "post/new--ketra-d2-and-rania-d2-architectural-downlights",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/outdoor-entertainment-comparisons-and-considerations/",
+    "name": "post/outdoor-entertainment-comparisons-and-considerations",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/planar-expands-award-winning-planar-carbonlight-led-display-family/",
+    "name": "post/planar-expands-award-winning-planar-carbonlight-led-display-family",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/planar-komodo-series/",
+    "name": "post/planar-komodo-series",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/polina-brings-beauty-and-stellar-performance-to-open-spaces/",
+    "name": "post/polina-brings-beauty-and-stellar-performance-to-open-spaces",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/pristine-audio-connectivity-avpro-edges-new-dante-enabled-products/",
+    "name": "post/pristine-audio-connectivity-avpro-edges-new-dante-enabled-products",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/pro-ject-t1-evo-the-perfect-entry-point-to-hi-fi-vinyl-or-a-great-addition-to-a-collection/",
+    "name": "post/pro-ject-t1-evo-the-perfect-entry-point-to-hi-fi-vinyl-or-a-great-addition-to-a-collection",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/rania-and-lumaris/",
+    "name": "post/rania-and-lumaris",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/sage-series-l150m/",
+    "name": "post/sage-series-l150m",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/samsung-smart-laser-projector-integrated-cabinets/",
+    "name": "post/samsung-smart-laser-projector-integrated-cabinets",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/samsung-unveils-worlds-first-samsung-r95h/",
+    "name": "post/samsung-unveils-worlds-first-samsung-r95h",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/savant-reveals-new-premium-proseo-ge-smart-lighting-and-shading-solutions/",
+    "name": "post/savant-reveals-new-premium-proseo-ge-smart-lighting-and-shading-solutions",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/screen-innovations-upgrades-kaos-outdoor-shades-with-features-from-its-zen-line/",
+    "name": "post/screen-innovations-upgrades-kaos-outdoor-shades-with-features-from-its-zen-line",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/small-but-mighty-the-best-selling-sonus-faber-concertino-g4/",
+    "name": "post/small-but-mighty-the-best-selling-sonus-faber-concertino-g4",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/smart-home-technology-wed-like-to-see-in-2025-a-vision-for-high-end-integration/",
+    "name": "post/smart-home-technology-wed-like-to-see-in-2025-a-vision-for-high-end-integration",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/sonances-elegant-innovations-unveiled-at-cedia-expo-2024/",
+    "name": "post/sonances-elegant-innovations-unveiled-at-cedia-expo-2024",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/sonus-faber-and-automobili-lamborghini/",
+    "name": "post/sonus-faber-and-automobili-lamborghini",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/sony-develops-next-generation-display-system/",
+    "name": "post/sony-develops-next-generation-display-system",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/sonys-2025-bravia-lineup/",
+    "name": "post/sonys-2025-bravia-lineup",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/sony-vpl-xw7000es-elevating-home-cinema-in-2024/",
+    "name": "post/sony-vpl-xw7000es-elevating-home-cinema-in-2024",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/soundscapes-redefined/",
+    "name": "post/soundscapes-redefined",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/stormaudio-isr-fusion-20-named-stereonet-product-of-the-year-2025/",
+    "name": "post/stormaudio-isr-fusion-20-named-stereonet-product-of-the-year-2025",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/the-arena-collection-by-sonus-faber/",
+    "name": "post/the-arena-collection-by-sonus-faber",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/the-m6800d-from-audiocontrol/",
+    "name": "post/the-m6800d-from-audiocontrol",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/the-worlds-first-single-apparent-source-loudspeaker/",
+    "name": "post/the-worlds-first-single-apparent-source-loudspeaker",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/transform-any-room-with-a-view/",
+    "name": "post/transform-any-room-with-a-view",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/trinnov-unveils-altitudeci/",
+    "name": "post/trinnov-unveils-altitudeci",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/turning-homes-into-self-sustaining-power-grids-the-savant-revolution/",
+    "name": "post/turning-homes-into-self-sustaining-power-grids-the-savant-revolution",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/unlock-the-full-potential-of-your-sonos-ace-wireless-headphones/",
+    "name": "post/unlock-the-full-potential-of-your-sonos-ace-wireless-headphones",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/unpacking-the-sony-xr90-series/",
+    "name": "post/unpacking-the-sony-xr90-series",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/unveiling-hyphn-the-pinnacle-of-sound-sculpting-by-monitor-audio/",
+    "name": "post/unveiling-hyphn-the-pinnacle-of-sound-sculpting-by-monitor-audio",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/upgrade-your-home-audio-with-the-james-loudspeaker-on-wall-qt-series/",
+    "name": "post/upgrade-your-home-audio-with-the-james-loudspeaker-on-wall-qt-series",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/urc-furrion-announce-expanded-partnership/",
+    "name": "post/urc-furrion-announce-expanded-partnership",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/urcs-tdc-8300-and-trc-1120-for-smart-home-control/",
+    "name": "post/urcs-tdc-8300-and-trc-1120-for-smart-home-control",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/vinyl-royalty-pro-ject-unveils-the-classic-reference-turntable-with-elevated-elegance-and-precision/",
+    "name": "post/vinyl-royalty-pro-ject-unveils-the-classic-reference-turntable-with-elevated-elegance-and-precision",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/void-acoustics-unveils-three-new-products/",
+    "name": "post/void-acoustics-unveils-three-new-products",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/wisdom-audio-s57i-a-subwoofer-that-fits-anywhere-and-sounds-amazing/",
+    "name": "post/wisdom-audio-s57i-a-subwoofer-that-fits-anywhere-and-sounds-amazing",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/post/zeppelin-pro-a-fresh-take-on-a-classic-wireless-speaker/",
+    "name": "post/zeppelin-pro-a-fresh-take-on-a-classic-wireless-speaker",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/processes/",
+    "name": "processes",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/residential-form/",
+    "name": "residential-form",
+    "type": "page",
+    "hasForm": true
+  },
+  {
+    "path": "/service-request/",
+    "name": "service-request",
+    "type": "page",
+    "hasForm": true
+  },
+  {
+    "path": "/services/",
+    "name": "services",
+    "type": "page",
+    "hasForm": false
+  },
+  {
+    "path": "/test.html/",
+    "name": "test.html",
+    "type": "page",
+    "hasForm": false
+  }
+]
