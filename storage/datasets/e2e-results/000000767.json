@@ -1,0 +1,20 @@
+{
+	"pagePath": "/test.html/",
+	"url": "https://www.avir.com/test.html/",
+	"isLive": true,
+	"statusCode": 404,
+	"loadTime": 590,
+	"screenshotPath": "/home/agent/avir/e2e-results/screenshots/_test.html_-live.png",
+	"metrics": {
+		"title": "404 - Page not found",
+		"description": "The page you are looking for doesn't exist or has been moved.",
+		"h1Count": 1,
+		"imageCount": 0,
+		"linkCount": 0,
+		"brokenImages": [],
+		"consoleErrors": []
+	},
+	"links": [],
+	"timestamp": "2026-01-31T00:49:00.738Z",
+	"passed": false
+}

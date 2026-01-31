@@ -1,6 +1,6 @@
 {
 	"id": "zqbVus7pxQ9CElU",
-	"json": "{\"id\":\"zqbVus7pxQ9CElU\",\"url\":\"https://www.avir.com/careers/assistant-technician/\",\"loadedUrl\":\"https://www.avir.com/careers/assistant-technician\",\"uniqueKey\":\"live-/careers/assistant-technician/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:20:52.969Z\"}",
+	"json": "{\"id\":\"zqbVus7pxQ9CElU\",\"url\":\"https://www.avir.com/careers/assistant-technician/\",\"loadedUrl\":\"https://www.avir.com/careers/assistant-technician\",\"uniqueKey\":\"live-/careers/assistant-technician/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:14.695Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

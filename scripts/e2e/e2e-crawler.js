@@ -216,9 +216,6 @@ class E2ETestRunner {
 
                 const totalPixels = width * height;
                 const diffPercentage = (numDiffPixels / totalPixels) * 100;
-
-                const totalPixels = width * height;
-                const diffPercentage = (numDiffPixels / totalPixels) * 100;
                 
                 const isImprovement = diffPercentage > 0 && diffPercentage < 5.0;
                 const passed = diffPercentage < 1.0 || isImprovement;

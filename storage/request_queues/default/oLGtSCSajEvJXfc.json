@@ -1,9 +1,0 @@
-{
-	"id": "oLGtSCSajEvJXfc",
-	"json": "{\"id\":\"oLGtSCSajEvJXfc\",\"url\":\"https://www.avir.com/city/indian-wells\",\"loadedUrl\":\"https://www.avir.com/city/indian-wells\",\"uniqueKey\":\"https://www.avir.com/city/indian-wells\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:45.712Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.avir.com/city/indian-wells",
-	"url": "https://www.avir.com/city/indian-wells"
-}

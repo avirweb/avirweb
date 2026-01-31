@@ -1,6 +1,6 @@
 {
 	"id": "PmVEpQ06MfQB9HD",
-	"json": "{\"id\":\"PmVEpQ06MfQB9HD\",\"url\":\"https://www.avir.com/city/thermal/\",\"loadedUrl\":\"https://www.avir.com/city/thermal\",\"uniqueKey\":\"live-/city/thermal/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:38.583Z\"}",
+	"json": "{\"id\":\"PmVEpQ06MfQB9HD\",\"url\":\"https://www.avir.com/city/thermal/\",\"loadedUrl\":\"https://www.avir.com/city/thermal\",\"uniqueKey\":\"live-/city/thermal/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:36:14.615Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

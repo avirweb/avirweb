@@ -1,6 +1,6 @@
 {
 	"id": "32Q36N2g9ddqIcE",
-	"json": "{\"id\":\"32Q36N2g9ddqIcE\",\"url\":\"https://avirwebtest.pages.dev/galleries/lifestyle/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/galleries/lifestyle/\",\"uniqueKey\":\"deployed-/galleries/lifestyle/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:23:56.426Z\"}",
+	"json": "{\"id\":\"32Q36N2g9ddqIcE\",\"url\":\"https://avirwebtest.pages.dev/galleries/lifestyle/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/galleries/lifestyle/\",\"uniqueKey\":\"deployed-/galleries/lifestyle/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:37:31.697Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

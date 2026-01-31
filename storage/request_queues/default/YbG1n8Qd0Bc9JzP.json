@@ -1,6 +1,6 @@
 {
 	"id": "YbG1n8Qd0Bc9JzP",
-	"json": "{\"id\":\"YbG1n8Qd0Bc9JzP\",\"url\":\"https://avirwebtest.pages.dev/city/big-bear/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/big-bear/\",\"uniqueKey\":\"deployed-/city/big-bear/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:16.908Z\"}",
+	"json": "{\"id\":\"YbG1n8Qd0Bc9JzP\",\"url\":\"https://avirwebtest.pages.dev/city/big-bear/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/big-bear/\",\"uniqueKey\":\"deployed-/city/big-bear/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:42.908Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

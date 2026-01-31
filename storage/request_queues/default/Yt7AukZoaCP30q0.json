@@ -1,6 +1,6 @@
 {
 	"id": "Yt7AukZoaCP30q0",
-	"json": "{\"id\":\"Yt7AukZoaCP30q0\",\"url\":\"https://avirwebtest.pages.dev/exciting-new-products/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/exciting-new-products/\",\"uniqueKey\":\"deployed-/exciting-new-products/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:23:10.586Z\"}",
+	"json": "{\"id\":\"Yt7AukZoaCP30q0\",\"url\":\"https://avirwebtest.pages.dev/exciting-new-products/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/exciting-new-products/\",\"uniqueKey\":\"deployed-/exciting-new-products/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:36:48.477Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

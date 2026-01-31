@@ -1,6 +1,6 @@
 {
 	"id": "6Fha3RdpvlPFhbc",
-	"json": "{\"id\":\"6Fha3RdpvlPFhbc\",\"url\":\"https://avirwebtest.pages.dev/brands/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/brands/\",\"uniqueKey\":\"deployed-/brands/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:20:46.585Z\"}",
+	"json": "{\"id\":\"6Fha3RdpvlPFhbc\",\"url\":\"https://avirwebtest.pages.dev/brands/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/brands/\",\"uniqueKey\":\"deployed-/brands/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:08.093Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

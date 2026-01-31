@@ -1,6 +1,6 @@
 {
 	"id": "vF5NdyV38qenRID",
-	"json": "{\"id\":\"vF5NdyV38qenRID\",\"url\":\"https://avirwebtest.pages.dev/city/coachella/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/coachella/\",\"uniqueKey\":\"deployed-/city/coachella/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:26.108Z\"}",
+	"json": "{\"id\":\"vF5NdyV38qenRID\",\"url\":\"https://avirwebtest.pages.dev/city/coachella/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/coachella/\",\"uniqueKey\":\"deployed-/city/coachella/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:53.434Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

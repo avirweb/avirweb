@@ -1,6 +1,6 @@
 {
 	"id": "MTZS4bSowxh4ghO",
-	"json": "{\"id\":\"MTZS4bSowxh4ghO\",\"url\":\"https://www.avir.com/city/banning/\",\"loadedUrl\":\"https://www.avir.com/city/banning\",\"uniqueKey\":\"live-/city/banning/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:03.161Z\"}",
+	"json": "{\"id\":\"MTZS4bSowxh4ghO\",\"url\":\"https://www.avir.com/city/banning/\",\"loadedUrl\":\"https://www.avir.com/city/banning\",\"uniqueKey\":\"live-/city/banning/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:25.444Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

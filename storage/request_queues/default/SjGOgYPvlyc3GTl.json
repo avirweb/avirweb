@@ -1,6 +1,6 @@
 {
 	"id": "SjGOgYPvlyc3GTl",
-	"json": "{\"id\":\"SjGOgYPvlyc3GTl\",\"url\":\"https://avirwebtest.pages.dev/city/thermal/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/thermal/\",\"uniqueKey\":\"deployed-/city/thermal/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:41.501Z\"}",
+	"json": "{\"id\":\"SjGOgYPvlyc3GTl\",\"url\":\"https://avirwebtest.pages.dev/city/thermal/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/thermal/\",\"uniqueKey\":\"deployed-/city/thermal/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:36:18.367Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

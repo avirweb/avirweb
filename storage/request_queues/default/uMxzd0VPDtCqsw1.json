@@ -1,9 +1,0 @@
-{
-	"id": "uMxzd0VPDtCqsw1",
-	"json": "{\"id\":\"uMxzd0VPDtCqsw1\",\"url\":\"https://www.avir.com/city/lake-arrowhead\",\"loadedUrl\":\"https://www.avir.com/city/lake-arrowhead\",\"uniqueKey\":\"https://www.avir.com/city/lake-arrowhead\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:49.443Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.avir.com/city/lake-arrowhead",
-	"url": "https://www.avir.com/city/lake-arrowhead"
-}
