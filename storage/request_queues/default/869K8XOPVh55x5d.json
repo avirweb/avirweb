@@ -1,6 +1,6 @@
 {
 	"id": "869K8XOPVh55x5d",
-	"json": "{\"id\":\"869K8XOPVh55x5d\",\"url\":\"https://www.avir.com/city/la-quinta/\",\"loadedUrl\":\"https://www.avir.com/city/la-quinta\",\"uniqueKey\":\"live-/city/la-quinta/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:51.331Z\"}",
+	"json": "{\"id\":\"869K8XOPVh55x5d\",\"url\":\"https://www.avir.com/city/la-quinta/\",\"loadedUrl\":\"https://www.avir.com/city/la-quinta\",\"uniqueKey\":\"live-/city/la-quinta/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:35:21.662Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

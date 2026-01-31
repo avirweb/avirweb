@@ -1,6 +1,6 @@
 {
 	"id": "Vn5ClXGqLP8rp5L",
-	"json": "{\"id\":\"Vn5ClXGqLP8rp5L\",\"url\":\"https://avirwebtest.pages.dev/city/cathedral-city/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/cathedral-city/\",\"uniqueKey\":\"deployed-/city/cathedral-city/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:23.711Z\"}",
+	"json": "{\"id\":\"Vn5ClXGqLP8rp5L\",\"url\":\"https://avirwebtest.pages.dev/city/cathedral-city/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/cathedral-city/\",\"uniqueKey\":\"deployed-/city/cathedral-city/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:48.433Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

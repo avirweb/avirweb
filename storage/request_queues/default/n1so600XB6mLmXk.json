@@ -1,6 +1,6 @@
 {
 	"id": "n1so600XB6mLmXk",
-	"json": "{\"id\":\"n1so600XB6mLmXk\",\"url\":\"https://avirwebtest.pages.dev/city/idyllwild/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/idyllwild/\",\"uniqueKey\":\"deployed-/city/idyllwild/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:21:30.883Z\"}",
+	"json": "{\"id\":\"n1so600XB6mLmXk\",\"url\":\"https://avirwebtest.pages.dev/city/idyllwild/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/idyllwild/\",\"uniqueKey\":\"deployed-/city/idyllwild/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:58.262Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

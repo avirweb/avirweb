@@ -1,9 +1,0 @@
-{
-	"id": "YiqlW0tmRSxDq07",
-	"json": "{\"id\":\"YiqlW0tmRSxDq07\",\"url\":\"https://www.avir.com/blog\",\"loadedUrl\":\"https://www.avir.com/blog\",\"uniqueKey\":\"https://www.avir.com/blog\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:38.363Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.avir.com/blog",
-	"url": "https://www.avir.com/blog"
-}

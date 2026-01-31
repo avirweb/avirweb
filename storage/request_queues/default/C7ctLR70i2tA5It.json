@@ -1,9 +1,0 @@
-{
-	"id": "C7ctLR70i2tA5It",
-	"json": "{\"id\":\"C7ctLR70i2tA5It\",\"url\":\"https://www.avir.com/city/joshua-tree\",\"loadedUrl\":\"https://www.avir.com/city/joshua-tree\",\"uniqueKey\":\"https://www.avir.com/city/joshua-tree\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:14:49.222Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.avir.com/city/joshua-tree",
-	"url": "https://www.avir.com/city/joshua-tree"
-}

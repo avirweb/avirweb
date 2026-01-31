@@ -1,9 +1,0 @@
-{
-	"id": "AdPp5tKMCL1b0W4",
-	"json": "{\"id\":\"AdPp5tKMCL1b0W4\",\"url\":\"https://www.avir.com/city/yucca-valley\",\"loadedUrl\":\"https://www.avir.com/city/yucca-valley\",\"uniqueKey\":\"https://www.avir.com/city/yucca-valley\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"crawlDepth\":1,\"state\":4}},\"handledAt\":\"2026-01-29T18:15:00.177Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.avir.com/city/yucca-valley",
-	"url": "https://www.avir.com/city/yucca-valley"
-}

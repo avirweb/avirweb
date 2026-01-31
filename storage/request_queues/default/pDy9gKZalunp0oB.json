@@ -1,9 +1,0 @@
-{
-	"id": "pDy9gKZalunp0oB",
-	"json": "{\"id\":\"pDy9gKZalunp0oB\",\"url\":\"https://www.avir.com/\",\"loadedUrl\":\"https://www.avir.com/\",\"uniqueKey\":\"https://www.avir.com\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-29T18:14:24.047Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://www.avir.com",
-	"url": "https://www.avir.com/"
-}

@@ -1,29 +1,41 @@
 {
-  "requestsFinished": 144,
+  "requestsFinished": 288,
   "requestsFailed": 0,
-  "requestsRetries": 0,
+  "requestsRetries": 1,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 84,
-  "requestMinDurationMillis": 3180,
-  "requestMaxDurationMillis": 8871,
+  "requestsFinishedPerMinute": 18,
+  "requestMinDurationMillis": 5340,
+  "requestMaxDurationMillis": 30967,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 644149,
-  "crawlerStartedAt": "2026-01-29T18:14:17.970Z",
-  "crawlerFinishedAt": "2026-01-29T18:16:00.472Z",
-  "statsPersistedAt": "2026-01-29T18:16:00.472Z",
-  "crawlerRuntimeMillis": 102718,
-  "crawlerLastStartTimestamp": 1769710457754,
+  "requestTotalFinishedDurationMillis": 2778042,
+  "crawlerStartedAt": "2026-01-31T00:33:38.118Z",
+  "crawlerFinishedAt": "2026-01-31T00:49:23.595Z",
+  "statsPersistedAt": "2026-01-31T00:49:23.595Z",
+  "crawlerRuntimeMillis": 945880,
+  "crawlerLastStartTimestamp": 1769819617715,
   "requestRetryHistogram": [
-    144
+    287,
+    1
   ],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 4473,
-  "requestTotalDurationMillis": 644149,
-  "requestsTotal": 144,
+  "requestAvgFinishedDurationMillis": 9646,
+  "requestTotalDurationMillis": 2778042,
+  "requestsTotal": 288,
   "requestsWithStatusCode": {
-    "200": 144
+    "200": 287,
+    "404": 1
   },
   "errors": {},
-  "retryErrors": {}
+  "retryErrors": {
+    "/home/agent/avir/node_modules/@crawlee/browser-pool/browser-pool.js:405:19": {
+      "missing error code": {
+        "Error": {
+          "browserController.newPage() failed: gNcdKpYEQhhiR8JLX0hfq": {
+            "count": 1
+          }
+        }
+      }
+    }
+  }
 }

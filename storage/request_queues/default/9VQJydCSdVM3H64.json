@@ -1,6 +1,6 @@
 {
 	"id": "9VQJydCSdVM3H64",
-	"json": "{\"id\":\"9VQJydCSdVM3H64\",\"url\":\"https://avirwebtest.pages.dev/city/rancho-mirage/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/rancho-mirage/\",\"uniqueKey\":\"deployed-/city/rancho-mirage/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-30T21:22:17.472Z\"}",
+	"json": "{\"id\":\"9VQJydCSdVM3H64\",\"url\":\"https://avirwebtest.pages.dev/city/rancho-mirage/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/rancho-mirage/\",\"uniqueKey\":\"deployed-/city/rancho-mirage/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:35:50.385Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,
