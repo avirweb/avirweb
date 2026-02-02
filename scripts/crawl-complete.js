@@ -129,6 +129,30 @@ function extractLinks(page, baseUrl) {
 }
 
 /**
+ * Trigger lazy-loading by scrolling through page
+ */
+async function triggerLazyLoading(page) {
+    console.log('    → Triggering lazy-loaded images...');
+
+    // Get page height
+    const scrollHeight = await page.evaluate(() => document.body.scrollHeight);
+    const viewportHeight = 1080; // Matches our viewport setting
+
+    // Scroll through page in increments
+    for (let y = 0; y < scrollHeight; y += viewportHeight) {
+        await page.evaluate(y => window.scrollTo(0, y), y);
+        // Wait for images to load
+        await page.waitForTimeout(500);
+    }
+
+    // Scroll back to top
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(1000);
+
+    console.log('    ✓ Lazy-loading triggered');
+}
+
+/**
  * Save page HTML
  */
 async function savePage(url, html) {
@@ -168,10 +192,13 @@ async function crawlPage(browser, { url, depth }) {
             throw new Error(`HTTP ${response ? response.status() : 'no response'}`);
         }
 
+        // Trigger lazy-loading to load dynamic images
+        await triggerLazyLoading(page);
+
         // Extract links
         const links = extractLinks(page, url);
 
-        // Save page
+        // Save page (now with lazy-loaded content)
         const html = await page.content();
         await savePage(url, html);
 
