@@ -9,19 +9,24 @@
  */
 
 const { chromium } = require('playwright');
+const https = require('https');
 const fs = require('fs').promises;
 const path = require('path');
+const { URL } = require('url');
 
 // Configuration
 const BASE_URL = 'https://www.avir.com';
 const OUTPUT_DIR = '/home/agent/avir/mirror-raw';
 const CRAWL_LOG_FILE = path.join(OUTPUT_DIR, 'crawl-log.json');
+const CDN_DOMAIN = 'cdn.prod.website-files.com';
 
 // Crawler state
 const crawledUrls = new Set();
 const queue = [];
 const errors = [];
 const startTime = new Date();
+const downloadedAssets = new Set();
+let assetsDownloaded = 0;
 
 /**
  * Initialize crawler
@@ -153,6 +158,63 @@ async function triggerLazyLoading(page) {
 }
 
 /**
+ * Download a CDN asset
+ */
+async function downloadCdnAsset(cdnUrl) {
+    if (downloadedAssets.has(cdnUrl)) {
+        return;
+    }
+
+    try {
+        const urlObj = new URL(cdnUrl);
+        const localPath = path.join(OUTPUT_DIR, 'cdn', urlObj.pathname);
+        const dir = path.dirname(localPath);
+
+        await fs.mkdir(dir, { recursive: true });
+
+        const file = fs.createWriteStream(localPath);
+
+        return new Promise((resolve, reject) => {
+            https.get(cdnUrl, (response) => {
+                if (response.statusCode !== 200) {
+                    reject(new Error(`HTTP ${response.statusCode}`));
+                    return;
+                }
+
+                response.pipe(file);
+
+                file.on('finish', () => {
+                    file.close();
+                    downloadedAssets.add(cdnUrl);
+                    assetsDownloaded++;
+                    resolve(localPath);
+                });
+            }).on('error', reject);
+        });
+    } catch (err) {
+        console.error(`    ✗ Failed to download ${cdnUrl}: ${err.message}`);
+        errors.push({ url: cdnUrl, error: err.message });
+    }
+}
+
+/**
+ * Rewrite CDN URLs in HTML to local paths
+ */
+function rewriteCdnUrls(html, url) {
+    const urlObj = new URL(url);
+    const basePath = path.join(OUTPUT_DIR, 'cdn');
+
+    // Rewrite all CDN URLs
+    return html.replace(
+        /https:\/\/cdn\.prod\.website-files\.com\/([^\s"']+)/g,
+        (match, assetPath) => {
+            const localPath = path.join(basePath, assetPath);
+            return localPath.replace(new RegExp('^' + path.resolve(__dirname, '..')), '');
+        }
+    );
+}
+
+/**
  * Save page HTML
  */
 async function savePage(url, html) {
@@ -162,7 +224,7 @@ async function savePage(url, html) {
     // Create directory structure
     await fs.mkdir(dir, { recursive: true });
 
-    // Save HTML
+    // Save HTML (after URL rewriting)
     await fs.writeFile(localPath, html, 'utf8');
 
     // Make readable
@@ -195,11 +257,27 @@ async function crawlPage(browser, { url, depth }) {
         // Trigger lazy-loading to load dynamic images
         await triggerLazyLoading(page);
 
+        // Get HTML content
+        let html = await page.content();
+
+        // Extract and download CDN assets
+        const cdnMatches = html.match(/https:\/\/cdn\.prod\.website-files\.com\/[^\s"']+/g) || [];
+        const uniqueCdnUrls = [...new Set(cdnMatches)];
+
+        if (uniqueCdnUrls.length > 0) {
+            console.log(`    → Found ${uniqueCdnUrls.length} CDN assets`);
+            for (const cdnUrl of uniqueCdnUrls) {
+                await downloadCdnAsset(cdnUrl);
+            }
+        }
+
+        // Rewrite CDN URLs to local paths
+        html = rewriteCdnUrls(html, url);
+
         // Extract links
         const links = extractLinks(page, url);
 
-        // Save page (now with lazy-loaded content)
-        const html = await page.content();
+        // Save page (with rewritten URLs)
         await savePage(url, html);
 
         // Queue new links
@@ -247,6 +325,7 @@ async function saveCrawlLog() {
         completedAt: completedAt.toISOString(),
         durationMs: completedAt - startTime,
         pagesCrawled: crawledUrls.size,
+        assetsDownloaded,
         errors: errors,
     };
 
@@ -257,6 +336,7 @@ async function saveCrawlLog() {
     console.log('  Crawl Complete');
     console.log('========================================');
     console.log(`Pages crawled: ${crawledUrls.size}`);
+    console.log(`Assets downloaded: ${assetsDownloaded}`);
     console.log(`Errors: ${errors.length}`);
     console.log(`Duration: ${(log.durationMs / 1000).toFixed(2)}s`);
     console.log(`Crawl log: ${CRAWL_LOG_FILE}`);
