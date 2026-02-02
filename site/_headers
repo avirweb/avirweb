@@ -23,3 +23,12 @@
 # API routes - no cache
 /api/*
   Cache-Control: no-store
+# JavaScript files - explicit MIME type
+/images/js/*
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000, immutable
+
+# Chunked JS files
+/images/js/*.js
+  Content-Type: application/javascript
+  Cache-Control: public, max-age=31536000, immutable

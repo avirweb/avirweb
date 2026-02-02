@@ -21,10 +21,56 @@ echo ""
 
 # Commit validation
 echo "Running commit validation..."
-SITE_DIR="../site"
+SITE_DIR="site"
 if [[ ! -d "$SITE_DIR" ]]; then
     echo "Error: site/ directory not found"
     exit 1
+fi
+
+# Check for sensitive files
+echo "Checking for sensitive files..."
+SENSITIVE_PATTERNS=(
+    ".env"
+    ".secrets"
+    "secrets.json"
+    "*.pem"
+    "*.key"
+    "id_rsa"
+    ".htpasswd"
+)
+
+for pattern in "${SENSITIVE_PATTERNS[@]}"; do
+    if find "$SITE_DIR" -name "$pattern" -type f 2>/dev/null | grep -q .; then
+        echo "Error: Found sensitive file pattern: $pattern"
+        echo "Review these files before committing:"
+        find "$SITE_DIR" -name "$pattern" -type f
+        exit 1
+    fi
+done
+echo "✓ No sensitive files detected"
+
+# Check for large files (>10MB)
+echo "Checking for large files..."
+LARGE_FILES=$(find "$SITE_DIR" -type f -size +10M 2>/dev/null)
+if [[ -n "$LARGE_FILES" ]]; then
+    echo "Warning: Found large files (>10MB):"
+    echo "$LARGE_FILES"
+    echo "Consider using Git LFS for these files"
+fi
+
+# Verify HTML structure
+echo "Checking HTML structure..."
+if [[ ! -f "$SITE_DIR/index.html" ]]; then
+    echo "Error: index.html not found in site directory"
+    exit 1
+fi
+
+# Check for empty src attributes (critical issue)
+echo "Checking for empty image sources..."
+EMPTY_SRC_COUNT=$(find "$SITE_DIR" -name "*.html" -exec grep -l 'src=""' {} \; 2>/dev/null | wc -l)
+if [[ $EMPTY_SRC_COUNT -gt 0 ]]; then
+    echo "Warning: Found $EMPTY_SRC_COUNT files with empty src attributes"
+    echo "Run ./scripts/validate-site.sh for details"
 fi
 
 # Check for changes
@@ -35,6 +81,7 @@ if git diff-index --quiet HEAD --; then
 fi
 
 echo "✓ Found changes to commit"
+echo "✓ All validation checks passed"
 
 # Configure git
 GIT_USERNAME=$(get_github_username) || exit 1

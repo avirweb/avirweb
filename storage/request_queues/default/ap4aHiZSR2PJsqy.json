@@ -1,6 +1,6 @@
 {
 	"id": "ap4aHiZSR2PJsqy",
-	"json": "{\"id\":\"ap4aHiZSR2PJsqy\",\"url\":\"https://avirwebtest.pages.dev/city/la-quinta/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/la-quinta/\",\"uniqueKey\":\"deployed-/city/la-quinta/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:35:24.569Z\"}",
+	"json": "{\"id\":\"ap4aHiZSR2PJsqy\",\"url\":\"https://avirwebtest.pages.dev/city/la-quinta/\",\"loadedUrl\":\"https://avirwebtest.pages.dev/city/la-quinta/\",\"uniqueKey\":\"deployed-/city/la-quinta/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"deployed\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T02:37:47.411Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

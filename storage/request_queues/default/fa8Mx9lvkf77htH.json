@@ -1,6 +1,6 @@
 {
 	"id": "fa8Mx9lvkf77htH",
-	"json": "{\"id\":\"fa8Mx9lvkf77htH\",\"url\":\"https://www.avir.com/city/san-bernardino/\",\"loadedUrl\":\"https://www.avir.com/city/san-bernardino\",\"uniqueKey\":\"live-/city/san-bernardino/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:36:04.411Z\"}",
+	"json": "{\"id\":\"fa8Mx9lvkf77htH\",\"url\":\"https://www.avir.com/city/san-bernardino/\",\"loadedUrl\":\"https://www.avir.com/city/san-bernardino\",\"uniqueKey\":\"live-/city/san-bernardino/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T02:38:23.068Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,

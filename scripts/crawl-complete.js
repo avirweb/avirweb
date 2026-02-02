@@ -10,7 +10,8 @@
 
 const { chromium } = require('playwright');
 const https = require('https');
-const fs = require('fs').promises;
+const fs = require('fs');
+const fsPromises = require('fs').promises;
 const path = require('path');
 const { URL } = require('url');
 
@@ -41,7 +42,7 @@ async function init() {
     console.log('');
 
     // Ensure output directory exists
-    await fs.mkdir(OUTPUT_DIR, { recursive: true });
+    await fsPromises.mkdir(OUTPUT_DIR, { recursive: true });
 
     // Add homepage to queue
     queue.push({ url: BASE_URL, depth: 0 });
@@ -106,15 +107,15 @@ function shouldCrawlUrl(url) {
 /**
  * Extract links from page
  */
-function extractLinks(page, baseUrl) {
+async function extractLinks(page, baseUrl) {
     const links = new Set();
 
     // Get all anchor links
     const anchors = page.locator('a[href]');
-    const count = anchors.count();
+    const count = await anchors.count();
 
     for (let i = 0; i < count; i++) {
-        const href = anchors.nth(i).getAttribute('href');
+        const href = await anchors.nth(i).getAttribute('href');
         if (href) {
             try {
                 // Make absolute URL
@@ -170,7 +171,7 @@ async function downloadCdnAsset(cdnUrl) {
         const localPath = path.join(OUTPUT_DIR, 'cdn', urlObj.pathname);
         const dir = path.dirname(localPath);
 
-        await fs.mkdir(dir, { recursive: true });
+        await fsPromises.mkdir(dir, { recursive: true });
 
         const file = fs.createWriteStream(localPath);
 
@@ -222,13 +223,13 @@ async function savePage(url, html) {
     const dir = path.dirname(localPath);
 
     // Create directory structure
-    await fs.mkdir(dir, { recursive: true });
+    await fsPromises.mkdir(dir, { recursive: true });
 
     // Save HTML (after URL rewriting)
-    await fs.writeFile(localPath, html, 'utf8');
+    await fsPromises.writeFile(localPath, html, 'utf8');
 
     // Make readable
-    await fs.chmod(localPath, 0o644);
+    await fsPromises.chmod(localPath, 0o644);
 }
 
 /**
@@ -275,7 +276,7 @@ async function crawlPage(browser, { url, depth }) {
         html = rewriteCdnUrls(html, url);
 
         // Extract links
-        const links = extractLinks(page, url);
+        const links = await extractLinks(page, url);
 
         // Save page (with rewritten URLs)
         await savePage(url, html);
@@ -329,7 +330,7 @@ async function saveCrawlLog() {
         errors: errors,
     };
 
-    await fs.writeFile(CRAWL_LOG_FILE, JSON.stringify(log, null, 2), 'utf8');
+    await fsPromises.writeFile(CRAWL_LOG_FILE, JSON.stringify(log, null, 2), 'utf8');
 
     console.log('');
     console.log('========================================');

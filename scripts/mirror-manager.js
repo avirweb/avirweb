@@ -20,29 +20,65 @@ class MirrorManager {
         this.warnings = [];
     }
 
-    async execute(command, description) {
+    async execute(command, description, options = {}) {
+        const { retries = 2, timeout = 300000 } = options;
+        let lastError;
+        
+        for (let attempt = 1; attempt <= retries; attempt++) {
+            try {
+                return await this.executeOnce(command, description, timeout);
+            } catch (error) {
+                lastError = error;
+                console.error(`✗ Attempt ${attempt}/${retries} failed: ${error.message}`);
+                
+                if (attempt < retries) {
+                    const delay = attempt * 5000;
+                    console.log(`Retrying in ${delay/1000}s...`);
+                    await this.sleep(delay);
+                }
+            }
+        }
+        
+        this.errors.push({ step: description, error: lastError.message });
+        throw lastError;
+    }
+    
+    async executeOnce(command, description, timeout) {
         return new Promise((resolve, reject) => {
             console.log(`\n[${description}]`);
             console.log(`Running: ${command}`);
             
-            exec(command, { cwd: PROJECT_ROOT }, (error, stdout, stderr) => {
+            const child = exec(command, { cwd: PROJECT_ROOT, timeout }, (error, stdout, stderr) => {
                 if (error) {
                     console.error(`Error: ${error.message}`);
-                    this.errors.push({ step: description, error: error.message, stderr });
                     reject(error);
                     return;
                 }
                 
-                if (stderr) {
+                if (stderr && !stderr.includes('Warning:')) {
                     console.warn(`Warning: ${stderr}`);
                     this.warnings.push({ step: description, warning: stderr });
                 }
                 
                 console.log('✓ Success');
-                console.log(stdout);
+                if (stdout.trim()) {
+                    console.log(stdout.slice(0, 1000));
+                    if (stdout.length > 1000) {
+                        console.log(`... (${stdout.length - 1000} more chars)`);
+                    }
+                }
                 resolve(stdout);
             });
+            
+            child.on('error', (error) => {
+                console.error(`Process error: ${error.message}`);
+                reject(error);
+            });
         });
+    }
+    
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
 
     async validateConfig() {
@@ -84,6 +120,20 @@ class MirrorManager {
         console.log('========================================');
         
         await this.execute('bash transformations/apply-transformations.sh', 'Transform');
+    }
+
+    async validateSite() {
+        console.log('\n========================================');
+        console.log('  Validating Site');
+        console.log('========================================');
+        
+        try {
+            await this.execute('bash scripts/validate-site.sh', 'Validate');
+        } catch (error) {
+            console.error('\n✗ Site validation failed');
+            console.error('Fix validation errors before deploying');
+            throw error;
+        }
     }
 
     async deploy() {
@@ -152,21 +202,50 @@ ${this.warnings.map(w => `- ${w.step}: ${w.warning}`).join('\n') || 'None'}
     }
 
     async runFullPipeline() {
-        try {
-            await this.validateConfig();
-            await this.crawlSite();
-            await this.applyTransformations();
-            await this.deploy();
-            await this.commitToGitHub();
-            await this.saveLog();
-            await this.sendNotification();
-            process.exit(0);
-        } catch (err) {
-            console.error('\nFatal error:', err.message);
-            await this.saveLog();
-            await this.sendNotification();
-            process.exit(1);
+        console.log('========================================');
+        console.log('  AVIR Mirror System');
+        console.log('========================================');
+        console.log(`Started: ${this.startTime.toISOString()}`);
+        console.log('');
+        
+        const steps = [
+            { name: 'validateConfig', fn: () => this.validateConfig() },
+            { name: 'crawlSite', fn: () => this.crawlSite() },
+            { name: 'applyTransformations', fn: () => this.applyTransformations() },
+            { name: 'validateSite', fn: () => this.validateSite() },
+            { name: 'deploy', fn: () => this.deploy() },
+            { name: 'commitToGitHub', fn: () => this.commitToGitHub() },
+        ];
+        
+        for (const step of steps) {
+            try {
+                await step.fn();
+            } catch (err) {
+                console.error(`\n✗ Step "${step.name}" failed: ${err.message}`);
+                this.errors.push({ step: step.name, error: err.message });
+                
+                if (step.name === 'validateConfig') {
+                    console.error('Configuration error - cannot proceed');
+                    break;
+                }
+                
+                if (step.name === 'validateSite') {
+                    console.error('Site validation failed - skipping deployment');
+                    break;
+                }
+                
+                if (step.name === 'deploy') {
+                    console.error('Deployment failed - skipping GitHub commit');
+                    break;
+                }
+            }
         }
+        
+        await this.saveLog();
+        await this.sendNotification();
+        
+        const exitCode = this.errors.length === 0 ? 0 : 1;
+        process.exit(exitCode);
     }
 }
 

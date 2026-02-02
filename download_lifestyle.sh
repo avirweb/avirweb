@@ -1,0 +1,27 @@
+#!/bin/bash
+cd /home/agent/avir/site/images/galleries/lifestyle
+
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a0224bfe8ef5e1e128c56_asset%2021.jpeg" -o "asset_21.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a022d508a6e002ef4d16a_asset%2022.jpeg" -o "asset_22.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02374a9c18093217be4d_asset%2023.jpeg" -o "asset_23.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a023fc30344658ee0333b_asset%2024.jpeg" -o "asset_24.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a0247f823775175394732_asset%2025.jpeg" -o "asset_25.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a0252d34ffd970c42f41a_asset%2026.jpeg" -o "asset_26.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02644a9c18988917caec_asset%2027.jpeg" -o "asset_27.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02744e9f7f5383767d62_asset%2029.jpeg" -o "asset_29.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a026c1dca5e93e24b1d7c_asset%2028.jpeg" -o "asset_28.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02b74e9f7f252876b3fa_asset%2036.jpeg" -o "asset_36.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02ac43f00522c45d1325_asset%2035.jpeg" -o "asset_35.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02a4d5523094e148d252_asset%2034.jpeg" -o "asset_34.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02bed5523040d348dc3e_asset%2037.jpeg" -o "asset_37.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02c7ec8deeccf221b4b4_asset%2038.jpeg" -o "asset_38.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a02ce5586dd1a764437a4_asset%2039.jpeg" -o "asset_39.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/6238cd6c2c84fb24ff997c3d_asset%207.jpeg" -o "asset_7.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/6238cd9412945d4db7ea0fce_asset%208.jpeg" -o "asset_8.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/6238cda30b22d987e7cff021_asset%209.jpeg" -o "asset_9.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a0195c26b66466412987b_asset%2011.jpeg" -o "asset_11.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a01a0bfe8ef1e9c1283f2_asset%2012.jpeg" -o "asset_12.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a01aa43f0056b565d0a0e_asset%2013.jpeg" -o "asset_13.jpeg"
+curl -sL "https://cdn.prod.website-files.com/61d85621390c3d3f845db5b4/623a01b4c26b66b3a9129a65_asset%2014.jpeg" -o "asset_14.jpeg"
+
+echo "Lifestyle images downloaded"

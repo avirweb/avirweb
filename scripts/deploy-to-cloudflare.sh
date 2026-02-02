@@ -55,12 +55,16 @@ echo "Starting deployment..."
 TOKEN=$(get_cloudflare_token) || exit 1
 ACCOUNT_ID=$(get_cloudflare_account_id) || exit 1
 
+# Export for wrangler
+export CLOUDFLARE_API_TOKEN="$TOKEN"
+export CLOUDFLARE_ACCOUNT_ID="$ACCOUNT_ID"
+
 # Using Cloudflare Pages API to deploy
 # Note: Requires wrangler to be installed
 if command -v wrangler &> /dev/null; then
     echo "Deploying with Wrangler..."
     cd "$SOURCE_DIR"
-    wrangler pages deploy --project-name="$PROJECT_NAME"
+    wrangler pages deploy "$SOURCE_DIR" --project-name="$PROJECT_NAME" --branch=main
 else
     echo "Error: wrangler not found. Install with: npm install -g wrangler"
     exit 1

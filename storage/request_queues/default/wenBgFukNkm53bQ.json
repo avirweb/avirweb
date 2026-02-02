@@ -1,6 +1,6 @@
 {
 	"id": "wenBgFukNkm53bQ",
-	"json": "{\"id\":\"wenBgFukNkm53bQ\",\"url\":\"https://www.avir.com/city/big-bear/\",\"loadedUrl\":\"https://www.avir.com/city/big-bear\",\"uniqueKey\":\"live-/city/big-bear/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T00:34:40.878Z\"}",
+	"json": "{\"id\":\"wenBgFukNkm53bQ\",\"url\":\"https://www.avir.com/city/big-bear/\",\"loadedUrl\":\"https://www.avir.com/city/big-bear\",\"uniqueKey\":\"live-/city/big-bear/\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"label\":\"live\",\"__crawlee\":{\"state\":4}},\"handledAt\":\"2026-01-31T02:37:07.458Z\"}",
 	"method": "GET",
 	"orderNo": null,
 	"retryCount": 0,
