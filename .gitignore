@@ -36,6 +36,7 @@ Thumbs.db
 # AI assistant / Agent planning
 .claude/
 .sisyphus/
+AGENTS.local.md
 
 # Generated scripts (not needed in repo)
 # scripts/  # Commented out - we need to commit credential scripts
