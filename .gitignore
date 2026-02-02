@@ -38,7 +38,7 @@ Thumbs.db
 .sisyphus/
 
 # Generated scripts (not needed in repo)
-scripts/
+# scripts/  # Commented out - we need to commit credential scripts
 visual_test_report.md
 
 # Functions - keep submit-form.js
