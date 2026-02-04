@@ -1,54 +1,44 @@
-# Dependencies
-node_modules/
+# Ignore everything by default
+/*
 
-# Cloudflare Wrangler
-.wrangler/
-wrangler.toml
-wrangler-pages.toml
-_worker.ts
+# Allowlist: essential repo files
+!.gitignore
+!README.md
+!package.json
+!package-lock.json
 
-# Build output
+# Allowlist: website content
+!site/
+!site/**
+
+# Allowlist: build/maintenance scripts
+!scripts/
+!scripts/**
+
+# Allowlist: required Pages function
+!functions/
+!functions/api/
+!functions/api/submit-form.js
+
+# Security - Secrets and Credentials
+.secrets/
+*.key
+*.pem
+*.p12
+*.pfx
+.env*
+secrets.*
+credentials.json
+service-account.json
+*secret*
+*apikey*
+
+# Build artifacts that might contain secrets
+.cache/
+.output/
 dist/
 build/
 
-# Environment and secrets
-.env
-.env.local
-.env.*
-*.key
-*.pem
-credentials.json
-secrets.json
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-.DS_Store
-
-# OS files
-Thumbs.db
-.Spotlight-V100
-.Trashes
-
-# AI assistant / Agent planning
-.claude/
-.sisyphus/
-AGENTS.local.md
-
-# Generated scripts (not needed in repo)
-# scripts/  # Commented out - we need to commit credential scripts
-visual_test_report.md
-
-# Functions - keep submit-form.js
-functions/
-!functions/api/submit-form.js
-
-# Temporary files
-tmp/
-temp/
-*.tmp
-.cache/
-.secrets/
+# Logs that might contain sensitive data
+*.log
+logs/
