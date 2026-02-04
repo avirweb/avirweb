@@ -146,3 +146,153 @@ Cons:
 - Large binary assets can bloat the repo.
 
 Default recommendation: **commit `site/`** for predictable deployments. If repo growth becomes a problem, move mirrors to a separate repo or generate in CI and ignore `site/` locally.
+
+## Mirror-Deploy-Test Pipeline
+
+Run the complete pipeline (mirror → fix → validate → deploy → test) with a single command:
+
+```bash
+./scripts/mirror-deploy-test.sh
+```
+
+This orchestrates all stages:
+1. **Mirror** - Downloads the AVIR website
+2. **Fix** - Repairs image paths and references
+3. **Validate** - Runs site structure and security checks
+4. **Deploy** - Pushes to Cloudflare Pages
+5. **Test** - Runs E2E Playwright tests
+
+### Pipeline Results
+
+The script generates:
+- Console output with color-coded status
+- Log file: `logs/mirror-deploy-YYYYMMDD-HHMMSS.log`
+- JSON report: `test-results/unified-report.json`
+- HTML report: `test-results/unified-report.html`
+
+### Exit Codes
+
+- `0` - All stages completed successfully
+- `1` - One or more stages failed
+
+### Example Output
+
+```
+========================================
+  AVIR Mirror + Fix + Validate Pipeline
+========================================
+Started: Wed Feb 4 12:00:00 UTC 2026
+Log file: logs/mirror-deploy-20260204-120000.log
+
+[STAGE 1] Mirror Site
+----------------------------------------
+[INFO] Stage 1 completed in 45s
+
+[STAGE 2] Fix Images
+----------------------------------------
+[INFO] Stage 2 completed in 2s
+
+...
+
+========================================
+  Pipeline Summary
+========================================
+✅ All stages completed successfully!
+Site is ready for deployment.
+```
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed deployment documentation.
+
+## Troubleshooting
+
+### Common Issues
+
+| Issue | Solution |
+|-------|----------|
+| Mirror fails with SSL errors | The script uses `--no-check-certificate` by default |
+| Images not loading | Run `python3 scripts/fix-all-images.py` |
+| Validation warnings | Check `logs/validation-report-*.txt` for details |
+| Deployment fails | Ensure `wrangler` is authenticated: `wrangler login` |
+| E2E tests timeout | Check deploy URL is accessible |
+
+### Debug Commands
+
+```bash
+# Check site structure
+./scripts/validate-site.sh
+
+# Verify all assets
+./scripts/verify-assets.sh
+
+# Run security scan
+./scripts/validate-security.sh
+
+# Serve locally for manual testing
+./scripts/serve.sh
+```
+
+### Getting Help
+
+1. Check the log files in `logs/` directory
+2. Review [docs/TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)
+3. Check [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for deployment-specific issues
+
+## Usage Examples
+
+### Example 1: Full Pipeline (Recommended)
+
+```bash
+# Run everything - mirror, fix, validate, deploy, test
+./scripts/mirror-deploy-test.sh
+```
+
+### Example 2: Manual Step-by-Step
+
+```bash
+# Step 1: Mirror the site
+./scripts/mirror-avir.sh
+
+# Step 2: Fix image paths
+python3 scripts/fix-all-images.py
+
+# Step 3: Validate
+./scripts/validate-site.sh
+./scripts/validate-security.sh
+
+# Step 4: Deploy
+./scripts/commit-and-push.sh
+```
+
+### Example 3: Quick Local Test
+
+```bash
+# Mirror and serve locally (no deploy)
+./scripts/mirror-avir.sh
+./scripts/serve.sh
+
+# In another terminal
+./scripts/smoke.sh
+```
+
+### Example 4: Update Existing Mirror
+
+```bash
+# Clean and re-mirror
+rm -rf site/
+./scripts/mirror-avir.sh
+./scripts/fix-all-images.py
+./scripts/validate-site.sh
+./scripts/commit-and-push.sh
+```
+
+### Example 5: Custom Domain Setup
+
+```bash
+# 1. Deploy first
+./scripts/mirror-deploy-test.sh
+
+# 2. Add domain in Cloudflare Pages dashboard
+# 3. Update DNS records as instructed
+# 4. Create _redirects file if needed
+echo "/old-path /new-path 301" > site/_redirects
+```

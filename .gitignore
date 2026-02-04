@@ -4,8 +4,14 @@
 # Allowlist: essential repo files
 !.gitignore
 !README.md
+!SECURITY.md
+!MIGRATION-REPORT.md
 !package.json
 !package-lock.json
+
+# Allowlist: documentation
+!docs/
+!docs/**
 
 # Allowlist: website content
 !site/
