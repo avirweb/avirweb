@@ -1,6 +1,9 @@
 # Ignore everything by default
 /*
 
+# Ignore crawler output (generated, not committed)
+mirror-raw/
+
 # Allowlist: essential repo files
 !.gitignore
 !README.md
