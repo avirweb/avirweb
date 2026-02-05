@@ -29,6 +29,11 @@ mirror-raw/
 !functions/api/
 !functions/api/submit-form.js
 
+# Allowlist: GitHub Actions workflows
+!.github/
+!.github/workflows/
+!.github/workflows/*.yml
+
 # Security - Secrets and Credentials
 .secrets/
 *.key
@@ -51,3 +56,6 @@ build/
 # Logs that might contain sensitive data
 *.log
 logs/
+
+# Test results (generated, not committed)
+test-results/visual-regression/

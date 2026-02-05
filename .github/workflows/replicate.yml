@@ -1,0 +1,490 @@
+name: AVIR Site Replication
+
+# Workflow triggers:
+# 1. Schedule: Daily at 2 AM UTC
+# 2. Manual: workflow_dispatch with environment selection
+# 3. Webhook: repository_dispatch for external triggers
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Daily at 2 AM UTC
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      skip_validation:
+        description: 'Skip validation gates (not recommended)'
+        required: false
+        default: false
+        type: boolean
+  repository_dispatch:
+    types: [replicate, sync, update]
+
+# Environment variables used across jobs
+env:
+  NODE_VERSION: '20'
+  SOURCE_URL: 'https://avir.co'
+
+# Permissions required for the workflow
+permissions:
+  contents: read
+  actions: read
+  checks: write
+  statuses: write
+
+jobs:
+  # ============================================================================
+  # STAGE 1: COPY - Download source site with all assets
+  # ============================================================================
+  copy:
+    name: 'Stage 1: Copy Source Site'
+    runs-on: ubuntu-latest
+    outputs:
+      status: ${{ steps.copy.outcome }}
+      timestamp: ${{ steps.timestamp.outputs.time }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate timestamp
+        id: timestamp
+        run: echo "time=$(date -u +%Y%m%d_%H%M%S)" >> $GITHUB_OUTPUT
+
+      - name: Stage 1 - Copy Source Site
+        id: copy
+        run: |
+          echo "🔄 Stage 1: Copying source site from ${{ env.SOURCE_URL }}..."
+          node scripts/crawler-enhanced.js --url ${{ env.SOURCE_URL }} --output mirror-raw/
+          echo "✅ Copy complete"
+          echo "📁 Output directory: mirror-raw/"
+          ls -la mirror-raw/ || echo "Directory listing failed"
+
+      - name: Upload raw mirror artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: mirror-raw-${{ github.run_id }}
+          path: mirror-raw/
+          retention-days: 7
+
+  # ============================================================================
+  # STAGE 2: UPDATE - Process assets and rewrite URLs
+  # ============================================================================
+  update:
+    name: 'Stage 2: Update Assets'
+    runs-on: ubuntu-latest
+    needs: copy
+    if: needs.copy.outputs.status == 'success'
+    outputs:
+      status: ${{ steps.update.outcome }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download raw mirror artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: mirror-raw-${{ github.run_id }}
+          path: mirror-raw/
+
+      - name: Stage 2 - Update Assets
+        id: update
+        run: |
+          echo "🔄 Stage 2: Processing assets and rewriting URLs..."
+          node scripts/asset-manager.js --input mirror-raw/ --output site/
+          echo "✅ Update complete"
+          echo "📁 Output directory: site/"
+          ls -la site/ || echo "Directory listing failed"
+
+      - name: Upload processed site artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: site-${{ github.run_id }}
+          path: site/
+          retention-days: 7
+
+  # ============================================================================
+  # STAGE 3: VALIDATE (Local) - Validate assets, CSS, and visual regression
+  # ============================================================================
+  validate-local:
+    name: 'Stage 3: Validate (Local)'
+    runs-on: ubuntu-latest
+    needs: update
+    if: needs.update.outputs.status == 'success' && github.event.inputs.skip_validation != 'true'
+    outputs:
+      status: ${{ steps.validate.outcome }}
+      asset_report: ${{ steps.asset-report.outputs.path }}
+      css_report: ${{ steps.css-report.outputs.path }}
+      visual_report: ${{ steps.visual-report.outputs.path }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download processed site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-${{ github.run_id }}
+          path: site/
+
+      - name: Stage 3 - Validate Assets (Local)
+        id: validate-assets
+        run: |
+          echo "🔄 Stage 3a: Validating assets (local)..."
+          node scripts/validate-assets.js --input site/ --output test-results/asset-integrity/
+          echo "✅ Asset validation complete"
+
+      - name: Stage 3 - Validate CSS (Local)
+        id: validate-css
+        run: |
+          echo "🔄 Stage 3b: Validating CSS (local)..."
+          node scripts/validate-css.js --input site/ --reference mirror-raw/ --output test-results/css-comparison/
+          echo "✅ CSS validation complete"
+
+      - name: Stage 3 - Validate Visual (Local)
+        id: validate-visual
+        run: |
+          echo "🔄 Stage 3c: Running visual regression tests (local)..."
+          node scripts/validate-visual.js --input site/ --reference mirror-raw/ --threshold 0.5 --output test-results/visual-regression/
+          echo "✅ Visual validation complete"
+
+      - name: Set validation status
+        id: validate
+        if: steps.validate-assets.outcome == 'success' && steps.validate-css.outcome == 'success' && steps.validate-visual.outcome == 'success'
+        run: |
+          echo "✅ All local validations passed"
+          echo "status=success" >> $GITHUB_OUTPUT
+
+      - name: Set asset report path
+        id: asset-report
+        run: echo "path=test-results/asset-integrity/" >> $GITHUB_OUTPUT
+
+      - name: Set CSS report path
+        id: css-report
+        run: echo "path=test-results/css-comparison/" >> $GITHUB_OUTPUT
+
+      - name: Set visual report path
+        id: visual-report
+        run: echo "path=test-results/visual-regression/" >> $GITHUB_OUTPUT
+
+      - name: Upload local validation reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-reports-local-${{ github.run_id }}
+          path: |
+            test-results/asset-integrity/
+            test-results/css-comparison/
+            test-results/visual-regression/
+          retention-days: 30
+
+  # ============================================================================
+  # STAGE 4: PUBLISH - Deploy to Cloudflare Pages
+  # ============================================================================
+  publish:
+    name: 'Stage 4: Publish to Cloudflare'
+    runs-on: ubuntu-latest
+    needs: [update, validate-local]
+    # Gate: Only publish if update succeeded and (validation passed or skipped)
+    if: |
+      always() &&
+      needs.update.outputs.status == 'success' &&
+      (needs.validate-local.outputs.status == 'success' || github.event.inputs.skip_validation == 'true')
+    outputs:
+      deployment-url: ${{ steps.deploy.outputs.deployment-url }}
+      environment: ${{ steps.environment.outputs.name }}
+    environment:
+      name: ${{ github.event.inputs.environment || 'staging' }}
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Download processed site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-${{ github.run_id }}
+          path: site/
+
+      - name: Determine environment
+        id: environment
+        run: |
+          ENV=${{ github.event.inputs.environment || 'staging' }}
+          echo "name=$ENV" >> $GITHUB_OUTPUT
+          echo "🌍 Deploying to: $ENV"
+
+      - name: Stage 4 - Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy site --project-name=avir-replica-${{ steps.environment.outputs.name }}
+
+      - name: Record deployment URL
+        run: |
+          echo "🚀 Deployment URL: ${{ steps.deploy.outputs.deployment-url }}"
+          echo "deployment_url=${{ steps.deploy.outputs.deployment-url }}" >> $GITHUB_ENV
+
+  # ============================================================================
+  # STAGE 5: VALIDATE (Live) - Validate live deployment
+  # ============================================================================
+  validate-live:
+    name: 'Stage 5: Validate (Live)'
+    runs-on: ubuntu-latest
+    needs: publish
+    if: needs.publish.outputs.deployment-url != '' && github.event.inputs.skip_validation != 'true'
+    outputs:
+      status: ${{ steps.validate-live.outcome }}
+      rollback-needed: ${{ steps.decision.outputs.rollback }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Stage 5 - Validate Assets (Live)
+        id: validate-assets-live
+        run: |
+          echo "🔄 Stage 5a: Validating assets on live deployment..."
+          DEPLOY_URL="${{ needs.publish.outputs.deployment-url }}"
+          node scripts/validate-assets.js --url $DEPLOY_URL --output test-results/live/asset-integrity/
+          echo "✅ Live asset validation complete"
+
+      - name: Stage 5 - Validate CSS (Live)
+        id: validate-css-live
+        run: |
+          echo "🔄 Stage 5b: Validating CSS on live deployment..."
+          DEPLOY_URL="${{ needs.publish.outputs.deployment-url }}"
+          node scripts/validate-css.js --url $DEPLOY_URL --reference ${{ env.SOURCE_URL }} --output test-results/live/css-comparison/
+          echo "✅ Live CSS validation complete"
+
+      - name: Stage 5 - Validate Visual (Live)
+        id: validate-visual-live
+        run: |
+          echo "🔄 Stage 5c: Running visual regression tests on live deployment..."
+          DEPLOY_URL="${{ needs.publish.outputs.deployment-url }}"
+          node scripts/validate-visual.js --url $DEPLOY_URL --reference ${{ env.SOURCE_URL }} --threshold 0.5 --output test-results/live/visual-regression/
+          echo "✅ Live visual validation complete"
+
+      - name: Set validation status
+        id: validate-live
+        if: steps.validate-assets-live.outcome == 'success' && steps.validate-css-live.outcome == 'success' && steps.validate-visual-live.outcome == 'success'
+        run: |
+          echo "✅ All live validations passed"
+          echo "status=success" >> $GITHUB_OUTPUT
+
+      - name: Determine if rollback needed
+        id: decision
+        if: failure()
+        run: |
+          echo "⚠️ Live validation failed - rollback may be needed"
+          echo "rollback=true" >> $GITHUB_OUTPUT
+
+      - name: Upload live validation reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-reports-live-${{ github.run_id }}
+          path: |
+            test-results/live/asset-integrity/
+            test-results/live/css-comparison/
+            test-results/live/visual-regression/
+          retention-days: 30
+
+  # ============================================================================
+  # NOTIFICATIONS - Send success/failure notifications
+  # ============================================================================
+  notify:
+    name: 'Notifications'
+    runs-on: ubuntu-latest
+    needs: [copy, update, validate-local, publish, validate-live]
+    if: always()
+    steps:
+      - name: Notify Success
+        if: |
+          needs.copy.result == 'success' &&
+          needs.update.result == 'success' &&
+          (needs.validate-local.result == 'success' || needs.validate-local.result == 'skipped') &&
+          needs.publish.result == 'success' &&
+          (needs.validate-live.result == 'success' || needs.validate-live.result == 'skipped')
+        run: |
+          echo "=========================================="
+          echo "✅ AVIR REPLICATION PIPELINE SUCCESSFUL"
+          echo "=========================================="
+          echo ""
+          echo "📋 Pipeline Summary:"
+          echo "  - Stage 1 (Copy): ✅ Success"
+          echo "  - Stage 2 (Update): ✅ Success"
+          echo "  - Stage 3 (Validate Local): ✅ Success"
+          echo "  - Stage 4 (Publish): ✅ Success"
+          echo "  - Stage 5 (Validate Live): ✅ Success"
+          echo ""
+          echo "🌐 Deployment URL: ${{ needs.publish.outputs.deployment-url }}"
+          echo "🌍 Environment: ${{ needs.publish.outputs.environment }}"
+          echo "📅 Timestamp: $(date -u +%Y-%m-%d_%H:%M:%S)"
+          echo ""
+          echo "=========================================="
+
+      - name: Notify Failure
+        if: |
+          needs.copy.result == 'failure' ||
+          needs.update.result == 'failure' ||
+          needs.validate-local.result == 'failure' ||
+          needs.publish.result == 'failure' ||
+          needs.validate-live.result == 'failure'
+        run: |
+          echo "=========================================="
+          echo "❌ AVIR REPLICATION PIPELINE FAILED"
+          echo "=========================================="
+          echo ""
+          echo "📋 Failure Summary:"
+          [ "${{ needs.copy.result }}" == "failure" ] && echo "  - Stage 1 (Copy): ❌ Failed"
+          [ "${{ needs.update.result }}" == "failure" ] && echo "  - Stage 2 (Update): ❌ Failed"
+          [ "${{ needs.validate-local.result }}" == "failure" ] && echo "  - Stage 3 (Validate Local): ❌ Failed"
+          [ "${{ needs.publish.result }}" == "failure" ] && echo "  - Stage 4 (Publish): ❌ Failed"
+          [ "${{ needs.validate-live.result }}" == "failure" ] && echo "  - Stage 5 (Validate Live): ❌ Failed"
+          echo ""
+          echo "🔍 Check the logs above for detailed error information."
+          echo "📁 Validation reports are available as artifacts."
+          echo ""
+          echo "=========================================="
+          exit 1
+
+      - name: Notify Partial Success (with warnings)
+        if: |
+          needs.copy.result == 'success' &&
+          needs.update.result == 'success' &&
+          needs.publish.result == 'success' &&
+          (needs.validate-local.result == 'skipped' || needs.validate-live.result == 'skipped')
+        run: |
+          echo "=========================================="
+          echo "⚠️ AVIR REPLICATION PIPELINE COMPLETED WITH WARNINGS"
+          echo "=========================================="
+          echo ""
+          echo "📋 Pipeline Summary:"
+          echo "  - Stage 1 (Copy): ✅ Success"
+          echo "  - Stage 2 (Update): ✅ Success"
+          [ "${{ needs.validate-local.result }}" == "skipped" ] && echo "  - Stage 3 (Validate Local): ⚠️ Skipped"
+          [ "${{ needs.validate-local.result }}" == "success" ] && echo "  - Stage 3 (Validate Local): ✅ Success"
+          echo "  - Stage 4 (Publish): ✅ Success"
+          [ "${{ needs.validate-live.result }}" == "skipped" ] && echo "  - Stage 5 (Validate Live): ⚠️ Skipped"
+          [ "${{ needs.validate-live.result }}" == "success" ] && echo "  - Stage 5 (Validate Live): ✅ Success"
+          echo ""
+          echo "🌐 Deployment URL: ${{ needs.publish.outputs.deployment-url }}"
+          echo "🌍 Environment: ${{ needs.publish.outputs.environment }}"
+          echo ""
+          echo "⚠️ Note: Some validation steps were skipped."
+          echo "=========================================="
+
+  # ============================================================================
+  # ROLLBACK - Handle rollback on validation failure
+  # ============================================================================
+  rollback:
+    name: 'Rollback (if needed)'
+    runs-on: ubuntu-latest
+    needs: [publish, validate-live]
+    if: |
+      always() &&
+      needs.validate-live.outputs.rollback-needed == 'true' &&
+      needs.publish.outputs.deployment-url != ''
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Rollback deployment
+        run: |
+          echo "⚠️ Rolling back deployment due to validation failure..."
+          echo "Deployment URL: ${{ needs.publish.outputs.deployment-url }}"
+          # Note: Cloudflare Pages doesn't support direct rollback
+          # This would require redeploying the previous version
+          # For now, we just log the failure
+          echo "❌ Rollback not implemented - manual intervention required"
+          echo "Please manually redeploy the previous version from Cloudflare dashboard"
+
+      - name: Create rollback issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const body = [
+              '## Rollback Required',
+              '',
+              'The AVIR replication pipeline failed live validation and requires manual rollback.',
+              '',
+              '### Details',
+              '- **Run ID**: ${{ github.run_id }}',
+              '- **Deployment URL**: ${{ needs.publish.outputs.deployment-url }}',
+              '- **Environment**: ${{ needs.publish.outputs.environment }}',
+              '- **Timestamp**: ${{ github.event.head_commit.timestamp }}',
+              '',
+              '### Action Required',
+              'Please manually redeploy the previous working version from the Cloudflare Pages dashboard.',
+              '',
+              '### Validation Reports',
+              'Download the validation reports from the workflow artifacts for analysis.'
+            ].join('\n');
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: '🚨 Rollback Required: Validation Failed',
+              body: body,
+              labels: ['rollback-required', 'pipeline-failure', 'automated']
+            })
+
