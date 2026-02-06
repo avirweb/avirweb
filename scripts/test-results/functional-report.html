@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functional Test Results - AVIR</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    h1 {
+      color: #1a1a1a;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    h2 {
+      color: #444;
+      margin: 25px 0 15px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .summary-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .summary-card.status {
+      background: #ef4444;
+      color: white;
+    }
+    .summary-card h3 {
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
+    .summary-card p {
+      color: #666;
+      font-size: 0.9em;
+    }
+    .summary-card.status p {
+      color: rgba(255,255,255,0.9);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      background: #f8f9fa;
+      font-weight: 600;
+      color: #555;
+    }
+    tr:hover {
+      background: #f8f9fa;
+    }
+    .status-pass {
+      color: #22c55e;
+      font-weight: 600;
+    }
+    .status-fail {
+      color: #ef4444;
+      font-weight: 600;
+    }
+    .duration {
+      color: #666;
+      font-size: 0.9em;
+    }
+    .error {
+      color: #ef4444;
+      font-size: 0.85em;
+      margin-top: 5px;
+    }
+    .screenshot-link {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    .screenshot-link:hover {
+      text-decoration: underline;
+    }
+    .config-info {
+      background: #f0f7ff;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .config-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+    footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Functional Test Results</h1>
+    
+    <div class="config-info">
+      <p><strong>Base URL:</strong> http://127.0.0.1:8000</p>
+      <p><strong>Viewport:</strong> mobile</p>
+      <p><strong>Generated:</strong> 2026-02-06T02:58:22.564Z</p>
+    </div>
+    
+    <div class="summary">
+      <div class="summary-card status">
+        <h3>FAILED</h3>
+        <p>Overall Status</p>
+      </div>
+      <div class="summary-card">
+        <h3>10</h3>
+        <p>Total Tests</p>
+      </div>
+      <div class="summary-card">
+        <h3 style="color: #22c55e;">8</h3>
+        <p>Passed</p>
+      </div>
+      <div class="summary-card">
+        <h3 style="color: #ef4444;">2</h3>
+        <p>Failed</p>
+      </div>
+      <div class="summary-card">
+        <h3>53645ms</h3>
+        <p>Total Duration</p>
+      </div>
+    </div>
+    
+    <h2>Detailed Results</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Test</th>
+          <th>Status</th>
+          <th>Duration</th>
+          <th>Screenshot</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            Navigation - Homepage to Services
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">2060ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/navigation___homepage_to_services.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Navigation - All Main Nav Links
+            <div class="error">Failed navigation to: /</div>
+          </td>
+          <td class="status-fail">
+            FAIL
+          </td>
+          <td class="duration">10269ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/FAILED_navigation___all_main_nav_links.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Mobile Menu Toggle
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">1778ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/mobile_menu_toggle.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Video Element Present
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">1177ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/video_element_present.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Video Playback Capabilities
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">1311ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/video_playback_capabilities.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Homepage Form Fields
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">1347ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/homepage_form_fields.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Contact Page Accessibility
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">1146ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/contact_page_accessibility.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Dropdown Navigation
+            <div class="error">elementHandle.hover: Timeout 30000ms exceeded.
+Call log:
+[2m  - attempting hover action[22m
+[2m    2 × waiting for element to be visible and stable[22m
+[2m      - element is visible and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <a tabindex="0" href="/contact" class="nav-link-mobile w-dropdown-link">Contact</a> from <div data-delay="500" data-hover="false" class="mobile__nav w-dropdown" data-w-id="8046ebb1-f391-30b7-dacc-c38851ec32f0">…</div> subtree intercepts pointer events[22m
+[2m    - retrying hover action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible and stable[22m
+[2m      - element is visible and stable[22m
+[2m      - scrolling into view if needed[22m
+[2m      - done scrolling[22m
+[2m      - <a tabindex="0" href="/contact" class="nav-link-mobile w-dropdown-link">Contact</a> from <div data-delay="500" data-hover="false" class="mobile__nav w-dropdown" data-w-id="8046ebb1-f391-30b7-dacc-c38851ec32f0">…</div> subtree intercepts pointer events[22m
+[2m    - retrying hover action[22m
+[2m      - waiting 100ms[22m
+[2m    56 × waiting for element to be visible and stable[22m
+[2m       - element is visible and stable[22m
+[2m       - scrolling into view if needed[22m
+[2m       - done scrolling[22m
+[2m       - <a tabindex="0" href="/contact" class="nav-link-mobile w-dropdown-link">Contact</a> from <div data-delay="500" data-hover="false" class="mobile__nav w-dropdown" data-w-id="8046ebb1-f391-30b7-dacc-c38851ec32f0">…</div> subtree intercepts pointer events[22m
+[2m     - retrying hover action[22m
+[2m       - waiting 500ms[22m
+</div>
+          </td>
+          <td class="status-fail">
+            FAIL
+          </td>
+          <td class="duration">31273ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/FAILED_dropdown_navigation.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Left Sidebar Navigation
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">1832ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/left_sidebar_navigation.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            Footer Navigation
+            
+          </td>
+          <td class="status-pass">
+            PASS
+          </td>
+          <td class="duration">1306ms</td>
+          <td>
+            <a class="screenshot-link" href="functional-screenshots/footer_navigation.png" target="_blank">View</a>
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <footer>
+      <p>AVIR Functional Tests | Generated by Playwright</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+========================================
+  AVIR Mirror + Fix + Validate Pipeline
+========================================
+Started: Wed Feb  4 11:02:35 PM UTC 2026
+Log file: /home/agent/avir/scripts/mirror-deploy-20260204-230235.log
+
+[0;34m[STAGE 1][0m Mirror Site
+----------------------------------------
+[0;32m[INFO][0m Starting AVIR site mirror...
+[0;32m[INFO][0m URL: https://www.avir.com
+[0;32m[INFO][0m Output: site
+[0;32m[INFO][0m Log: mirror-20260204-230235.log
+[0;32m[INFO][0m Starting download with retry logic (3 attempts)...
+--2026-02-04 23:02:35--  https://www.avir.com/
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving www.avir.com (www.avir.com)... 2620:cb:2000::1, 198.202.211.1
+Connecting to www.avir.com (www.avir.com)|2620:cb:2000::1|:443... connected.
+HTTP request sent, awaiting response... 
+  HTTP/1.1 304 Not Modified
+  Date: Wed, 04 Feb 2026 23:02:35 GMT
+  Connection: keep-alive
+  Server: cloudflare
+  CF-Ray: 9c8dcbe68c43e13f-ORD
+  CF-Cache-Status: HIT
+  Age: 124921
+  Last-Modified: Fri, 30 Jan 2026 23:34:01 GMT
+  Strict-Transport-Security: max-age=31536000
+  surrogate-control: max-age=432000
+  surrogate-key: www.avir.com 61aeaa63fc373a25c198ab33 pageId:637580d6ea911a095b11941c 61d85622ad416d3b2a772d64 63bc9fe0a31c0bf1cab28d4f
+  x-lambda-id: 5c5c6c43-7ea8-4670-83ff-95df82e2dbb2
+  vary: Accept-Encoding
+  Set-Cookie: _cfuvid=fwTjZ7mZOeQ5FBMA83j4tJhfXqqP_4XrAAALVfIU9NM-1770246155340-0.0.1.1-604800000; path=/; domain=.www.avir.com; HttpOnly; Secure; SameSite=None
+  alt-svc: h3=":443"; ma=86400
+File ‘site/www.avir.com/index.html’ not modified on server. Omitting download.
+
+Converted links in 0 files in 0 seconds.
+[0;32m[INFO][0m Mirror complete!
+[0;32m[INFO][0m Output directory: site
+[0;32m[INFO][0m Log file: mirror-20260204-230235.log
+[0;32m[INFO][0m Downloaded 391 files (65M)
+[0;32m[INFO][0m Stage 1 completed in 0s
+
+[0;34m[STAGE 2][0m Fix Images
+----------------------------------------
+[2026-02-04 23:02:35] [INFO] ============================================================
+[2026-02-04 23:02:35] [INFO] Universal Image Fix Script Starting
+[2026-02-04 23:02:35] [INFO] ============================================================
+[2026-02-04 23:02:35] [INFO] Scanning for files with empty src...
+[2026-02-04 23:02:35] [INFO] Found 0 files with empty src
+[2026-02-04 23:02:35] [INFO] No files to process!
+[0;32m[INFO][0m Stage 2 completed in 0s
+
+[0;34m[STAGE 3a][0m Validate Site Structure
+----------------------------------------
+========================================
+  AVIR Pre-Deploy Validation
+========================================
+Site directory: site
+Report file: validation-report-20260204-230235.txt
+
+[0;32m✓[0m Site directory exists
+[0;32m✓[0m index.html exists
+[0;32m✓[0m index.html has DOCTYPE declaration
+
+Caching file lists...
+[0;32m✓[0m HTML page count: 146
+
+Running parallel attribute checks...
+[0;32m✓[0m No empty src attributes found
+[1;33m⚠[0m Found 8 files with empty srcset attributes
+[0;32m✓[0m No empty href attributes found
+
+Checking critical files...
+[0;32m✓[0m Critical file exists: index.html
+[0;32m✓[0m Critical file exists: contact/index.html
+[0;32m✓[0m Critical file exists: services/index.html
+[0;32m✓[0m Critical file exists: about-avir/index.html
+
+Checking CSS files...
+[0;32m✓[0m Found 2 CSS files
+
+Checking JavaScript files...
+[0;32m✓[0m Found 4 JavaScript files
+
+Checking images...
+[0;32m✓[0m Images directory exists with 232 images
+
+Checking for potential broken links (sample-based)...
+[0;32m✓[0m No obvious broken internal links detected (checked sample of 50 files)
+
+========================================
+  Validation Summary
+========================================
+Checks passed: [0;32m14[0m
+Warnings: [1;33m1[0m
+Errors: [0;31m0[0m
+
+[1;33mValidation PASSED with warnings[0m - Review warnings before deploying
+See validation-report-20260204-230235.txt for details
+[0;32m[INFO][0m Stage 3a completed in 13s
+
+[0;34m[STAGE 3b][0m Validate Security
+----------------------------------------
+========================================
+Security Validation Script
+========================================
+Checking .secrets/ directory permissions...
+  ⚠️  WARN: .secrets/ directory does not exist
+Checking for secret keys in HTML files...
+  ✅ PASS: No Turnstile secret keys found in HTML
+  ✅ PASS: No AWS access keys found in site files
+  ✅ PASS: No private keys found in site files
+  ✅ PASS: No suspicious API key patterns found in site files
+Running Gitleaks scan...
+  ⚠️  WARN: Gitleaks found potential secrets (check manually)
+Checking git for credential files...
+  ✅ PASS: No credential files in git
+Checking script file permissions...
+  ✅ PASS: All scripts have execute permission
+Checking for reCAPTCHA site keys (public keys are OK)...
+  ℹ️  INFO: Found 3 reCAPTCHA site keys (these are public and OK)
+========================================
+✅ All security checks passed!
+[0;32m[INFO][0m Stage 3b completed in 27s
+
+[0;34m[STAGE 4][0m Deploying to Cloudflare Pages
+----------------------------------------
+[0;31m[ERROR][0m site/ directory not found
+
+========================================
+  Pipeline Summary
+========================================
+Completed: Wed Feb  4 11:03:15 PM UTC 2026
+
+  Stage 1 (Mirror Site): PASSED (0s)
+  Stage 2 (Fix Images): PASSED (0s)
+  Stage 3a (Validate Site Structure): PASSED (13s)
+  Stage 3b (Validate Security): PASSED (27s)
+
+[0;31m❌ Pipeline completed with 1 error(s)[0m
+Review the log file for details: /home/agent/avir/scripts/mirror-deploy-20260204-230235.log
+
+Log saved to: /home/agent/avir/scripts/mirror-deploy-20260204-230235.log
+[0;32m[INFO][0m Generating unified report...
+[0;32m[INFO][0m Reports saved: /home/agent/avir/scripts/test-results/unified-report.json, /home/agent/avir/scripts/test-results/unified-report.html
+[0;31m[ERROR][0m Pipeline failed with exit code 1
+[0;31m[ERROR][0m Check log file: /home/agent/avir/scripts/mirror-deploy-20260204-230235.log
+[0;32m[INFO][0m Cleaning up temporary files...
+[0;32m[INFO][0m Cleanup complete

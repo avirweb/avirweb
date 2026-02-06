@@ -1,0 +1,644 @@
+{
+  "timestamp": "2026-02-06T03:02:58.861Z",
+  "config": {
+    "url": "http://localhost:8000",
+    "viewports": {
+      "mobile": {
+        "width": 375,
+        "height": 667,
+        "deviceScaleFactor": 2
+      },
+      "tablet": {
+        "width": 768,
+        "height": 1024,
+        "deviceScaleFactor": 2
+      },
+      "desktop": {
+        "width": 1920,
+        "height": 1080,
+        "deviceScaleFactor": 1
+      }
+    },
+    "pages": [
+      "homepage",
+      "services",
+      "contact"
+    ]
+  },
+  "summary": {
+    "total": 21,
+    "passed": 6,
+    "failed": 15,
+    "duration": 32344
+  },
+  "results": [
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "mobile",
+      "page": "homepage",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:29.816Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "mobile",
+      "page": "homepage",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:29.820Z",
+      "documentWidth": 2008,
+      "windowWidth": 375,
+      "overflowDiff": 1633,
+      "overflowingElements": [
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 359,
+          "right": 397
+        }
+      ]
+    },
+    {
+      "testName": "Mobile Menu Functional",
+      "viewport": "mobile",
+      "page": "homepage",
+      "passed": true,
+      "timestamp": "2026-02-06T03:02:30.381Z",
+      "menuOpened": true,
+      "linksClickable": true,
+      "linkCount": 9,
+      "error": null
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "tablet",
+      "page": "homepage",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:33.858Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "tablet",
+      "page": "homepage",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:33.861Z",
+      "documentWidth": 2008,
+      "windowWidth": 768,
+      "overflowDiff": 1240,
+      "overflowingElements": [
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 752,
+          "right": 790
+        }
+      ]
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "desktop",
+      "page": "homepage",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:37.245Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "desktop",
+      "page": "homepage",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:37.247Z",
+      "documentWidth": 2008,
+      "windowWidth": 1920,
+      "overflowDiff": 88,
+      "overflowingElements": [
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "H3",
+          "class": "dept__heading",
+          "width": 1904,
+          "right": 1942
+        }
+      ]
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "mobile",
+      "page": "services",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:40.397Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "mobile",
+      "page": "services",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:40.399Z",
+      "documentWidth": 397,
+      "windowWidth": 375,
+      "overflowDiff": 22,
+      "overflowingElements": [
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "P",
+          "class": "partner__para",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "P",
+          "class": "partner__para",
+          "width": 359,
+          "right": 397
+        },
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 359,
+          "right": 397
+        }
+      ]
+    },
+    {
+      "testName": "Mobile Menu Functional",
+      "viewport": "mobile",
+      "page": "services",
+      "passed": true,
+      "timestamp": "2026-02-06T03:02:40.964Z",
+      "menuOpened": true,
+      "linksClickable": true,
+      "linkCount": 9,
+      "error": null
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "tablet",
+      "page": "services",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:44.113Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "tablet",
+      "page": "services",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:44.115Z",
+      "documentWidth": 790,
+      "windowWidth": 768,
+      "overflowDiff": 22,
+      "overflowingElements": [
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "P",
+          "class": "partner__para",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "P",
+          "class": "partner__para",
+          "width": 752,
+          "right": 790
+        },
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 752,
+          "right": 790
+        }
+      ]
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "desktop",
+      "page": "services",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:47.480Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "desktop",
+      "page": "services",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:47.483Z",
+      "documentWidth": 1942,
+      "windowWidth": 1920,
+      "overflowDiff": 22,
+      "overflowingElements": [
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "P",
+          "class": "partner__para",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "P",
+          "class": "partner__para",
+          "width": 1904,
+          "right": 1942
+        },
+        {
+          "tag": "H3",
+          "class": "partner__title",
+          "width": 1904,
+          "right": 1942
+        }
+      ]
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "mobile",
+      "page": "contact",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:50.801Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "mobile",
+      "page": "contact",
+      "passed": true,
+      "timestamp": "2026-02-06T03:02:50.803Z",
+      "documentWidth": 375,
+      "windowWidth": 375,
+      "overflowDiff": 0,
+      "overflowingElements": []
+    },
+    {
+      "testName": "Mobile Menu Functional",
+      "viewport": "mobile",
+      "page": "contact",
+      "passed": true,
+      "timestamp": "2026-02-06T03:02:51.356Z",
+      "menuOpened": true,
+      "linksClickable": true,
+      "linkCount": 9,
+      "error": null
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "tablet",
+      "page": "contact",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:55.003Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "tablet",
+      "page": "contact",
+      "passed": true,
+      "timestamp": "2026-02-06T03:02:55.005Z",
+      "documentWidth": 768,
+      "windowWidth": 768,
+      "overflowDiff": 0,
+      "overflowingElements": []
+    },
+    {
+      "testName": "Critical Elements Visible",
+      "viewport": "desktop",
+      "page": "contact",
+      "passed": false,
+      "timestamp": "2026-02-06T03:02:58.685Z",
+      "elements": {
+        "logo": {
+          "found": false,
+          "selector": null
+        },
+        "nav": {
+          "found": true,
+          "selector": ".nav__link-wrap"
+        },
+        "content": {
+          "found": true,
+          "selector": ".page-content"
+        },
+        "footer": {
+          "found": true,
+          "selector": ".footer"
+        }
+      }
+    },
+    {
+      "testName": "No Horizontal Scroll",
+      "viewport": "desktop",
+      "page": "contact",
+      "passed": true,
+      "timestamp": "2026-02-06T03:02:58.687Z",
+      "documentWidth": 1920,
+      "windowWidth": 1920,
+      "overflowDiff": 0,
+      "overflowingElements": []
+    }
+  ],
+  "screenshots": [
+    {
+      "path": "test-results/mobile-screenshots/homepage_mobile_375x667.png",
+      "viewport": "mobile",
+      "page": "homepage",
+      "description": "Homepage at mobile",
+      "timestamp": "2026-02-06T03:02:30.474Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/homepage_tablet_768x1024.png",
+      "viewport": "tablet",
+      "page": "homepage",
+      "description": "Homepage at tablet",
+      "timestamp": "2026-02-06T03:02:34.017Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/homepage_desktop_1920x1080.png",
+      "viewport": "desktop",
+      "page": "homepage",
+      "description": "Homepage at desktop",
+      "timestamp": "2026-02-06T03:02:37.340Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/services_mobile_375x667.png",
+      "viewport": "mobile",
+      "page": "services",
+      "description": "Services page at mobile",
+      "timestamp": "2026-02-06T03:02:41.047Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/services_tablet_768x1024.png",
+      "viewport": "tablet",
+      "page": "services",
+      "description": "Services page at tablet",
+      "timestamp": "2026-02-06T03:02:44.289Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/services_desktop_1920x1080.png",
+      "viewport": "desktop",
+      "page": "services",
+      "description": "Services page at desktop",
+      "timestamp": "2026-02-06T03:02:47.583Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/contact_mobile_375x667.png",
+      "viewport": "mobile",
+      "page": "contact",
+      "description": "Contact page at mobile",
+      "timestamp": "2026-02-06T03:02:51.448Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/contact_tablet_768x1024.png",
+      "viewport": "tablet",
+      "page": "contact",
+      "description": "Contact page at tablet",
+      "timestamp": "2026-02-06T03:02:55.206Z"
+    },
+    {
+      "path": "test-results/mobile-screenshots/contact_desktop_1920x1080.png",
+      "viewport": "desktop",
+      "page": "contact",
+      "description": "Contact page at desktop",
+      "timestamp": "2026-02-06T03:02:58.819Z"
+    }
+  ]
+}

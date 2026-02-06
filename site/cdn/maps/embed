@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style type="text/css">
+      html, body, #mapDiv {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mapDiv"></div>
+      
+    <script nonce="mZylMmA3_rzgPiGq25jRVQ">
+      function onEmbedLoad() {
+        initEmbed([null,null,null,null,null,[[[2,"spotlit",null,null,null,null,null,[null,null,null,null,null,null,null,null,null,null,11,null,[null,null,null,null,null,null,null,null,null,null,null,null,null,1]]]],null,null,[[null,null,null,null,null,null,null,null,null,null,null,null,null,[[["9285010913274936299","5309410082039668275"],"/g/1tdylhmr",null,[337456986,3131409302],null,null,null,null,null,null,null,null,null,null,"gcid:audio_visual_consultant"],0,0,null,null,0,null,0]]]],null,["en","uk"],[null,null,null,"/maps/api/js/ApplicationService.GetEntityDetails","/maps/embed/upgrade204",null,"/maps/embed/record204"],null,null,null,null,null,null,null,null,"awqGabacHKud0PEPssKM6QU",null,null,null,[[[72036.66812365667,-116.3557994,33.7456986],[0,0,0],null,13.10000038146973],null,0,[["0x80dafc3b4560bbeb:0x49aed056d2da1e33","AVIR, Inc., 41905 Boardwalk suite x, Palm Desert, CA 92211, United States",[33.7456986,-116.3557994],"5309410082039668275"],"AVIR, Inc.",["41905 Boardwalk suite x","Palm Desert, CA 92211","United States"],4.599999904632568,"27 reviews","https://search.google.com/local/reviews?placeid=ChIJ67tgRTv82oARMx7a0lbQrkk\u0026q=AVIR,+Inc.\u0026hl=en\u0026gl=GB",null,"+1 760-779-0881",null,null,null,["http://www.avir.com/","avir.com",null,null,",AOvVaw3--CrotOSNbvcxqhlXxKVz,,0ahUKEwj2_fjjmMWSAxWrDjQIHTIhI10Q61gIFCgQ,"],"Audio visual consultant","41905 Boardwalk suite x, Palm Desert, CA 92211, United States",null,null,null,null,null,null,null,null,null,null,null,null,null,"ChIJ67tgRTv82oARMx7a0lbQrkk",null,null,"0ahUKEwj2_fjjmMWSAxWrDjQIHTIhI10Q8BcIAigA",null,null,["tel:+17607790881"],null,null,null,1,["0ahUKEwj2_fjjmMWSAxWrDjQIHTIhI10QqtMBCA0oCg",["8555PJWV+7M"],["PJWV+7M Palm Desert, California, USA"],3],[[["Friday",5,[2026,2,6],[["9 am–5 pm",[[9],[17]]]],0,1],["Saturday",6,[2026,2,7],[["Closed"]],0,2],["Sunday",7,[2026,2,8],[["Closed"]],0,2],["Monday",1,[2026,2,9],[["9 am–5 pm",[[9],[17]]]],0,1],["Tuesday",2,[2026,2,10],[["9 am–5 pm",[[9],[17]]]],0,1],["Wednesday",3,[2026,2,11],[["9 am–5 pm",[[9],[17]]]],0,1],["Thursday",4,[2026,2,12],[["9 am–5 pm",[[9],[17]]]],0,1]],[["Friday",5,[2026,2,6],[["9 am–5 pm",[[9],[17]]]],0,1],0,4,null,["Closed · Opens 9 am",[[0,6,[null,[4292621870,4294097077]]]]],["Closed · Opens 9 am",[[0,6,[null,[4292621870,4294097077]]]]],null,[8,30],["Closed",[[0,6,[null,[4292621870,4294097077]]]]]],5,null,null,null,1]]],null,null,null,0,null,null,null,null,null,null,[1]]);
+      }
+      function onApiLoad() {
+        var embed = document.createElement('script');
+        embed.src = "https://maps.gstatic.com/maps-api-v3/embed/js/63/14d/init_embed.js";
+        document.body.appendChild(embed);
+      }
+    </script>
+    <link rel="preload" href="https://maps.gstatic.com/maps-api-v3/embed/js/63/14d/init_embed.js" nonce="mZylMmA3_rzgPiGq25jRVQ" as="script" />
+    <script src="https://maps.googleapis.com/maps/api/js?client=google-maps-embed&amp;paint_origin=&amp;libraries=geometry,search&amp;v=weekly&amp;loading=async&amp;language=en&amp;region=uk&amp;callback=onApiLoad" nonce="mZylMmA3_rzgPiGq25jRVQ" async defer></script>
+  </body>
+</html>

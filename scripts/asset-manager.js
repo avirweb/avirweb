@@ -336,6 +336,12 @@ class AssetManager {
     rewriteCssUrls(content) {
         let rewritten = content;
 
+        // Rewrite CDN URLs in CSS: url(https://cdn.prod.website-files.com/...) -> url(/cdn/...)
+        rewritten = rewritten.replace(
+            /url\(['"]?https:\/\/cdn\.prod\.website-files\.com\/([^'"\)]+)['"]?\)/g,
+            "url('/cdn/$1')"
+        );
+
         // Rewrite font URLs in CSS: url(https://fonts.gstatic.com/...) -> url(/fonts/...)
         rewritten = rewritten.replace(
             /url\(['"]?https:\/\/fonts\.gstatic\.com\/s\/([^'"\)]+)['"]?\)/g,
@@ -541,18 +547,39 @@ class AssetManager {
                 const srcPath = path.join(MIRROR_RAW_DIR, asset.localPath);
                 const destPath = path.join(SITE_DIR, asset.localPath);
 
-                // Copy file
-                await this.copyFile(srcPath, destPath);
-
-                // Add to target manifest
-                const buffer = await fsPromises.readFile(srcPath);
-                await this.targetManifest.addAsset(
-                    asset.originalUrl,
-                    asset.localPath,
-                    buffer,
-                    asset.type,
-                    { status: asset.status, headers: asset.headers }
-                );
+                // Check if this is a CSS file that needs URL rewriting
+                const isCss = asset.localPath.endsWith('.css') || asset.type?.includes('css');
+                
+                if (isCss) {
+                    // Read, rewrite URLs, and write CSS
+                    let content = await fsPromises.readFile(srcPath, 'utf8');
+                    content = this.rewriteCssUrls(content);
+                    await fsPromises.mkdir(path.dirname(destPath), { recursive: true });
+                    await fsPromises.writeFile(destPath, content, 'utf8');
+                    
+                    // Add to target manifest
+                    const buffer = Buffer.from(content);
+                    await this.targetManifest.addAsset(
+                        asset.originalUrl,
+                        asset.localPath,
+                        buffer,
+                        asset.type,
+                        { status: asset.status, headers: asset.headers }
+                    );
+                } else {
+                    // Copy file as-is for non-CSS
+                    await this.copyFile(srcPath, destPath);
+                    
+                    // Add to target manifest
+                    const buffer = await fsPromises.readFile(srcPath);
+                    await this.targetManifest.addAsset(
+                        asset.originalUrl,
+                        asset.localPath,
+                        buffer,
+                        asset.type,
+                        { status: asset.status, headers: asset.headers }
+                    );
+                }
 
                 this.stats.cdnFiles++;
             } catch (error) {

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Performance Benchmark Report - AVIR</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+    h1 {
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #e0e0e0;
+    }
+    h2 {
+      color: #444;
+      margin: 25px 0 15px;
+    }
+    h3 {
+      color: #555;
+      margin: 20px 0 10px;
+    }
+    .subtitle {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+    .summary-card {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .summary-card.status {
+      background: #22c55e;
+      color: white;
+    }
+    .summary-card h3.value {
+      font-size: 2em;
+      margin-bottom: 5px;
+      color: inherit;
+    }
+    .summary-card p {
+      color: #666;
+      font-size: 0.9em;
+    }
+    .summary-card.status p {
+      color: rgba(255,255,255,0.9);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    th {
+      background: #f8f9fa;
+      font-weight: 600;
+      color: #555;
+    }
+    tr:hover {
+      background: #f8f9fa;
+    }
+    .status-pass {
+      color: #22c55e;
+      font-weight: 600;
+    }
+    .status-fail {
+      color: #ef4444;
+      font-weight: 600;
+    }
+    .metric {
+      font-family: monospace;
+      font-size: 0.9em;
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    .metric-good {
+      color: #22c55e;
+    }
+    .metric-warn {
+      color: #f59e0b;
+    }
+    .metric-bad {
+      color: #ef4444;
+    }
+    .config-info {
+      background: #f0f7ff;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .config-info p {
+      margin: 5px 0;
+      color: #555;
+    }
+    .cwv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .cwv-item {
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .cwv-item .label {
+      font-size: 0.8em;
+      color: #666;
+      text-transform: uppercase;
+    }
+    .cwv-item .value {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-top: 5px;
+    }
+    footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      color: #888;
+      font-size: 0.9em;
+    }
+    .error {
+      color: #ef4444;
+      font-size: 0.85em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Performance Benchmark Report</h1>
+    <p class="subtitle">AVIR Website Performance Analysis</p>
+    
+    <div class="config-info">
+      <p><strong>Base URL:</strong> http://localhost:8000</p>
+      <p><strong>Max Load Time Threshold:</strong> 5.00s</p>
+      <p><strong>Generated:</strong> 2026-02-06T03:03:29.772Z</p>
+    </div>
+    
+    <div class="summary">
+      <div class="summary-card status">
+        <h3 class="value">PASS</h3>
+        <p>Overall Status</p>
+      </div>
+      <div class="summary-card">
+        <h3 class="value">5</h3>
+        <p>Pages Tested</p>
+      </div>
+      <div class="summary-card">
+        <h3 class="value" style="color: #22c55e;">5</h3>
+        <p>Passed (&lt;5s)</p>
+      </div>
+      <div class="summary-card">
+        <h3 class="value" style="color: #666;">0</h3>
+        <p>Failed (&ge;5s)</p>
+      </div>
+      <div class="summary-card">
+        <h3 class="value">18.12 MB</h3>
+        <p>Total Page Weight</p>
+      </div>
+      <div class="summary-card">
+        <h3 class="value">714ms</h3>
+        <p>Avg Load Time</p>
+      </div>
+    </div>
+    
+    <h2>Detailed Results</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Page</th>
+          <th>Load Time</th>
+          <th>Status</th>
+          <th>Network Requests</th>
+          <th>Page Weight</th>
+          <th>LCP</th>
+          <th>CLS</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            <strong>Homepage</strong>
+            <br><small style="color: #666;">/</small>
+            
+          </td>
+          <td>
+            <span class="metric metric-good">897ms</span>
+          </td>
+          <td class="status-pass">PASS</td>
+          <td>50</td>
+          <td>3.46 MB</td>
+          <td>120ms</td>
+          <td>0.0178</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <strong>Services</strong>
+            <br><small style="color: #666;">/services</small>
+            
+          </td>
+          <td>
+            <span class="metric metric-good">646ms</span>
+          </td>
+          <td class="status-pass">PASS</td>
+          <td>53</td>
+          <td>3.26 MB</td>
+          <td>408ms</td>
+          <td>0.0062</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <strong>About AVIR</strong>
+            <br><small style="color: #666;">/about-avir</small>
+            
+          </td>
+          <td>
+            <span class="metric metric-good">601ms</span>
+          </td>
+          <td class="status-pass">PASS</td>
+          <td>42</td>
+          <td>3.24 MB</td>
+          <td>348ms</td>
+          <td>0.0062</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <strong>Contact</strong>
+            <br><small style="color: #666;">/contact</small>
+            
+          </td>
+          <td>
+            <span class="metric metric-good">775ms</span>
+          </td>
+          <td class="status-pass">PASS</td>
+          <td>73</td>
+          <td>4.81 MB</td>
+          <td>356ms</td>
+          <td>0.0062</td>
+        </tr>
+        
+        <tr>
+          <td>
+            <strong>Brands</strong>
+            <br><small style="color: #666;">/brands</small>
+            
+          </td>
+          <td>
+            <span class="metric metric-good">653ms</span>
+          </td>
+          <td class="status-pass">PASS</td>
+          <td>106</td>
+          <td>3.35 MB</td>
+          <td>412ms</td>
+          <td>0.0062</td>
+        </tr>
+        
+      </tbody>
+    </table>
+    
+    <h2>Core Web Vitals Summary</h2>
+    <div class="cwv-grid">
+      <div class="cwv-item">
+        <div class="label">Largest Contentful Paint (LCP)</div>
+        <div class="value">329ms</div>
+      </div>
+      <div class="cwv-item">
+        <div class="label">First Input Delay (FID)</div>
+        <div class="value">N/A</div>
+      </div>
+      <div class="cwv-item">
+        <div class="label">Cumulative Layout Shift (CLS)</div>
+        <div class="value">0.0085</div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>AVIR Performance Benchmark | Generated by Playwright</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -63,6 +63,7 @@ mkdir -p "$OUTPUT_DIR"
 # --waitretry=5: Wait 5 seconds between retries
 # --user-agent: Identify as a browser
 # --reject: Skip large video files
+# --reject-regex: Skip malformed embedded URLs
 # --domains: Only follow links within this domain
 # --no-check-certificate: Don't check server certificates (for SSL issues)
 # --progress=bar:force: Show progress bar
@@ -80,9 +81,11 @@ wget \
     --tries=3 \
     --timeout=30 \
     --waitretry=5 \
-    --user-agent="Mozilla/5.0 (compatible; AVIR-Bot/1.0)" \
-    --reject="*.mp4,*.webm,*.mov,*.avi,*.mkv" \
-    --domains=www.avir.com \
+    --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+    --span-hosts \
+    --domains=www.avir.com,cdn.prod.website-files.com,assets.website-files.com,fonts.gstatic.com,fonts.googleapis.com \
+    --accept-regex=".*\.(html|css|js|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|eot|mp4|webm|ogv|pdf)" \
+    --reject-regex=".*&quot;https?://.*" \
     --no-check-certificate \
     --directory-prefix="$OUTPUT_DIR" \
     --progress=bar:force \

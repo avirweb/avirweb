@@ -1,0 +1,304 @@
+{
+  "timestamp": "2026-02-06T03:03:29.772Z",
+  "config": {
+    "url": "http://localhost:8000",
+    "maxLoadTime": 5000,
+    "pages": [
+      {
+        "path": "/",
+        "name": "Homepage"
+      },
+      {
+        "path": "/services",
+        "name": "Services"
+      },
+      {
+        "path": "/about-avir",
+        "name": "About AVIR"
+      },
+      {
+        "path": "/contact",
+        "name": "Contact"
+      },
+      {
+        "path": "/brands",
+        "name": "Brands"
+      }
+    ]
+  },
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "totalWeight": 18998809,
+    "avgLoadTime": "714ms",
+    "avgLCP": 328.8,
+    "avgFID": null,
+    "avgCLS": 0.00852
+  },
+  "results": [
+    {
+      "page": "Homepage",
+      "path": "/",
+      "url": "http://localhost:8000/",
+      "loadTime": 896.6000000238419,
+      "loadTimeFormatted": "897ms",
+      "navigationTiming": {
+        "navigationStart": 0,
+        "domInteractive": 228.60000002384186,
+        "domContentLoadedEventEnd": 231.80000001192093,
+        "loadEventEnd": 896.6000000238419,
+        "duration": 896.6000000238419
+      },
+      "networkRequests": 50,
+      "successfulRequests": 38,
+      "pageWeight": 3628035,
+      "pageWeightFormatted": "3.46 MB",
+      "coreWebVitals": {
+        "lcp": 120,
+        "fid": null,
+        "cls": 0.0178
+      },
+      "resourceBreakdown": {
+        "document": {
+          "count": 3,
+          "size": 62361
+        },
+        "stylesheet": {
+          "count": 3,
+          "size": 189127
+        },
+        "script": {
+          "count": 20,
+          "size": 3160526
+        },
+        "image": {
+          "count": 12,
+          "size": 6445
+        },
+        "font": {
+          "count": 6,
+          "size": 209116
+        },
+        "media": {
+          "count": 2,
+          "size": 460
+        },
+        "fetch": {
+          "count": 4,
+          "size": 0
+        }
+      },
+      "passed": true,
+      "timestamp": "2026-02-06T03:03:22.886Z"
+    },
+    {
+      "page": "Services",
+      "path": "/services",
+      "url": "http://localhost:8000/services",
+      "loadTime": 646.3000000119209,
+      "loadTimeFormatted": "646ms",
+      "navigationTiming": {
+        "navigationStart": 0,
+        "domInteractive": 216.5999999642372,
+        "domContentLoadedEventEnd": 217.80000001192093,
+        "loadEventEnd": 646.3000000119209,
+        "duration": 646.3000000119209
+      },
+      "networkRequests": 53,
+      "successfulRequests": 30,
+      "pageWeight": 3416885,
+      "pageWeightFormatted": "3.26 MB",
+      "coreWebVitals": {
+        "lcp": 408,
+        "fid": null,
+        "cls": 0.0062
+      },
+      "resourceBreakdown": {
+        "document": {
+          "count": 3,
+          "size": 46362
+        },
+        "stylesheet": {
+          "count": 2,
+          "size": 105761
+        },
+        "script": {
+          "count": 18,
+          "size": 3227505
+        },
+        "image": {
+          "count": 27,
+          "size": 12421
+        },
+        "font": {
+          "count": 1,
+          "size": 24836
+        },
+        "fetch": {
+          "count": 2,
+          "size": 0
+        }
+      },
+      "passed": true,
+      "timestamp": "2026-02-06T03:03:24.576Z"
+    },
+    {
+      "page": "About AVIR",
+      "path": "/about-avir",
+      "url": "http://localhost:8000/about-avir",
+      "loadTime": 601.1000000238419,
+      "loadTimeFormatted": "601ms",
+      "navigationTiming": {
+        "navigationStart": 0,
+        "domInteractive": 123.20000004768372,
+        "domContentLoadedEventEnd": 124.20000004768372,
+        "loadEventEnd": 601.1000000238419,
+        "duration": 601.1000000238419
+      },
+      "networkRequests": 42,
+      "successfulRequests": 26,
+      "pageWeight": 3401022,
+      "pageWeightFormatted": "3.24 MB",
+      "coreWebVitals": {
+        "lcp": 348,
+        "fid": null,
+        "cls": 0.0062
+      },
+      "resourceBreakdown": {
+        "document": {
+          "count": 3,
+          "size": 36034
+        },
+        "stylesheet": {
+          "count": 2,
+          "size": 105761
+        },
+        "script": {
+          "count": 18,
+          "size": 3227449
+        },
+        "image": {
+          "count": 16,
+          "size": 6942
+        },
+        "font": {
+          "count": 1,
+          "size": 24836
+        },
+        "fetch": {
+          "count": 2,
+          "size": 0
+        }
+      },
+      "passed": true,
+      "timestamp": "2026-02-06T03:03:26.219Z"
+    },
+    {
+      "page": "Contact",
+      "path": "/contact",
+      "url": "http://localhost:8000/contact",
+      "loadTime": 774.9000000357628,
+      "loadTimeFormatted": "775ms",
+      "navigationTiming": {
+        "navigationStart": 0,
+        "domInteractive": 116.90000003576279,
+        "domContentLoadedEventEnd": 117.20000004768372,
+        "loadEventEnd": 774.9000000357628,
+        "duration": 774.9000000357628
+      },
+      "networkRequests": 73,
+      "successfulRequests": 62,
+      "pageWeight": 5042433,
+      "pageWeightFormatted": "4.81 MB",
+      "coreWebVitals": {
+        "lcp": 356,
+        "fid": null,
+        "cls": 0.0062
+      },
+      "resourceBreakdown": {
+        "document": {
+          "count": 4,
+          "size": 30091
+        },
+        "stylesheet": {
+          "count": 4,
+          "size": 188781
+        },
+        "script": {
+          "count": 30,
+          "size": 4532811
+        },
+        "image": {
+          "count": 27,
+          "size": 185330
+        },
+        "font": {
+          "count": 2,
+          "size": 64964
+        },
+        "fetch": {
+          "count": 2,
+          "size": 0
+        },
+        "xhr": {
+          "count": 4,
+          "size": 40456
+        }
+      },
+      "passed": true,
+      "timestamp": "2026-02-06T03:03:28.040Z"
+    },
+    {
+      "page": "Brands",
+      "path": "/brands",
+      "url": "http://localhost:8000/brands",
+      "loadTime": 652.6999999880791,
+      "loadTimeFormatted": "653ms",
+      "navigationTiming": {
+        "navigationStart": 0,
+        "domInteractive": 217.30000001192093,
+        "domContentLoadedEventEnd": 217.9000000357628,
+        "loadEventEnd": 652.6999999880791,
+        "duration": 652.6999999880791
+      },
+      "networkRequests": 106,
+      "successfulRequests": 37,
+      "pageWeight": 3510434,
+      "pageWeightFormatted": "3.35 MB",
+      "coreWebVitals": {
+        "lcp": 412,
+        "fid": null,
+        "cls": 0.0062
+      },
+      "resourceBreakdown": {
+        "document": {
+          "count": 3,
+          "size": 72959
+        },
+        "stylesheet": {
+          "count": 2,
+          "size": 105761
+        },
+        "script": {
+          "count": 18,
+          "size": 3133732
+        },
+        "image": {
+          "count": 80,
+          "size": 173146
+        },
+        "font": {
+          "count": 1,
+          "size": 24836
+        },
+        "fetch": {
+          "count": 2,
+          "size": 0
+        }
+      },
+      "passed": true,
+      "timestamp": "2026-02-06T03:03:29.741Z"
+    }
+  ]
+}

@@ -22,6 +22,11 @@ on:
         required: false
         default: false
         type: boolean
+      rollback_index:
+        description: 'Manual rollback: deployment index (0=latest, 1=previous, etc.)'
+        required: false
+        default: ''
+        type: string
   repository_dispatch:
     types: [replicate, sync, update]
 
@@ -267,6 +272,17 @@ jobs:
           echo "🚀 Deployment URL: ${{ steps.deploy.outputs.deployment-url }}"
           echo "deployment_url=${{ steps.deploy.outputs.deployment-url }}" >> $GITHUB_ENV
 
+      - name: Record deployment in history
+        run: |
+          echo "📝 Recording deployment to history..."
+          node scripts/deployment-history.js add \
+            --url "${{ steps.deploy.outputs.deployment-url }}" \
+            --commit "${{ github.sha }}" \
+            --run-id "${{ github.run_id }}" \
+            --env "${{ steps.environment.outputs.name }}" \
+            --validated
+          echo "✅ Deployment recorded"
+
   # ============================================================================
   # STAGE 5: VALIDATE (Live) - Validate live deployment
   # ============================================================================
@@ -321,6 +337,18 @@ jobs:
         run: |
           echo "✅ All live validations passed"
           echo "status=success" >> $GITHUB_OUTPUT
+
+      - name: Record successful validation
+        if: steps.validate-assets-live.outcome == 'success' && steps.validate-css-live.outcome == 'success' && steps.validate-visual-live.outcome == 'success'
+        run: |
+          echo "📝 Marking deployment as validated..."
+          node scripts/deployment-history.js add \
+            --url "${{ needs.publish.outputs.deployment-url }}" \
+            --commit "${{ github.sha }}" \
+            --run-id "${{ github.run_id }}" \
+            --env "${{ needs.publish.outputs.environment }}" \
+            --validated
+          echo "✅ Deployment marked as validated"
 
       - name: Determine if rollback needed
         id: decision
@@ -426,19 +454,25 @@ jobs:
           echo "=========================================="
 
   # ============================================================================
-  # ROLLBACK - Handle rollback on validation failure
+  # ROLLBACK - Handle rollback on validation failure or manual trigger
   # ============================================================================
   rollback:
     name: 'Rollback (if needed)'
     runs-on: ubuntu-latest
     needs: [publish, validate-live]
     if: |
-      always() &&
-      needs.validate-live.outputs.rollback-needed == 'true' &&
-      needs.publish.outputs.deployment-url != ''
+      always() && (
+        (needs.validate-live.outputs.rollback-needed == 'true' && needs.publish.outputs.deployment-url != '') ||
+        (github.event.inputs.rollback_index != '' && github.event.inputs.rollback_index != null)
+      )
+    outputs:
+      rollback-success: ${{ steps.rollback.outputs.rollback-success }}
+      rollback-url: ${{ steps.rollback.outputs.rollback-url }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Need full history for rollback
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -449,42 +483,88 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Rollback deployment
+      - name: List available deployments
         run: |
-          echo "⚠️ Rolling back deployment due to validation failure..."
-          echo "Deployment URL: ${{ needs.publish.outputs.deployment-url }}"
-          # Note: Cloudflare Pages doesn't support direct rollback
-          # This would require redeploying the previous version
-          # For now, we just log the failure
-          echo "❌ Rollback not implemented - manual intervention required"
-          echo "Please manually redeploy the previous version from Cloudflare dashboard"
+          echo "📋 Available deployments for rollback:"
+          node scripts/deployment-history.js list || echo "No deployment history found"
 
-      - name: Create rollback issue
+      - name: Perform auto-rollback
+        id: rollback
+        if: needs.validate-live.outputs.rollback-needed == 'true' && github.event.inputs.rollback_index == ''
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT_NAME: avir-replica-${{ needs.publish.outputs.environment }}
+        run: |
+          echo "🔄 Performing automatic rollback..."
+          echo "Current deployment: ${{ needs.publish.outputs.deployment-url }}"
+          
+          # Execute rollback script
+          ./scripts/rollback.sh --auto --current-url "${{ needs.publish.outputs.deployment-url }}"
+          
+          echo "✅ Automatic rollback complete"
+
+      - name: Perform manual rollback
+        id: manual-rollback
+        if: github.event.inputs.rollback_index != '' && github.event.inputs.rollback_index != null
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          PROJECT_NAME: avir-replica-${{ github.event.inputs.environment || 'staging' }}
+        run: |
+          echo "🔄 Performing manual rollback to index ${{ github.event.inputs.rollback_index }}..."
+          
+          # Execute rollback script with specific index
+          ./scripts/rollback.sh --manual "${{ github.event.inputs.rollback_index }}"
+          
+          echo "✅ Manual rollback complete"
+
+      - name: Create rollback notification
+        if: always()
         uses: actions/github-script@v7
         with:
           script: |
+            const isAuto = '${{ needs.validate-live.outputs.rollback-needed }}' === 'true';
+            const isSuccess = '${{ steps.rollback.outputs.rollback-success }}' === 'true' || '${{ steps.manual-rollback.outcome }}' === 'success';
+            const rollbackUrl = '${{ steps.rollback.outputs.rollback-url }}' || '${{ steps.manual-rollback.outputs.rollback-url }}';
+            
+            const title = isSuccess 
+              ? (isAuto ? '✅ Auto-Rollback Successful' : '✅ Manual Rollback Successful')
+              : (isAuto ? '🚨 Auto-Rollback Failed' : '🚨 Manual Rollback Failed');
+            
             const body = [
-              '## Rollback Required',
+              isAuto ? '## Automatic Rollback Executed' : '## Manual Rollback Executed',
               '',
-              'The AVIR replication pipeline failed live validation and requires manual rollback.',
+              isAuto 
+                ? 'The AVIR replication pipeline failed live validation and an automatic rollback was performed.'
+                : `Manual rollback was triggered to deployment index ${'${{ github.event.inputs.rollback_index }}'}.`,
               '',
               '### Details',
-              '- **Run ID**: ${{ github.run_id }}',
-              '- **Deployment URL**: ${{ needs.publish.outputs.deployment-url }}',
-              '- **Environment**: ${{ needs.publish.outputs.environment }}',
-              '- **Timestamp**: ${{ github.event.head_commit.timestamp }}',
+              `- **Run ID**: ${{ github.run_id }}`,
+              `- **Failed Deployment**: ${{ needs.publish.outputs.deployment-url || 'N/A (manual rollback)' }}`,
+              isSuccess ? `- **Rollback URL**: ${rollbackUrl}` : '',
+              `- **Environment**: ${{ needs.publish.outputs.environment || github.event.inputs.environment || 'staging' }}`,
+              `- **Timestamp**: ${{ github.event.head_commit?.timestamp || new Date().toISOString() }}`,
+              `- **Status**: ${isSuccess ? '✅ Success' : '❌ Failed'}`,
               '',
-              '### Action Required',
-              'Please manually redeploy the previous working version from the Cloudflare Pages dashboard.',
+              isSuccess 
+                ? 'The previous known-good version has been redeployed successfully.'
+                : '**Action Required**: Please check the workflow logs and manually redeploy if necessary.',
+              '',
+              '### Deployment History',
+              'View `.sisyphus/deployments/history.json` for the full deployment history.',
               '',
               '### Validation Reports',
               'Download the validation reports from the workflow artifacts for analysis.'
-            ].join('\n');
+            ].filter(line => line !== '').join('\n');
+            
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: '🚨 Rollback Required: Validation Failed',
+              title: title,
               body: body,
-              labels: ['rollback-required', 'pipeline-failure', 'automated']
-            })
+              labels: isSuccess 
+                ? ['rollback-completed', 'pipeline-recovered', 'automated']
+                : ['rollback-failed', 'pipeline-failure', 'automated', 'action-required']
+            });
 

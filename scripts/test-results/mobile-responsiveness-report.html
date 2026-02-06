@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Responsiveness Test Report - AVIR</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .header p { opacity: 0.9; }
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .summary-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .summary-card h3 {
+      font-size: 0.875rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+    .summary-card .value {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    .summary-card.passed .value { color: #22c55e; }
+    .summary-card.failed .value { color: #ef4444; }
+    .summary-card.total .value { color: #3b82f6; }
+    .summary-card.duration .value { color: #6b7280; }
+    
+    .viewport-section {
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .viewport-header {
+      background: #f8f9fa;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .viewport-header h2 {
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .viewport-badge {
+      background: #e0e7ff;
+      color: #4338ca;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .viewport-content {
+      padding: 1.5rem;
+    }
+    
+    .screenshot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .screenshot-card {
+      border: 1px solid #e5e7eb;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+    .screenshot-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: top;
+      background: #f8f9fa;
+    }
+    .screenshot-info {
+      padding: 1rem;
+    }
+    .screenshot-info h4 {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+    }
+    .screenshot-meta {
+      font-size: 0.75rem;
+      color: #6b7280;
+    }
+    
+    .test-results {
+      margin-top: 1rem;
+    }
+    .test-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .test-item:last-child {
+      border-bottom: none;
+    }
+    .test-name {
+      font-weight: 500;
+    }
+    .test-status {
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .test-status.pass {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .test-status.fail {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+    
+    .details-section {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 6px;
+    }
+    .details-section h5 {
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      color: #4b5563;
+    }
+    .details-list {
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    .details-list li {
+      margin-left: 1.5rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .config-info {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .config-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .config-item {
+      font-size: 0.875rem;
+    }
+    .config-item strong {
+      color: #111;
+    }
+    .config-item span {
+      color: #6b7280;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    
+    @media (max-width: 768px) {
+      .screenshot-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Mobile Responsiveness Test Report</h1>
+      <p>AVIR Website - Viewport Testing Across Mobile, Tablet, and Desktop</p>
+      <p style="margin-top: 0.5rem; font-size: 0.875rem;">2/6/2026, 3:02:58 AM</p>
+    </div>
+    
+    <div class="summary-grid">
+      <div class="summary-card total">
+        <h3>Total Tests</h3>
+        <div class="value">21</div>
+      </div>
+      <div class="summary-card passed">
+        <h3>Passed</h3>
+        <div class="value">6</div>
+      </div>
+      <div class="summary-card failed">
+        <h3>Failed</h3>
+        <div class="value">15</div>
+      </div>
+      <div class="summary-card duration">
+        <h3>Duration</h3>
+        <div class="value">32.3s</div>
+      </div>
+    </div>
+    
+    <div class="config-info">
+      <h3>Test Configuration</h3>
+      <div class="config-grid">
+        <div class="config-item"><strong>Base URL:</strong> <span>http://localhost:8000</span></div>
+        <div class="config-item"><strong>Pages Tested:</strong> <span>3</span></div>
+        <div class="config-item"><strong>Viewports:</strong> <span>mobile, tablet, desktop</span></div>
+        <div class="config-item"><strong>Total Screenshots:</strong> <span>9</span></div>
+      </div>
+    </div>
+    
+    
+    <div class="viewport-section">
+      <div class="viewport-header">
+        <h2>
+          Mobile
+          <span class="viewport-badge">375x667</span>
+        </h2>
+        <span style="color: #ef4444; font-weight: 600;">
+          4/9 passed
+        </span>
+      </div>
+      <div class="viewport-content">
+        <div class="screenshot-grid">
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/homepage_mobile_375x667.png" alt="Homepage at mobile" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Homepage</h4>
+              <div class="screenshot-meta">Homepage at mobile</div>
+            </div>
+          </div>
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/services_mobile_375x667.png" alt="Services page at mobile" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Services</h4>
+              <div class="screenshot-meta">Services page at mobile</div>
+            </div>
+          </div>
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/contact_mobile_375x667.png" alt="Contact page at mobile" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Contact</h4>
+              <div class="screenshot-meta">Contact page at mobile</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="test-results">
+          <h4 style="margin-bottom: 0.5rem;">Test Results</h4>
+          
+          <div class="test-item">
+            <span class="test-name">homepage - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">homepage - No Horizontal Scroll</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">homepage - Mobile Menu Functional</span>
+            <span class="test-status pass">PASS</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">services - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">services - No Horizontal Scroll</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">services - Mobile Menu Functional</span>
+            <span class="test-status pass">PASS</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">contact - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">contact - No Horizontal Scroll</span>
+            <span class="test-status pass">PASS</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">contact - Mobile Menu Functional</span>
+            <span class="test-status pass">PASS</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      
+    <div class="viewport-section">
+      <div class="viewport-header">
+        <h2>
+          Tablet
+          <span class="viewport-badge">768x1024</span>
+        </h2>
+        <span style="color: #ef4444; font-weight: 600;">
+          1/6 passed
+        </span>
+      </div>
+      <div class="viewport-content">
+        <div class="screenshot-grid">
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/homepage_tablet_768x1024.png" alt="Homepage at tablet" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Homepage</h4>
+              <div class="screenshot-meta">Homepage at tablet</div>
+            </div>
+          </div>
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/services_tablet_768x1024.png" alt="Services page at tablet" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Services</h4>
+              <div class="screenshot-meta">Services page at tablet</div>
+            </div>
+          </div>
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/contact_tablet_768x1024.png" alt="Contact page at tablet" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Contact</h4>
+              <div class="screenshot-meta">Contact page at tablet</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="test-results">
+          <h4 style="margin-bottom: 0.5rem;">Test Results</h4>
+          
+          <div class="test-item">
+            <span class="test-name">homepage - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">homepage - No Horizontal Scroll</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">services - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">services - No Horizontal Scroll</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">contact - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">contact - No Horizontal Scroll</span>
+            <span class="test-status pass">PASS</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      
+    <div class="viewport-section">
+      <div class="viewport-header">
+        <h2>
+          Desktop
+          <span class="viewport-badge">1920x1080</span>
+        </h2>
+        <span style="color: #ef4444; font-weight: 600;">
+          1/6 passed
+        </span>
+      </div>
+      <div class="viewport-content">
+        <div class="screenshot-grid">
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/homepage_desktop_1920x1080.png" alt="Homepage at desktop" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Homepage</h4>
+              <div class="screenshot-meta">Homepage at desktop</div>
+            </div>
+          </div>
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/services_desktop_1920x1080.png" alt="Services page at desktop" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Services</h4>
+              <div class="screenshot-meta">Services page at desktop</div>
+            </div>
+          </div>
+          
+          <div class="screenshot-card">
+            <img src="mobile-screenshots/contact_desktop_1920x1080.png" alt="Contact page at desktop" loading="lazy">
+            <div class="screenshot-info">
+              <h4>Contact</h4>
+              <div class="screenshot-meta">Contact page at desktop</div>
+            </div>
+          </div>
+          
+        </div>
+        
+        <div class="test-results">
+          <h4 style="margin-bottom: 0.5rem;">Test Results</h4>
+          
+          <div class="test-item">
+            <span class="test-name">homepage - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">homepage - No Horizontal Scroll</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">services - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">services - No Horizontal Scroll</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">contact - Critical Elements Visible</span>
+            <span class="test-status fail">FAIL</span>
+          </div>
+          
+          <div class="test-item">
+            <span class="test-name">contact - No Horizontal Scroll</span>
+            <span class="test-status pass">PASS</span>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      
+    
+    <footer>
+      <p>AVIR Mobile Responsiveness Testing | Generated by Playwright</p>
+    </footer>
+  </div>
+</body>
+</html>

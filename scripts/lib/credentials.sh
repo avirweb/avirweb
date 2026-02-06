@@ -47,6 +47,16 @@ get_cloudflare_token() {
     get_credential "cloudflare-token"
 }
 
+# Get Cloudflare API key (legacy)
+get_cloudflare_api_key() {
+    get_credential "cloudflare-api-key"
+}
+
+# Get Cloudflare account email (legacy auth)
+get_cloudflare_email() {
+    get_credential "cloudflare-email"
+}
+
 # Get Cloudflare account ID
 get_cloudflare_account_id() {
     get_credential "cloudflare-account-id"
@@ -93,7 +103,11 @@ validate_all_credentials() {
     local missing=()
     
     # Check each credential
-    get_cloudflare_token > /dev/null 2>&1 || missing+=("cloudflare-token")
+    if ! get_cloudflare_token > /dev/null 2>&1; then
+        if ! get_cloudflare_api_key > /dev/null 2>&1 || ! get_cloudflare_email > /dev/null 2>&1; then
+            missing+=("cloudflare-token or cloudflare-api-key+cloudflare-email")
+        fi
+    fi
     get_cloudflare_account_id > /dev/null 2>&1 || missing+=("cloudflare-account-id")
     get_github_ssh_key > /dev/null 2>&1 || missing+=("github-ssh-key")
     get_github_username > /dev/null 2>&1 || missing+=("github-username")
@@ -111,6 +125,8 @@ validate_all_credentials() {
 # Export functions for use in other scripts
 export -f get_credential
 export -f get_cloudflare_token
+export -f get_cloudflare_api_key
+export -f get_cloudflare_email
 export -f get_cloudflare_account_id
 export -f get_github_ssh_key
 export -f get_github_username

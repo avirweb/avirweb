@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-02-04T23:03:15+00:00",
+  "deploy_url": "N/A",
+  "stages": [
+    "Stage 1 (Mirror Site): PASSED (0s)",
+    "Stage 2 (Fix Images): PASSED (0s)",
+    "Stage 3a (Validate Site Structure): PASSED (13s)",
+    "Stage 3b (Validate Security): PASSED (27s)"
+  ],
+  "errors": 1,
+  "success": false
+}

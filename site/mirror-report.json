@@ -1,0 +1,21 @@
+{
+  "startedAt": "2026-02-06T15:35:58.930Z",
+  "completedAt": "2026-02-06T15:46:09.903Z",
+  "durationMs": 610973,
+  "durationFormatted": "610.97s",
+  "pagesCrawled": 162,
+  "assetsDownloaded": 1818,
+  "videosDownloaded": 0,
+  "bytesDownloaded": 420004128,
+  "bytesFormatted": "400.55 MB",
+  "assetBreakdown": {
+    "css": 3,
+    "js": 363,
+    "images": 273,
+    "fonts": 175,
+    "videos": 1,
+    "cdn": 984,
+    "other": 0
+  },
+  "errors": []
+}
