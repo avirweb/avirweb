@@ -221,4 +221,27 @@ window.__lc.chat_between_groups = false;
   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
 })();
 </script>
-<!-- End of LiveChat code --><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe></body></html>
+<!-- End of LiveChat code --><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe><style>
+.contact-form .form__sub-heading{margin-top:0;}
+.contact-form .form__block{margin-top:30px;}
+</style><script>
+window.addEventListener("DOMContentLoaded",function(){
+  var formSection=document.createElement("section");
+  formSection.className="section contact-form";
+  formSection.innerHTML="<div class=\"container form-contain\"><div class=\"form__block w-form\"><form id=\"wf-form-Contact-Form\" name=\"wf-form-Contact-Form\" data-name=\"Contact Form\" method=\"get\" data-wf-page-id=\"6204f7f824425a27336674e5\" data-wf-element-id=\"contact-form\" aria-label=\"Contact Form\"><h3 class=\"form__sub-heading\">Tell us about your project</h3><div class=\"col-wrapper form\"><div class=\"col-50 form\"><label for=\"Contact-Name\" class=\"form__label\">Name</label><input class=\"form__field w-input\" maxlength=\"256\" name=\"Name\" data-name=\"Name\" placeholder=\"\" type=\"text\" id=\"Contact-Name\" required=\"\"></div><div class=\"col-50 form\"><label for=\"Contact-Email\" class=\"form__label\">Email Address</label><input class=\"form__field w-input\" maxlength=\"256\" name=\"Email\" data-name=\"Email\" placeholder=\"address@email.com\" type=\"email\" id=\"Contact-Email\" required=\"\"></div></div><label for=\"Project-Type\" class=\"form__label\">Project Type</label><select id=\"Project-Type\" name=\"Project-Type\" data-name=\"Project Type\" class=\"form__field w-select\" required=\"\"><option value=\"\">Select a project type</option><option value=\"Residential\">Residential</option><option value=\"Commercial\">Commercial</option><option value=\"Service Call\">Service Call</option><option value=\"Other\">Other</option></select><label for=\"Project-Budget\" class=\"form__label\">Budget</label><select id=\"Project-Budget\" name=\"Budget\" data-name=\"Budget\" class=\"form__field w-select\" required=\"\"><option value=\"\">Budget</option><option value=\"$15,000 - $40,000\">$15,000 - $40,000</option><option value=\"$40,000 - $120,000\">$40,000 - $120,000</option><option value=\"$120,000 - $400,000\">$120,000 - $400,000</option><option value=\"$400,000 - $700,000\">$400,000 - $700,000</option><option value=\"$700,000 - $1million+\">$700,000 - $1million+</option></select><label for=\"Project-Notes\" class=\"form__label\">Message / Notes</label><textarea id=\"Project-Notes\" name=\"Message\" maxlength=\"5000\" data-name=\"Message\" placeholder=\"\" class=\"form__field w-input\"></textarea><div data-sitekey=\"6LcH9Z0rAAAAALfoUR3yrajbWyjQ7ZZkekPwCuJ9\" class=\"w-form-formrecaptcha g-recaptcha\"></div><input type=\"submit\" data-wait=\"Please wait...\" class=\"button w-button\" value=\"Submit\"></form><div class=\"form__success w-form-done\" tabindex=\"-1\" role=\"region\" aria-label=\"Contact Form success\"><div class=\"form__success-text\">Thank you! Your submission has been received!</div></div><div class=\"w-form-fail\" tabindex=\"-1\" role=\"region\" aria-label=\"Contact Form failure\"><div>Oops! Something went wrong while submitting the form.</div></div></div></div>";
+  var anchor=document.querySelector(".section.title");
+  if(anchor&&anchor.parentNode){
+    anchor.parentNode.insertBefore(formSection,anchor.nextSibling);
+  }else{
+    var page=document.querySelector(".page-content")||document.body;
+    page.appendChild(formSection);
+  }
+  if(!document.querySelector('script[src*="recaptcha/api.js"]')){
+    var recaptcha=document.createElement("script");
+    recaptcha.src="https://www.google.com/recaptcha/api.js";
+    recaptcha.async=true;
+    recaptcha.defer=true;
+    document.head.appendChild(recaptcha);
+  }
+});
+</script></body></html>
